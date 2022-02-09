@@ -2,7 +2,7 @@ require 'rails_helper'
 
 RSpec.describe Event, type: :model do
     subject do
-        described_class.new(type: 'Monthly Meeting', start_date: '2022-02-14', end_date: '2022-02-14', start_time: '5:00', end_time: '6:00', description: 'Monthly meeting for February', points: 10)
+        described_class.new(event_type: 'Monthly Meeting', start_date: '2022-02-14', end_date: '2022-02-14', start_time: '5:00', end_time: '6:00', description: 'Monthly meeting for February', points: 10)
     end
 
     it 'is valid with all valid attributes' do
@@ -10,7 +10,7 @@ RSpec.describe Event, type: :model do
     end
 
     it 'is not valid without a type' do
-        subject.type = nil
+        subject.event_type = nil
         expect(subject).not_to be_valid
     end
 
