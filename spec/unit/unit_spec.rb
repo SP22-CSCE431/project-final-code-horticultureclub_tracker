@@ -2,7 +2,7 @@ require 'rails_helper'
 
 RSpec.describe Event, type: :model do
     subject do
-        described_class.new(type: 'Monthly Meeting', start_date: '2022-02-14', end_date: '2022-02-14', start_time: '5:00', end_time: '6:00', description: 'Monthly meeting for february', points: 10)
+        described_class.new(type: 'Monthly Meeting', start_date: '2022-02-14', end_date: '2022-02-14', start_time: '5:00', end_time: '6:00', description: 'Monthly meeting for February', points: 10)
     end
 
     it 'is valid with all valid attributes' do
