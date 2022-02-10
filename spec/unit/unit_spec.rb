@@ -43,3 +43,19 @@ RSpec.describe Event, type: :model do
         expect(subject).to be_valid
     end
 end
+
+RSpec.describe Member, type: :model do
+    subject do
+        described_class.new(name: 'John Smith')
+    end
+
+    it 'is valid with all valid attributes' do
+        expect(subject).to be_valid
+    end
+
+    it 'is not valid without a type' do
+        subject.name = nil
+        expect(subject).not_to be_valid
+    end
+
+end
