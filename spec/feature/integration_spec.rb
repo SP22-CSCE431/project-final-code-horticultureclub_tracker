@@ -20,3 +20,12 @@ RSpec.describe 'Creating an event', type: :feature do
         expect(page).to have_content('2022-02-14')
     end
 end
+
+RSpec.describe 'Creating a member', type: :feature do
+    scenario 'valid inputs' do
+        visit new_member_path
+        fill_in 'Name', with: 'John Smith'
+        click_on 'Create Member'
+        expect(page).to have_content('John Smith')
+    end
+end
