@@ -29,3 +29,15 @@ RSpec.describe 'Creating a member', type: :feature do
         expect(page).to have_content('John Smith')
     end
 end
+Rspec.describe 'Creating a point object', type: :feature do
+    scenario 'valid inputs' do
+        visit new_point_path
+        fill_in 'Member', with: '1'
+        fill_in 'Event', with: '5'
+        fill_in 'Points', with: '10'
+        click_on 'Create Point'
+        expect(page).to have_content('1')
+        expect(page).to have_content('5')
+        expect(page).to have_content('10')
+    end 
+end
