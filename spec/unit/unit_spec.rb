@@ -59,3 +59,25 @@ RSpec.describe Member, type: :model do
     end
 
 end
+
+RSpec.describe Point, type: :model do
+    subject do
+        described_class.new(member_id: 1, event_id: 5, points: 10)
+    end
+
+    it 'is valid with all valid attributes' do
+        expect(subject).to be_valid
+    end
+    it 'is not valid without a member_id' do
+        subject.member_id = nil
+        expect(subject).not_to be_valid
+    end
+    it 'is not valid without an event_id' do
+        subject.event_id = nil
+        expect(subject).not_to be_valid
+    end
+    it 'is not valid without a point value' do
+        subject.points = nil
+        expect(subject).not_to be_valid
+    end
+end
