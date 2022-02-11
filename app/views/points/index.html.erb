@@ -15,8 +15,8 @@
   <tbody>
     <% @points.each do |point| %>
       <tr>
-        <td><%= point.member_id %></td>
-        <td><%= point.event_id %></td>
+        <td><%= Member.find(point.member_id).name %></td>
+        <td><%= Event.find(point.event_id).description %></td>
         <td><%= point.points %></td>
         <td><%= link_to 'Show', point %></td>
         <td><%= link_to 'Edit', edit_point_path(point) %></td>

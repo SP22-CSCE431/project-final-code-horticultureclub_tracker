@@ -2,12 +2,12 @@
 
 <p>
   <strong>Member:</strong>
-  <%= @point.member_id %>
+  <%= Member.find(@point.member_id).name %>
 </p>
 
 <p>
   <strong>Event:</strong>
-  <%= @point.event_id %>
+  <%= Event.find(@point.event_id).description %>
 </p>
 
 <p>
