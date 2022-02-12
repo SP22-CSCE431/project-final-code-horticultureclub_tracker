@@ -19,6 +19,7 @@
      padding-bottom: 5vw;
      margin: 0;
      font-size: 30px;
+     line-height: 30px;
  }
 
  .card-title {
@@ -119,5 +120,9 @@
     }
     .selection-card {
         width: 90%;
+    }
+    .dashboard-title {
+        padding: 50px 20px;
+        font-size: 25px;
     }
 }
