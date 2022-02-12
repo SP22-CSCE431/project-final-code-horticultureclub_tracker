@@ -76,8 +76,5 @@ RSpec.describe Point, type: :model do
         subject.event_id = nil
         expect(subject).not_to be_valid
     end
-    it 'is not valid without a point value' do
-        subject.points = nil
-        expect(subject).not_to be_valid
-    end
+    
 end
