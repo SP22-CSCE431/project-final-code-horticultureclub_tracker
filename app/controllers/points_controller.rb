@@ -21,7 +21,8 @@ class PointsController < ApplicationController
 
   # POST /points or /points.json
   def create
-    @point = Point.new(point_params)
+    
+    @point = Point.new(event_id: point_params[:event_id], member_id: point_params[:member_id], points: Event.find(point_params[:event_id]).points)
 
     respond_to do |format|
       if @point.save
@@ -65,6 +66,6 @@ class PointsController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def point_params
-      params.require(:point).permit(:member_id, :event_id, :points)
+      params.require(:point).permit(:member_id, :event_id)
     end
 end
