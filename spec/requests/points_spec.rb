@@ -25,6 +25,7 @@ RSpec.describe "/points", type: :request do
     skip("Add a hash of attributes invalid for your model")
   }
 
+  
   describe "GET /index" do
     it "renders a successful response" do
       Point.create! valid_attributes
@@ -32,7 +33,7 @@ RSpec.describe "/points", type: :request do
       expect(response).to be_successful
     end
   end
-
+  
   describe "GET /show" do
     it "renders a successful response" do
       point = Point.create! valid_attributes

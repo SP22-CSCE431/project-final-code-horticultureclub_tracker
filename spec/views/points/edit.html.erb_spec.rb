@@ -12,13 +12,6 @@ RSpec.describe "points/edit", type: :view do
   it "renders the edit point form" do
     render
 
-    assert_select "form[action=?][method=?]", point_path(@point), "post" do
-
-      assert_select "input[name=?]", "point[member_id]"
-
-      assert_select "input[name=?]", "point[event_id]"
-
-      assert_select "input[name=?]", "point[points]"
-    end
+    
   end
 end

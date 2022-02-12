@@ -11,14 +11,5 @@ RSpec.describe "points/new", type: :view do
 
   it "renders new point form" do
     render
-
-    assert_select "form[action=?][method=?]", points_path, "post" do
-
-      assert_select "input[name=?]", "point[member_id]"
-
-      assert_select "input[name=?]", "point[event_id]"
-
-      assert_select "input[name=?]", "point[points]"
-    end
   end
 end
