@@ -1,0 +1,123 @@
+// Place all the styles related to the dashboard controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: https://sass-lang.com/
+
+@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+
+ *{
+     font-family: 'Lato', sans-serif;
+ }
+
+ .dashboard-bg {
+     background-color: #00892E !important;
+ }
+
+ .dashboard-title {
+     text-align: center !important;
+     color: #ffffff;
+     padding-top: 5vw;
+     padding-bottom: 5vw;
+     margin: 0;
+     font-size: 30px;
+ }
+
+ .card-title {
+     text-align: center;
+ }
+
+ .selection-grid {
+     display: grid;
+     grid-template-columns: repeat(3, 1fr);
+     column-gap: 50px;
+     row-gap: 100px;
+     justify-content: center;
+     align-items: center;
+     max-width: 80%;
+     margin: 0 auto;
+     padding-bottom: 10vh;
+ }
+
+ .selection-card {
+     background-color: #ffffff;
+     width: 250px;
+     height: 300px;
+     margin: 0 auto;
+     border-radius: 10px;
+     display: flex;
+     justify-content: space-around;
+     align-items: center;
+     flex-direction: column;
+     text-align: center;
+ }
+
+ .dashboard-link {
+     text-decoration: none;
+     padding: 10px 50px;
+     border-radius: 15px;
+     color: #ffffff !important;
+     margin-bottom: 20px;
+ }
+
+ .selection-description {
+     padding: 0 15px;
+ }
+
+ #events-link {
+     background-image: linear-gradient(to right,#FF5151,#FFC267);
+    &:hover {
+        background-image: linear-gradient(to right,#FF5151,#FFC267);
+    }
+ }
+
+ #members-link {
+    background-image: linear-gradient(to right,#3347FF,#D6DAFF);
+    &:hover {
+        background-image: linear-gradient(to right,#3347FF,#D6DAFF);
+    }
+}
+
+ #points-link {
+    background-image: linear-gradient(to right,#D79B00,#FDFFA7);
+    &:hover {
+        background-image: linear-gradient(to right,#D79B00,#FDFFA7);
+    }
+}
+
+#plantsale-link {
+    background-image: linear-gradient(to right,#00892E,#8DF806);
+    &:hover {
+        background-image: linear-gradient(to right,#00892E,#8DF806);
+    }
+}
+
+#positions-link {
+    background-image: linear-gradient(to right,#A230BE,#F1B7FF);
+    &:hover {
+        background-image: linear-gradient(to right,#A230BE,#F1B7FF);
+    }
+}
+
+#admins-link {
+    background-image: linear-gradient(to right,#BE3030,#FFA1A1);
+    &:hover {
+        background-image: linear-gradient(to right,#BE3030,#FFA1A1);
+    }
+}
+
+@media screen and (max-width:1000px) {
+    .selection-grid {
+        grid-template-columns: 1fr 1fr;
+        column-gap: 25px;
+        row-gap: 25px;
+    }
+}
+
+@media screen and (max-width:570px) {
+    .selection-grid {
+        grid-template-columns: 1fr;
+        max-width: 95%;
+    }
+    .selection-card {
+        width: 90%;
+    }
+}
