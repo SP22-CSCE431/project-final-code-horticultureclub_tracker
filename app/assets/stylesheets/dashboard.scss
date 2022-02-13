@@ -56,7 +56,10 @@
      padding: 10px 50px;
      border-radius: 15px;
      color: #ffffff !important;
-     margin-bottom: 20px;
+     
+     &:last-of-type {
+        margin-bottom: 20px;
+     }
  }
 
  .selection-description {
@@ -70,7 +73,7 @@
     }
  }
 
- #members-link {
+ #members-link, #leaderboard-link {
     background-image: linear-gradient(to right,#3347FF,#D6DAFF);
     &:hover {
         background-image: linear-gradient(to right,#3347FF,#D6DAFF);

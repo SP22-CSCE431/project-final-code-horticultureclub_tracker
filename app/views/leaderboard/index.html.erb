@@ -1,0 +1,28 @@
+
+
+<div class="leaderboard-wrapper">
+   <h1>Leaderboard</h1>
+   <table>
+      <tr>
+         <th>Member Name</th>
+         <th>Total Points</th>
+         <th></th>
+      </tr>
+      <% @members.each do |member| %>
+         <div>
+            <tr>
+               <td><%= member.name %></td>
+               <td><%= member.points %></td> 
+               <td>
+                  <%= link_to member_path(member.id) do %>
+                     <span>Show</span>
+                  <% end %>
+               </td>
+            </tr>
+         </div>
+            
+      <% end %>
+   </table>
+
+   <%= link_to 'Back', root_path %>
+</div>
