@@ -49,6 +49,12 @@ class EventsController < ApplicationController
 
   # DELETE /events/1 or /events/1.json
   def destroy
+
+    # Delete any associated points
+    Point.where(event_id: @event.id).each do |point|
+      point.destroy
+    end
+
     @event.destroy
 
     respond_to do |format|

@@ -49,6 +49,12 @@ class MembersController < ApplicationController
 
   # DELETE /members/1 or /members/1.json
   def destroy
+
+    # Delete any associated points
+    Point.where(member_id: @member.id).each do |point|
+      point.destroy
+    end
+
     @member.destroy
 
     respond_to do |format|
