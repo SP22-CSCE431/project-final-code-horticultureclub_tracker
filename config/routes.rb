@@ -1,8 +1,9 @@
 Rails.application.routes.draw do
-  get 'dashboard/index'
   resources :points
   resources :members
   resources :events
+  resources :plants
+
   root 'dashboard#index'
 
   get 'leaderboard', to: 'leaderboard#index'
