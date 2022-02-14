@@ -1,0 +1,30 @@
+// Place all the styles related to the leaderboard controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: https://sass-lang.com/
+
+.leaderboard-wrapper {
+
+   table {
+      font-family: arial, sans-serif;
+      border-collapse: collapse;
+      margin: 50px;
+   }
+    
+   td, th {
+      border: 1px solid #d1d1d1;
+      text-align: left;
+      padding: 8px;
+   }
+    
+   tr:nth-child(even) {
+      background-color: #dddddd;
+   }
+
+   a {
+      &:hover {
+         background-color: transparent;
+         color: black;
+      }
+   }
+    
+}
