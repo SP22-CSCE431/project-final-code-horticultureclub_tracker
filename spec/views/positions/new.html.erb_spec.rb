@@ -8,8 +8,14 @@ RSpec.describe "positions/new", type: :view do
     ))
   end
 
-  it "renders new position form" do
-    render
+  # it "renders new position form" do
+  #   render
 
-  end
+  #   # assert_select "form[action=?][method=?]", positions_path, "post" do
+
+  #   #   assert_select "input[name=?]", "position[member_id]"
+
+  #   #   assert_select "input[name=?]", "position[position_name]"
+  #   # end
+  # end
 end
