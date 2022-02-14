@@ -6,18 +6,16 @@
       <tr>
          <th>Member Name</th>
          <th>Total Points</th>
-         <th></th>
       </tr>
       <% @members.each do |member| %>
          <div>
             <tr>
-               <td><%= member.name %></td>
-               <td><%= member.points %></td> 
                <td>
                   <%= link_to member_path(member.id) do %>
-                     <span>Show</span>
+                     <%= member.name %>
                   <% end %>
                </td>
+               <td><%= member.points %></td>
             </tr>
          </div>
             
@@ -25,4 +23,8 @@
    </table>
 
    <%= link_to 'Back', root_path %>
+   <br>
+   <%= link_to 'Edit Members', members_path %>
+   <br>
+   <%= link_to 'Dashboard', root_path %>
 </div>
