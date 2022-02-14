@@ -3,39 +3,39 @@
 <h1>Events</h1>
 
 <table>
-  <thead>
-    <tr>
-      <th>Event type</th>
-      <th>Start date</th>
-      <th>End date</th>
-      <th>Start time</th>
-      <th>End time</th>
-      <th>Description</th>
-      <th>Points</th>
-      <th>Members attended</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
+  <tr>
+    <th>Event type</th>
+    <th>Start date</th>
+    <th>End date</th>
+    <th>Start time</th>
+    <th>End time</th>
+    <th>Description</th>
+    <th>Points</th>
+    <th>Members attended</th>
+    <th colspan="3"></th>
+  </tr>
 
-  <tbody>
-    <% @events.each do |event| %>
-      <tr>
-        <td><%= event.event_type %></td>
-        <td><%= event.start_date %></td>
-        <td><%= event.end_date %></td>
-        <td><%= event.start_time %></td>
-        <td><%= event.end_time %></td>
-        <td><%= event.description %></td>
-        <td><%= event.points %></td>
-        <td><%= event.members_attended %></td>
-        <td><%= link_to 'Show', event %></td>
-        <td><%= link_to 'Edit', edit_event_path(event) %></td>
-        <td><%= link_to 'Destroy', event, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
+  <% @events.each do |event| %>
+    <tr>
+      <td><%= event.event_type %></td>
+      <td><%= event.start_date %></td>
+      <td><%= event.end_date %></td>
+      <td><%= event.start_time %></td>
+      <td><%= event.end_time %></td>
+      <td><%= event.description %></td>
+      <td><%= event.points %></td>
+      <td><%= event.members_attended %></td>
+      <td><%= link_to 'Show', event %></td>
+      <td><%= link_to 'Edit', edit_event_path(event) %></td>
+      <td><%= link_to 'Destroy', event, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+    </tr>
+  <% end %>
 </table>
 
 <br>
 
 <%= link_to 'New Event', new_event_path %>
+<br>
+<%= link_to 'Dashboard', root_path %>
+
+

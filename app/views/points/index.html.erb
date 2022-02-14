@@ -3,29 +3,36 @@
 <h1>Points</h1>
 
 <table>
-  <thead>
-    <tr>
-      <th>Member</th>
-      <th>Event</th>
-      <th>Points</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
+  <tr>
+    <th>Member</th>
+    <th>Event</th>
+    <th>Points</th>
+    <th colspan="3"></th>
+  </tr>
 
-  <tbody>
-    <% @points.each do |point| %>
-      <tr>
-        <td><%= Member.find(point.member_id).name %></td>
-        <td><%= Event.find(point.event_id).description %></td>
-        <td><%= point.points %></td>
-        <td><%= link_to 'Show', point %></td>
-        <td><%= link_to 'Edit', edit_point_path(point) %></td>
-        <td><%= link_to 'Destroy', point, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
+  <% @points.each do |point| %>
+    <tr>
+      <td>
+        <%= link_to member_path(point.member_id) do %>
+          <%= Member.find(point.member_id).name %>
+        <% end %>
+      </td>
+      <td>
+        <%= link_to event_path(point.event_id) do %>
+          <%= Event.find(point.event_id).description %>
+        <% end %>
+      </td>
+      <td><%= point.points %></td>
+      <td><%= link_to 'Show', point %></td>
+      <td><%= link_to 'Edit', edit_point_path(point) %></td>
+      <td><%= link_to 'Destroy', point, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+    </tr>
+  <% end %>
 </table>
 
 <br>
 
 <%= link_to 'New Point', new_point_path %>
+<br>
+<%= link_to 'Dashboard', root_path %>
+
