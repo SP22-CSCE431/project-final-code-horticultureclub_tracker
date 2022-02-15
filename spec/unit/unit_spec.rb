@@ -106,10 +106,6 @@ RSpec.describe Plant, type: :model do
     it 'is valid with all valid attributes' do
         expect(subject).to be_valid
     end
-    it 'is not valid without a plant_id' do
-        subject.plant_id = nil
-        expect(subject).not_to be_valid
-    end
     it 'is not valid without a name' do
         subject.name = nil
         expect(subject).not_to be_valid
