@@ -5,7 +5,6 @@
 <table>
   <thead>
     <tr>
-      <th>ID</th>
       <th>Name</th>
       <th>Price</th>
 	  <th>Description</th>
@@ -17,7 +16,6 @@
   <tbody>
     <% @plants.each do |plant| %>
       <tr>
-        <td><%= plant.plant_id %></td>
         <td><%= plant.name %></td>
         <td><%= plant.price %></td>
 		<td><%= plant.description %></td>
