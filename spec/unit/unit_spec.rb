@@ -78,3 +78,53 @@ RSpec.describe Point, type: :model do
     end
     
 end
+
+RSpec.describe Position, type: :model do
+    subject do
+        described_class.new(member_id: 1, position_name: "test position" )
+    end
+
+    it 'is valid with all valid attributes' do
+        expect(subject).to be_valid
+    end
+    it 'is not valid without a member_id' do
+        subject.member_id = nil
+        expect(subject).not_to be_valid
+    end
+    it 'is not valid without a position_name' do
+        subject.position_name = nil
+        expect(subject).not_to be_valid
+    end
+    
+end
+
+RSpec.describe Plant, type: :model do
+    subject do
+        described_class.new(name: "test plant", price: 12.99, description: "rose", icon: "test")
+    end
+
+    it 'is valid with all valid attributes' do
+        expect(subject).to be_valid
+    end
+    it 'is not valid without a plant_id' do
+        subject.plant_id = nil
+        expect(subject).not_to be_valid
+    end
+    it 'is not valid without a name' do
+        subject.name = nil
+        expect(subject).not_to be_valid
+    end
+    it 'is not valid without a price' do
+        subject.price = nil
+        expect(subject).not_to be_valid
+    end
+    it 'is not valid without a description' do
+        subject.description = nil
+        expect(subject).not_to be_valid
+    end
+    it 'is not valid without an icon' do
+        subject.icon = nil
+        expect(subject).not_to be_valid
+    end
+    
+end
