@@ -9,7 +9,7 @@
  }
 
  .dashboard-bg {
-     background-color: #00892E !important;
+     background-image: linear-gradient(to right, #218743, #02491A);
  }
 
  .dashboard-title {
@@ -49,6 +49,19 @@
      align-items: center;
      flex-direction: column;
      text-align: center;
+ }
+
+ .selection-card-title {
+     margin: 0 auto;
+     width: 80%;
+     display: flex;
+     justify-content:space-evenly;
+     align-items: center;
+ }
+
+ .selection-icon {
+     width: 25px;
+     height: 25px;
  }
 
  .dashboard-link {
