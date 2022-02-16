@@ -50,6 +50,7 @@
      align-items: center;
      flex-direction: column;
      text-align: center;
+     box-shadow: 0 0 5px #4c4c4c;
  }
 
  .selection-card-title {
@@ -83,6 +84,7 @@
  #events-link {
      background-image: linear-gradient(to right,#FF5151,#FFC267);
     &:hover {
+        box-shadow: 0 0 3px #FF5151;
         background-image: linear-gradient(to right,#FF5151,#FFC267);
     }
  }
@@ -90,6 +92,7 @@
  #members-link, #leaderboard-link {
     background-image: linear-gradient(to right,#3347FF,#D6DAFF);
     &:hover {
+        box-shadow: 0 0 3px #3347FF;
         background-image: linear-gradient(to right,#3347FF,#D6DAFF);
     }
 }
@@ -101,6 +104,7 @@
  #points-link {
     background-image: linear-gradient(to right,#D79B00,#FDFFA7);
     &:hover {
+        box-shadow: 0 0 3px #D79B00;
         background-image: linear-gradient(to right,#D79B00,#FDFFA7);
     }
 }
@@ -108,6 +112,7 @@
 #plantsale-link {
     background-image: linear-gradient(to right,#00892E,#8DF806);
     &:hover {
+        box-shadow: 0 0 3px #00892E;
         background-image: linear-gradient(to right,#00892E,#8DF806);
     }
 }
@@ -115,6 +120,7 @@
 #positions-link {
     background-image: linear-gradient(to right,#A230BE,#F1B7FF);
     &:hover {
+        box-shadow: 0 0 3px #A230BE;
         background-image: linear-gradient(to right,#A230BE,#F1B7FF);
     }
 }
@@ -122,6 +128,7 @@
 #admins-link {
     background-image: linear-gradient(to right,#BE3030,#FFA1A1);
     &:hover {
+        box-shadow: 0 0 3px #BE3030;
         background-image: linear-gradient(to right,#BE3030,#FFA1A1);
     }
 }
