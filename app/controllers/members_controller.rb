@@ -55,6 +55,11 @@ class MembersController < ApplicationController
       point.destroy
     end
 
+    # Delete any associated positions
+    Position.where(member_id: @member.id).each do |position|
+      position.destroy
+    end
+
     @member.destroy
 
     respond_to do |format|
