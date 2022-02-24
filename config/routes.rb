@@ -9,5 +9,8 @@ Rails.application.routes.draw do
 
   get 'leaderboard', to: 'leaderboard#index'
   get 'dashboard', to: 'dashboard#index'
+
+  mount API::Base, at: "/"
+
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
 end
