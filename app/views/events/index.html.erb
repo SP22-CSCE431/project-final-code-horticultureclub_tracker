@@ -11,7 +11,6 @@
     <th>End time</th>
     <th>Description</th>
     <th>Points</th>
-    <th>Members attended</th>
     <th colspan="3"></th>
   </tr>
 
@@ -24,7 +23,6 @@
       <td><%= event.end_time %></td>
       <td><%= event.description %></td>
       <td><%= event.points %></td>
-      <td><%= event.members_attended %></td>
       <td><%= link_to 'Show', event %></td>
       <td><%= link_to 'Edit', edit_event_path(event) %></td>
       <td><%= link_to 'Destroy', event, method: :delete, data: { confirm: 'Are you sure?' } %></td>
