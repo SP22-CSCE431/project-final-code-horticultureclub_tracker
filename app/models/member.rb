@@ -1,6 +1,8 @@
-class Member < ApplicationRecord
-   validates :name, presence: true
+# frozen_string_literal: true
 
-   # has_many :points, dependent: :destroy
-   # has_many :events, through: :points
+class Member < ApplicationRecord
+  validates :name, presence: true
+
+  # has_many :points, dependent: :destroy
+  # has_many :events, through: :points
 end
