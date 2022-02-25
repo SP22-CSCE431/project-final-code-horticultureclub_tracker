@@ -10,10 +10,6 @@
   <%= Event.find(@point.event_id).description %>
 </p>
 
-<p>
-  <strong>Points:</strong>
-  <%= @point.points %>
-</p>
 
 <%= link_to 'Edit', edit_point_path(@point) %> |
 <%= link_to 'Back', points_path %>

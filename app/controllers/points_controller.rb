@@ -22,7 +22,7 @@ class PointsController < ApplicationController
   # POST /points or /points.json
   def create
     
-    @point = Point.new(event_id: point_params[:event_id], member_id: point_params[:member_id], points: Event.find(point_params[:event_id]).points)
+    @point = Point.new(event_id: point_params[:event_id], member_id: point_params[:member_id])
 
     respond_to do |format|
       if @point.save
