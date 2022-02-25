@@ -1,7 +1,9 @@
+# frozen_string_literal: true
+
 require 'rails_helper'
 
-RSpec.describe "points/index", type: :view do
-  before(:each) do
+RSpec.describe('points/index', type: :view) do
+  before do
     assign(:points, [
       Point.create!(
         member_id: 2,
@@ -13,7 +15,7 @@ RSpec.describe "points/index", type: :view do
         event_id: 3,
         points: 4
       )
-    ])
+    ]
+    )
   end
-
 end
