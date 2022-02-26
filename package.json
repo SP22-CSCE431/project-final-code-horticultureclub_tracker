@@ -2,6 +2,7 @@
   "name": "horticulture-tracker",
   "private": true,
   "dependencies": {
+    "@babel/preset-react": "^7.16.7",
     "@rails/actioncable": "^6.0.0",
     "@rails/activestorage": "^6.0.0",
     "@rails/ujs": "^6.0.0",
@@ -18,7 +19,6 @@
   },
   "version": "0.1.0",
   "devDependencies": {
-    "@babel/preset-react": "^7.16.7",
     "webpack-dev-server": "^3"
   }
 }
