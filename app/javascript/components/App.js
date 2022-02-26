@@ -16,7 +16,7 @@ const ColoredDateCellWrapper = ({ children }) =>
   })
 
 // translates rails event to javascript date
-async function formatEvent(event) {
+function formatEvent(event) {
 
    const formatedEvent = {
       title : event.event_type,
@@ -30,7 +30,7 @@ async function formatEvent(event) {
 }
 
 // get events from DB
-async function getEvents() {
+function getEvents() {
    let events = [];
    try {
    fetch('/api/v1/events')
@@ -38,14 +38,13 @@ async function getEvents() {
    .then(data =>
       data.forEach(event => {
          
-         events.push(await formatEvent(event));
+         events.push(formatEvent(event));
 
       })
    );
    }catch(error) { console.log(error); }
    
    // console.log(events);
-
    return events;
 }
 
@@ -59,7 +58,7 @@ const EventCalendar = () => {
    //    resource?: any,
    // }
 
-   const events = await getEvents();
+   const events = getEvents();
 
    // const events = [
    //    {
