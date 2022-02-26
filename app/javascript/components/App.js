@@ -38,7 +38,7 @@ async function getEvents() {
    .then(data =>
       data.forEach(event => {
          
-         await events.push(formatEvent(event));
+         events.push(await formatEvent(event));
 
       })
    );
