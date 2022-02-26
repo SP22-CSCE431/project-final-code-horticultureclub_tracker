@@ -15,6 +15,39 @@ const ColoredDateCellWrapper = ({ children }) =>
     },
   })
 
+// translates rails event to javascript date
+function formatEvent(event) {
+
+   const formatedEvent = {
+      title : event.event_type,
+      // some substring calculations to get the year month day
+      start : new Date(event.start_date.substring(0,4),parseInt(event.start_date.substring(5,7))-1,event.start_date.substring(8,10)),
+      end : new Date(event.end_date.substring(0,4),parseInt(event.end_date.substring(5,7))-1,event.end_date.substring(8,10))
+   }
+
+   return formatedEvent;
+
+}
+
+// get events from DB
+function getEvents() {
+   let events = [];
+   try {
+   fetch('/api/v1/events')
+   .then(response => response.json())
+   .then(data =>
+      data.forEach(event => {
+         
+         events.push(formatEvent(event));
+
+      })
+   );
+   }catch(error) { console.log(error); }
+   
+   console.log(events);
+
+   return events;
+}
 
 const EventCalendar = () => {
 
@@ -26,21 +59,23 @@ const EventCalendar = () => {
    //    resource?: any,
    // }
 
-   const events = [
-      {
-         id: 0,
-         title: 'All Day Event very long title',
-         allDay: true,
-         start: new Date(2015, 3, 0),
-         end: new Date(2015, 3, 1),
-      },
-      {
-         id: 1,
-         title: 'Long Event',
-         start: new Date(2015, 3, 7),
-         end: new Date(2015, 3, 10),
-      },
-   ]
+   const events = getEvents();
+
+   // const events = [
+   //    {
+   //       id: 0,
+   //       title: 'All Day Event very long title',
+   //       allDay: true,
+   //       start: new Date(2022, 1, 10),
+   //       end: new Date(2022, 1, 10),
+   //    },
+   //    {
+   //       id: 1,
+   //       title: 'Long Event',
+   //       start: new Date(2022, 1, 6),
+   //       end: new Date(2022, 1, 9),
+   //    },
+   // ]
 
    return (  
       <div className="calendar">
@@ -50,11 +85,12 @@ const EventCalendar = () => {
             step={60}
             showMultiDayTimes
             // max={dates.add(dates.endOf(new Date(2015, 17, 1), 'day'), -1, 'hours')}
-            defaultDate={new Date(2015, 3, 1)}
+            defaultDate={new Date(2022, 1, 15)}
             components={{
                timeSlotWrapper: ColoredDateCellWrapper,
             }}
             localizer={localizer}
+            style = {{ height: 500 }}
          />
       </div>
    );
