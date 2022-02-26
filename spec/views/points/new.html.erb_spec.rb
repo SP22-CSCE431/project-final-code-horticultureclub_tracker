@@ -6,8 +6,7 @@ RSpec.describe('points/new', type: :view) do
   before do
     assign(:point, Point.new(
                      member_id: 1,
-                     event_id: 1,
-                     points: 1
+                     event_id: 1
                    )
     )
   end

@@ -7,13 +7,11 @@ RSpec.describe('points/index', type: :view) do
     assign(:points, [
       Point.create!(
         member_id: 2,
-        event_id: 3,
-        points: 4
+        event_id: 3
       ),
       Point.create!(
         member_id: 2,
-        event_id: 3,
-        points: 4
+        event_id: 3
       )
     ]
     )
