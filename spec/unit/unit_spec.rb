@@ -64,7 +64,7 @@ end
 
 RSpec.describe(Point, type: :model) do
   subject do
-    described_class.new(member_id: 1, event_id: 5, points: 10)
+    described_class.new(member_id: 1, event_id: 5)
   end
 
   it 'is valid with all valid attributes' do

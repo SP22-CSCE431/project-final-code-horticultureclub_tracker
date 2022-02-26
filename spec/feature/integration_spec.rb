@@ -54,6 +54,5 @@ RSpec.describe('Creating a point object', type: :feature) do
     click_on 'Create Point'
     expect(page).to(have_content('John Smith'))
     expect(page).to(have_content('Monthly meeting for February'))
-    expect(page).to(have_content('10'))
   end
 end
