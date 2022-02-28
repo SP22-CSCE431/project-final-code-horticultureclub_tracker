@@ -1,39 +1,43 @@
-<p id="notice"><%= notice %></p>
+<section class="fade-bg">
+  <nav class="admin-navbar">
 
-<h1>Events</h1>
+    <h1 class="admin-page-title">Events</h1>
 
-<table>
-  <tr>
-    <th>Event type</th>
-    <th>Start date</th>
-    <th>End date</th>
-    <th>Start time</th>
-    <th>End time</th>
-    <th>Description</th>
-    <th>Points</th>
-    <th colspan="3"></th>
-  </tr>
+    <div class="nav-options">
+      <a href="../members">Members</a>
+      <a href="../points">Points</a>
+      <a href="../leaderboard">Leaderboard</a>
+      <a href="../plants">Plant Sale</a>
+      <a href="../positions">Positions</a>
+      <a href="../">Dashboard</a>
+    </div>
 
-  <% @events.each do |event| %>
-    <tr>
-      <td><%= event.event_type %></td>
-      <td><%= event.start_date %></td>
-      <td><%= event.end_date %></td>
-      <td><%= event.start_time %></td>
-      <td><%= event.end_time %></td>
-      <td><%= event.description %></td>
-      <td><%= event.points %></td>
-      <td><%= link_to 'Show', event %></td>
-      <td><%= link_to 'Edit', edit_event_path(event) %></td>
-      <td><%= link_to 'Destroy', event, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-    </tr>
-  <% end %>
-</table>
+  </nav>
 
-<br>
+  <p id="notice"><%= notice %></p>
 
-<%= link_to 'New Event', new_event_path %>
-<br>
-<%= link_to 'Dashboard', root_path %>
+  <div class="new-attribute-wrapper">
+    <%= link_to "Create New Event", new_event_path, class: "new-attribute-btn" %>
+  </div>
 
+  <div class="table-first-row events-first-row">
+    <h6>Event Type</h6>
+    <h6>Start Date</h6>
+    <h6>Description</h6>
+    <h6>Points</h6>
+  </div>
+  <div class="table-wrapper events-wrapper">
+    <% @events.each do |event| %>
+      <p><%= event.event_type %></p>
+      <p><%= event.start_date %></p>
+      <p><%= event.description %></p>
+      <p><%= event.points %></p>
+      <div class="crud-icons">
+        <p><%= link_to 'Show', event, class: "attribute-show-btn" %></p>
+        <p><%= link_to image_tag("edit.png", class: "attribute-icon"), edit_event_path(event) %></p>
+        <p><%= link_to image_tag("delete.png", class: "attribute-icon"), event, method: :delete, data: { confirm: 'Are you sure?' } %></p>
+      </div>
+    <% end %>
+  </div>
 
+</section>
