@@ -45,7 +45,7 @@ const EventCalendar = () => {
    }
 
 
-   useEffect(  () => {
+   useEffect(async () => {
       const getEvents = async () => {
          try {
             const response = await fetch('/api/v1/events');
@@ -53,8 +53,10 @@ const EventCalendar = () => {
             await updateEvents(json);
          }catch(error) { console.log(error); }
       }
-      getEvents();
+      await getEvents();
    }, []);
+
+
    // Event {
    //    title: string,
    //    start: Date,
