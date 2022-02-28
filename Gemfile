@@ -65,8 +65,6 @@ end
 gem 'tzinfo-data', platforms: %i[mingw mswin x64_mingw jruby]
 
 gem 'brakeman'
-gem 'rubocop'
-
 gem 'grape'
 gem 'grape-active_model_serializers'
 gem 'rack-cors'

@@ -1,4 +1,4 @@
-import React, { Component } from 'react'
+import React, { Component, useState, useEffect} from 'react'
 import { Calendar, Views, momentLocalizer } from 'react-big-calendar'
 import moment from 'moment'
 import './styles.scss'
@@ -7,7 +7,6 @@ const localizer = momentLocalizer(moment)
 
 let allViews = Object.keys(Views).map(k => Views[k])
 
-
 const ColoredDateCellWrapper = ({ children }) =>
   React.cloneElement(React.Children.only(children), {
     style: {
@@ -15,41 +14,47 @@ const ColoredDateCellWrapper = ({ children }) =>
     },
   })
 
-// translates rails event to javascript date
-function formatEvent(event) {
-
-   const formatedEvent = {
-      title : event.event_type,
-      // some substring calculations to get the year month day
-      start : new Date(event.start_date.substring(0,4),parseInt(event.start_date.substring(5,7))-1,event.start_date.substring(8,10)),
-      end : new Date(event.end_date.substring(0,4),parseInt(event.end_date.substring(5,7))-1,event.end_date.substring(8,10))
-   }
-
-   return formatedEvent;
-
-}
-
-// get events from DB
-function getEvents() {
-   let events = [];
-   try {
-   fetch('/api/v1/events')
-   .then(response => response.json())
-   .then(data =>
-      data.forEach(event => {
-         
-         events.push(formatEvent(event));
-
-      })
-   );
-   }catch(error) { console.log(error); }
-   
-   // console.log(events);
-   return events;
-}
 
 const EventCalendar = () => {
 
+   const [events, setEvents] = useState();
+
+   // translates rails event to javascript date
+   function formatEvent(event) {
+
+      const formatedEvent = {
+         title : event.event_type,
+         // some substring calculations to get the year month day
+         start : new Date(event.start_date.substring(0,4),parseInt(event.start_date.substring(5,7))-1,event.start_date.substring(8,10)),
+         end : new Date(event.end_date.substring(0,4),parseInt(event.end_date.substring(5,7))-1,event.end_date.substring(8,10))
+      }
+
+      return formatedEvent;
+
+   }
+
+   async function updateEvents(data) {
+      let tempEvents = [];
+      data.forEach(event => {
+                     
+         tempEvents.push(formatEvent(event));
+
+      })
+      setEvents(tempEvents);
+      console.log(tempEvents);
+   }
+
+
+   useEffect(  () => {
+      const getEvents = async () => {
+         try {
+            const response = await fetch('/api/v1/events');
+            const json = await response.json();
+            await updateEvents(json);
+         }catch(error) { console.log(error); }
+      }
+      getEvents();
+   }, []);
    // Event {
    //    title: string,
    //    start: Date,
@@ -57,8 +62,6 @@ const EventCalendar = () => {
    //    allDay?: boolean
    //    resource?: any,
    // }
-
-   const events = getEvents();
 
    // const events = [
    //    {
