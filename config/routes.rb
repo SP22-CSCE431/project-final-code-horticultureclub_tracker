@@ -7,7 +7,7 @@ Rails.application.routes.draw do
   resources :members
   resources :events
   resources :plants
-  resources :admins
+  # resources :admins
 
   root 'dashboard#index'
   #root to: 'dashboards#show'
