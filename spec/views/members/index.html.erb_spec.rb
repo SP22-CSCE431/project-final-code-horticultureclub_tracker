@@ -19,3 +19,4 @@ RSpec.describe('members/index', type: :view) do
     render
   end
 end
+
