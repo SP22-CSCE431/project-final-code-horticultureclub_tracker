@@ -14,7 +14,7 @@
       <img src="./assets/0.12.3/loading.gif" alt="loading"/>
     </div>
     <div id="wrapper" class="hide">
-      <div class="timestamp">Generated <abbr class="timeago" title="2022-02-28T23:10:47+00:00">2022-02-28T23:10:47+00:00</abbr></div>
+      <div class="timestamp">Generated <abbr class="timeago" title="2022-03-01T03:17:16+00:00">2022-03-01T03:17:16+00:00</abbr></div>
       <ul class="group_tabs"></ul>
 
       <div id="content">
@@ -183,7 +183,7 @@
           <tr class="t-file">
             <td class="strong t-file__name"><a href="#d4fa3640c4a7beb9a135d66eb5916558fd7216ea" class="src_link" title="app/controllers/leaderboard_controller.rb">app/controllers/leaderboard_controller.rb</a></td>
             <td class="green strong cell--number t-file__coverage">100.00 %</td>
-            <td class="cell--number">13</td>
+            <td class="cell--number">12</td>
             <td class="cell--number">3</td>
             <td class="cell--number">3</td>
             <td class="cell--number">0</td>
@@ -205,7 +205,7 @@
           <tr class="t-file">
             <td class="strong t-file__name"><a href="#48bfe4528e2ade4a5f39a92c754c2154d2e3b19e" class="src_link" title="app/controllers/points_controller.rb">app/controllers/points_controller.rb</a></td>
             <td class="red strong cell--number t-file__coverage">60.61 %</td>
-            <td class="cell--number">72</td>
+            <td class="cell--number">71</td>
             <td class="cell--number">33</td>
             <td class="cell--number">20</td>
             <td class="cell--number">13</td>
@@ -3917,7 +3917,7 @@
 
             
 
-            <code class="ruby">    .joins(&quot;INNER JOIN members ON members.id=points.member_id&quot;)</code>
+            <code class="ruby">               .joins(&#39;INNER JOIN members ON members.id=points.member_id&#39;)</code>
           </li>
         </div>
       
@@ -3928,7 +3928,7 @@
 
             
 
-            <code class="ruby">    .joins(&quot;INNER JOIN events ON events.id=points.event_id&quot;)</code>
+            <code class="ruby">               .joins(&#39;INNER JOIN events ON events.id=points.event_id&#39;)</code>
           </li>
         </div>
       
@@ -3939,7 +3939,7 @@
 
             
 
-            <code class="ruby">    .group(&#39;members.name, points.member_id, events.points&#39;)</code>
+            <code class="ruby">               .group(&#39;members.name, points.member_id, events.points&#39;)</code>
           </li>
         </div>
       
@@ -3950,7 +3950,7 @@
 
             
 
-            <code class="ruby">    .select(&#39;members.name, points.member_id as id, sum(events.points) as points&#39;)</code>
+            <code class="ruby">               .select(&#39;members.name, points.member_id as id, sum(events.points) as points&#39;)</code>
           </li>
         </div>
       
@@ -3961,7 +3961,7 @@
 
             
 
-            <code class="ruby">    .order(&#39;points DESC&#39;)    </code>
+            <code class="ruby">               .order(&#39;points DESC&#39;)</code>
           </li>
         </div>
       
@@ -3972,23 +3972,12 @@
 
             
 
-            <code class="ruby">    </code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="never" data-hits="" data-linenumber="12">
-            
-            
-
-            
-
             <code class="ruby">  end</code>
           </li>
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="13">
+          <li class="never" data-hits="" data-linenumber="12">
             
             
 
@@ -5161,18 +5150,7 @@
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="24">
-            
-            
-
-            
-
-            <code class="ruby">    </code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="covered" data-hits="1" data-linenumber="25">
+          <li class="covered" data-hits="1" data-linenumber="24">
             <span class="hits">1</span>
             
 
@@ -5183,13 +5161,24 @@
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="26">
+          <li class="never" data-hits="" data-linenumber="25">
             
             
 
             
 
             <code class="ruby"></code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="26">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">    respond_to do |format|</code>
           </li>
         </div>
       
@@ -5200,23 +5189,12 @@
 
             
 
-            <code class="ruby">    respond_to do |format|</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="covered" data-hits="1" data-linenumber="28">
-            <span class="hits">1</span>
-            
-
-            
-
             <code class="ruby">      if @point.save</code>
           </li>
         </div>
       
         <div>
-          <li class="covered" data-hits="2" data-linenumber="29">
+          <li class="covered" data-hits="2" data-linenumber="28">
             <span class="hits">2</span>
             
 
@@ -5227,7 +5205,7 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="30">
+          <li class="covered" data-hits="1" data-linenumber="29">
             <span class="hits">1</span>
             
 
@@ -5238,7 +5216,7 @@
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="31">
+          <li class="never" data-hits="" data-linenumber="30">
             
             
 
@@ -5249,7 +5227,7 @@
         </div>
       
         <div>
-          <li class="missed" data-hits="0" data-linenumber="32">
+          <li class="missed" data-hits="0" data-linenumber="31">
             
             
 
@@ -5260,13 +5238,24 @@
         </div>
       
         <div>
-          <li class="missed" data-hits="0" data-linenumber="33">
+          <li class="missed" data-hits="0" data-linenumber="32">
             
             
 
             
 
             <code class="ruby">        format.json { render(json: @point.errors, status: :unprocessable_entity) }</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="33">
+            
+            
+
+            
+
+            <code class="ruby">      end</code>
           </li>
         </div>
       
@@ -5277,7 +5266,7 @@
 
             
 
-            <code class="ruby">      end</code>
+            <code class="ruby">    end</code>
           </li>
         </div>
       
@@ -5288,7 +5277,7 @@
 
             
 
-            <code class="ruby">    end</code>
+            <code class="ruby">  end</code>
           </li>
         </div>
       
@@ -5299,7 +5288,7 @@
 
             
 
-            <code class="ruby">  end</code>
+            <code class="ruby"></code>
           </li>
         </div>
       
@@ -5310,23 +5299,12 @@
 
             
 
-            <code class="ruby"></code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="never" data-hits="" data-linenumber="38">
-            
-            
-
-            
-
             <code class="ruby">  # PATCH/PUT /points/1 or /points/1.json</code>
           </li>
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="39">
+          <li class="covered" data-hits="1" data-linenumber="38">
             <span class="hits">1</span>
             
 
@@ -5337,7 +5315,7 @@
         </div>
       
         <div>
-          <li class="missed" data-hits="0" data-linenumber="40">
+          <li class="missed" data-hits="0" data-linenumber="39">
             
             
 
@@ -5348,7 +5326,7 @@
         </div>
       
         <div>
-          <li class="missed" data-hits="0" data-linenumber="41">
+          <li class="missed" data-hits="0" data-linenumber="40">
             
             
 
@@ -5359,7 +5337,7 @@
         </div>
       
         <div>
-          <li class="missed" data-hits="0" data-linenumber="42">
+          <li class="missed" data-hits="0" data-linenumber="41">
             
             
 
@@ -5370,7 +5348,7 @@
         </div>
       
         <div>
-          <li class="missed" data-hits="0" data-linenumber="43">
+          <li class="missed" data-hits="0" data-linenumber="42">
             
             
 
@@ -5381,7 +5359,7 @@
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="44">
+          <li class="never" data-hits="" data-linenumber="43">
             
             
 
@@ -5392,7 +5370,7 @@
         </div>
       
         <div>
-          <li class="missed" data-hits="0" data-linenumber="45">
+          <li class="missed" data-hits="0" data-linenumber="44">
             
             
 
@@ -5403,7 +5381,7 @@
         </div>
       
         <div>
-          <li class="missed" data-hits="0" data-linenumber="46">
+          <li class="missed" data-hits="0" data-linenumber="45">
             
             
 
@@ -5414,7 +5392,7 @@
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="47">
+          <li class="never" data-hits="" data-linenumber="46">
             
             
 
@@ -5425,13 +5403,24 @@
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="48">
+          <li class="never" data-hits="" data-linenumber="47">
             
             
 
             
 
             <code class="ruby">    end</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="48">
+            
+            
+
+            
+
+            <code class="ruby">  end</code>
           </li>
         </div>
       
@@ -5442,7 +5431,7 @@
 
             
 
-            <code class="ruby">  end</code>
+            <code class="ruby"></code>
           </li>
         </div>
       
@@ -5453,23 +5442,12 @@
 
             
 
-            <code class="ruby"></code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="never" data-hits="" data-linenumber="51">
-            
-            
-
-            
-
             <code class="ruby">  # DELETE /points/1 or /points/1.json</code>
           </li>
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="52">
+          <li class="covered" data-hits="1" data-linenumber="51">
             <span class="hits">1</span>
             
 
@@ -5480,7 +5458,7 @@
         </div>
       
         <div>
-          <li class="missed" data-hits="0" data-linenumber="53">
+          <li class="missed" data-hits="0" data-linenumber="52">
             
             
 
@@ -5491,7 +5469,7 @@
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="54">
+          <li class="never" data-hits="" data-linenumber="53">
             
             
 
@@ -5502,7 +5480,7 @@
         </div>
       
         <div>
-          <li class="missed" data-hits="0" data-linenumber="55">
+          <li class="missed" data-hits="0" data-linenumber="54">
             
             
 
@@ -5513,7 +5491,7 @@
         </div>
       
         <div>
-          <li class="missed" data-hits="0" data-linenumber="56">
+          <li class="missed" data-hits="0" data-linenumber="55">
             
             
 
@@ -5524,7 +5502,7 @@
         </div>
       
         <div>
-          <li class="missed" data-hits="0" data-linenumber="57">
+          <li class="missed" data-hits="0" data-linenumber="56">
             
             
 
@@ -5535,7 +5513,7 @@
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="58">
+          <li class="never" data-hits="" data-linenumber="57">
             
             
 
@@ -5546,7 +5524,7 @@
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="59">
+          <li class="never" data-hits="" data-linenumber="58">
             
             
 
@@ -5557,7 +5535,7 @@
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="60">
+          <li class="never" data-hits="" data-linenumber="59">
             
             
 
@@ -5568,7 +5546,7 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="61">
+          <li class="covered" data-hits="1" data-linenumber="60">
             <span class="hits">1</span>
             
 
@@ -5579,7 +5557,7 @@
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="62">
+          <li class="never" data-hits="" data-linenumber="61">
             
             
 
@@ -5590,7 +5568,7 @@
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="63">
+          <li class="never" data-hits="" data-linenumber="62">
             
             
 
@@ -5601,7 +5579,7 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="64">
+          <li class="covered" data-hits="1" data-linenumber="63">
             <span class="hits">1</span>
             
 
@@ -5612,7 +5590,7 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="65">
+          <li class="covered" data-hits="1" data-linenumber="64">
             <span class="hits">1</span>
             
 
@@ -5623,7 +5601,7 @@
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="66">
+          <li class="never" data-hits="" data-linenumber="65">
             
             
 
@@ -5634,7 +5612,7 @@
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="67">
+          <li class="never" data-hits="" data-linenumber="66">
             
             
 
@@ -5645,7 +5623,7 @@
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="68">
+          <li class="never" data-hits="" data-linenumber="67">
             
             
 
@@ -5656,7 +5634,7 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="69">
+          <li class="covered" data-hits="1" data-linenumber="68">
             <span class="hits">1</span>
             
 
@@ -5667,7 +5645,7 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="2" data-linenumber="70">
+          <li class="covered" data-hits="2" data-linenumber="69">
             <span class="hits">2</span>
             
 
@@ -5678,7 +5656,7 @@
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="71">
+          <li class="never" data-hits="" data-linenumber="70">
             
             
 
@@ -5689,7 +5667,7 @@
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="72">
+          <li class="never" data-hits="" data-linenumber="71">
             
             
 
@@ -8301,7 +8279,7 @@
 
             
 
-            <code class="ruby">require &#39;bundler/setup&#39; # Set up gems listed in the Gemfile.</code>
+            <code class="ruby">require &#39;bundler/setup&#39;</code>
           </li>
         </div>
       
@@ -8312,7 +8290,7 @@
 
             
 
-            <code class="ruby">require &#39;bootsnap/setup&#39; # Speed up boot time by caching expensive operations.</code>
+            <code class="ruby">require &#39;bootsnap/setup&#39;</code>
           </li>
         </div>
       
@@ -22551,7 +22529,7 @@
 
             
 
-            <code class="ruby">  subject do</code>
+            <code class="ruby">  subject(:event) do</code>
           </li>
         </div>
       
@@ -22606,7 +22584,7 @@
 
             
 
-            <code class="ruby">    expect(subject).to(be_valid)</code>
+            <code class="ruby">    expect(event).to(be_valid)</code>
           </li>
         </div>
       
@@ -22650,7 +22628,7 @@
 
             
 
-            <code class="ruby">    subject.event_type = nil</code>
+            <code class="ruby">    event.event_type = nil</code>
           </li>
         </div>
       
@@ -22661,7 +22639,7 @@
 
             
 
-            <code class="ruby">    expect(subject).not_to(be_valid)</code>
+            <code class="ruby">    expect(event).not_to(be_valid)</code>
           </li>
         </div>
       
@@ -22705,7 +22683,7 @@
 
             
 
-            <code class="ruby">    subject.start_date = nil</code>
+            <code class="ruby">    event.start_date = nil</code>
           </li>
         </div>
       
@@ -22716,7 +22694,7 @@
 
             
 
-            <code class="ruby">    expect(subject).not_to(be_valid)</code>
+            <code class="ruby">    expect(event).not_to(be_valid)</code>
           </li>
         </div>
       
@@ -22760,7 +22738,7 @@
 
             
 
-            <code class="ruby">    subject.description = nil</code>
+            <code class="ruby">    event.description = nil</code>
           </li>
         </div>
       
@@ -22771,7 +22749,7 @@
 
             
 
-            <code class="ruby">    expect(subject).not_to(be_valid)</code>
+            <code class="ruby">    expect(event).not_to(be_valid)</code>
           </li>
         </div>
       
@@ -22815,7 +22793,7 @@
 
             
 
-            <code class="ruby">    subject.points = nil</code>
+            <code class="ruby">    event.points = nil</code>
           </li>
         </div>
       
@@ -22826,7 +22804,7 @@
 
             
 
-            <code class="ruby">    expect(subject).not_to(be_valid)</code>
+            <code class="ruby">    expect(event).not_to(be_valid)</code>
           </li>
         </div>
       
@@ -22870,7 +22848,7 @@
 
             
 
-            <code class="ruby">    subject.end_date = nil</code>
+            <code class="ruby">    event.end_date = nil</code>
           </li>
         </div>
       
@@ -22881,7 +22859,7 @@
 
             
 
-            <code class="ruby">    expect(subject).to(be_valid)</code>
+            <code class="ruby">    expect(event).to(be_valid)</code>
           </li>
         </div>
       
@@ -22925,7 +22903,7 @@
 
             
 
-            <code class="ruby">    subject.start_time = nil</code>
+            <code class="ruby">    event.start_time = nil</code>
           </li>
         </div>
       
@@ -22936,7 +22914,7 @@
 
             
 
-            <code class="ruby">    expect(subject).to(be_valid)</code>
+            <code class="ruby">    expect(event).to(be_valid)</code>
           </li>
         </div>
       
@@ -22980,7 +22958,7 @@
 
             
 
-            <code class="ruby">    subject.end_time = nil</code>
+            <code class="ruby">    event.end_time = nil</code>
           </li>
         </div>
       
@@ -22991,7 +22969,7 @@
 
             
 
-            <code class="ruby">    expect(subject).to(be_valid)</code>
+            <code class="ruby">    expect(event).to(be_valid)</code>
           </li>
         </div>
       
@@ -23046,7 +23024,7 @@
 
             
 
-            <code class="ruby">  subject do</code>
+            <code class="ruby">  subject(:member) do</code>
           </li>
         </div>
       
@@ -23101,7 +23079,7 @@
 
             
 
-            <code class="ruby">    expect(subject).to(be_valid)</code>
+            <code class="ruby">    expect(member).to(be_valid)</code>
           </li>
         </div>
       
@@ -23145,7 +23123,7 @@
 
             
 
-            <code class="ruby">    subject.name = nil</code>
+            <code class="ruby">    member.name = nil</code>
           </li>
         </div>
       
@@ -23156,7 +23134,7 @@
 
             
 
-            <code class="ruby">    expect(subject).not_to(be_valid)</code>
+            <code class="ruby">    expect(member).not_to(be_valid)</code>
           </li>
         </div>
       
@@ -23211,7 +23189,7 @@
 
             
 
-            <code class="ruby">  subject do</code>
+            <code class="ruby">  subject(:point) do</code>
           </li>
         </div>
       
@@ -23266,7 +23244,7 @@
 
             
 
-            <code class="ruby">    expect(subject).to(be_valid)</code>
+            <code class="ruby">    expect(point).to(be_valid)</code>
           </li>
         </div>
       
@@ -23310,7 +23288,7 @@
 
             
 
-            <code class="ruby">    subject.member_id = nil</code>
+            <code class="ruby">    point.member_id = nil</code>
           </li>
         </div>
       
@@ -23321,7 +23299,7 @@
 
             
 
-            <code class="ruby">    expect(subject).not_to(be_valid)</code>
+            <code class="ruby">    expect(point).not_to(be_valid)</code>
           </li>
         </div>
       
@@ -23365,7 +23343,7 @@
 
             
 
-            <code class="ruby">    subject.event_id = nil</code>
+            <code class="ruby">    point.event_id = nil</code>
           </li>
         </div>
       
@@ -23376,7 +23354,7 @@
 
             
 
-            <code class="ruby">    expect(subject).not_to(be_valid)</code>
+            <code class="ruby">    expect(point).not_to(be_valid)</code>
           </li>
         </div>
       
@@ -23431,7 +23409,7 @@
 
             
 
-            <code class="ruby">  subject do</code>
+            <code class="ruby">  subject(:position) do</code>
           </li>
         </div>
       
@@ -23486,7 +23464,7 @@
 
             
 
-            <code class="ruby">    expect(subject).to(be_valid)</code>
+            <code class="ruby">    expect(position).to(be_valid)</code>
           </li>
         </div>
       
@@ -23530,7 +23508,7 @@
 
             
 
-            <code class="ruby">    subject.member_id = nil</code>
+            <code class="ruby">    position.member_id = nil</code>
           </li>
         </div>
       
@@ -23541,7 +23519,7 @@
 
             
 
-            <code class="ruby">    expect(subject).not_to(be_valid)</code>
+            <code class="ruby">    expect(position).not_to(be_valid)</code>
           </li>
         </div>
       
@@ -23585,7 +23563,7 @@
 
             
 
-            <code class="ruby">    subject.position_name = nil</code>
+            <code class="ruby">    position.position_name = nil</code>
           </li>
         </div>
       
@@ -23596,7 +23574,7 @@
 
             
 
-            <code class="ruby">    expect(subject).not_to(be_valid)</code>
+            <code class="ruby">    expect(position).not_to(be_valid)</code>
           </li>
         </div>
       
@@ -23651,7 +23629,7 @@
 
             
 
-            <code class="ruby">  subject do</code>
+            <code class="ruby">  subject(:plant) do</code>
           </li>
         </div>
       
@@ -23706,7 +23684,7 @@
 
             
 
-            <code class="ruby">    expect(subject).to(be_valid)</code>
+            <code class="ruby">    expect(plant).to(be_valid)</code>
           </li>
         </div>
       
@@ -23750,7 +23728,7 @@
 
             
 
-            <code class="ruby">    subject.name = nil</code>
+            <code class="ruby">    plant.name = nil</code>
           </li>
         </div>
       
@@ -23761,7 +23739,7 @@
 
             
 
-            <code class="ruby">    expect(subject).not_to(be_valid)</code>
+            <code class="ruby">    expect(plant).not_to(be_valid)</code>
           </li>
         </div>
       
@@ -23805,7 +23783,7 @@
 
             
 
-            <code class="ruby">    subject.price = nil</code>
+            <code class="ruby">    plant.price = nil</code>
           </li>
         </div>
       
@@ -23816,7 +23794,7 @@
 
             
 
-            <code class="ruby">    expect(subject).not_to(be_valid)</code>
+            <code class="ruby">    expect(plant).not_to(be_valid)</code>
           </li>
         </div>
       
@@ -23860,7 +23838,7 @@
 
             
 
-            <code class="ruby">    subject.description = nil</code>
+            <code class="ruby">    plant.description = nil</code>
           </li>
         </div>
       
@@ -23871,7 +23849,7 @@
 
             
 
-            <code class="ruby">    expect(subject).not_to(be_valid)</code>
+            <code class="ruby">    expect(plant).not_to(be_valid)</code>
           </li>
         </div>
       
@@ -23915,7 +23893,7 @@
 
             
 
-            <code class="ruby">    subject.icon = nil</code>
+            <code class="ruby">    plant.icon = nil</code>
           </li>
         </div>
       
@@ -23926,7 +23904,7 @@
 
             
 
-            <code class="ruby">    expect(subject).not_to(be_valid)</code>
+            <code class="ruby">    expect(plant).not_to(be_valid)</code>
           </li>
         </div>
       

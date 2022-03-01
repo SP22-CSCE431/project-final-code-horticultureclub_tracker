@@ -299,8 +299,17 @@
         padding: 50px 20px;
         font-size: 25px;
     }
-    .events-first-row {
+    .events-first-row, .events-wrapper {
         grid-template-columns: repeat(4, 1fr);
+    }
+    .events-wrapper :nth-child(5n + 5) {
+        grid-column: span 4;
+    }
+    .crud-icons {
+        justify-content: center;
+    }
+    .crud-icons p {
+        margin: 10px;
     }
     .nav-options {
         width: 80vw;
