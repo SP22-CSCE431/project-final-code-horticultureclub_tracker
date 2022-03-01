@@ -69,7 +69,3 @@ gem 'brakeman'
 gem 'grape'
 gem 'grape-active_model_serializers'
 gem 'rack-cors'
-
-gem 'devise'
-gem 'omniauth', '~> 1.9.1'
-gem 'omniauth-google-oauth2'
