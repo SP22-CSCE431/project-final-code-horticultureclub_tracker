@@ -1,4 +1,3 @@
-
 # frozen_string_literal: true
 
 Rails.application.routes.draw do
@@ -10,7 +9,7 @@ Rails.application.routes.draw do
   # resources :admins
 
   root 'dashboard#index'
-  #root to: 'dashboards#show'
+  # root to: 'dashboards#show'
   devise_for :admins, controllers: { omniauth_callbacks: 'admins/omniauth_callbacks' }
   devise_scope :admin do
     get 'admins/sign_in', to: 'admins/sessions#new', as: :new_admin_session

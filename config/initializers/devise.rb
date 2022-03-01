@@ -14,7 +14,8 @@ Devise.setup do |config|
   # confirmation, reset password and unlock tokens in the database.
   # Devise will use the `secret_key_base` as its `secret_key`
   # by default. You can change it below and use your own secret key.
-  # config.secret_key = 'c3f77539120d088c85ed7ecde1acb9b536e0e627465a4f619a2e14780e757deb5e8307c0f3e70f548b4950d30dde81c1d4e93713dbdcbc6b55c46491b3278333'
+  # config.secret_key='c3f77539120d088c85ed7ecde1acb9b536e0e627465a4f619a2e14780e757deb
+  # 5e8307c0f3e70f548b4950d30dde81c1d4e93713dbdcbc6b55c46491b3278333'
 
   # ==> Controller configuration
   # Configure the parent class to the devise controllers.
@@ -310,5 +311,5 @@ Devise.setup do |config|
   # config.sign_in_after_change_password = true
 
   # configure omniauth
-  config.omniauth :google_oauth2, ENV['GOOGLE_OAUTH_CLIENT_ID'], ENV['GOOGLE_OAUTH_CLIENT_SECRET']
+  config.omniauth(:google_oauth2, ENV['GOOGLE_OAUTH_CLIENT_ID'], ENV['GOOGLE_OAUTH_CLIENT_SECRET'])
 end
