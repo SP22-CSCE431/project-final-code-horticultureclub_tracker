@@ -1,3 +1,138 @@
 // Place all the styles related to the Events controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
+
+// Event Form Styles
+.events-form-wrapper {
+    background-color: #fff;
+    border-radius: 15px;
+    margin: 0 auto;
+    width: 70vw;
+}
+
+.events-form-margin {
+    margin-left: 100px;
+    margin-right: 100px;
+}
+
+.events-date-start-end, .events-time-start-end, .events-form-links {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    // justify-content: space-between;
+    // align-items: center;
+    width: 90%;
+    max-width: 100%;
+}
+
+.events-event-type {
+    text-align: left;
+}
+
+label {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+#event_event_type, #event_description, #event_points {
+    line-height: 20px;
+    border-radius: 8px;
+    border: 1px solid #000;
+}
+
+#event_description {
+    width: 50%;
+}
+
+select {
+    line-height: 20px;
+    padding: 5px;
+    border-radius: 8px;
+}
+
+.events-form-title {
+    font-weight: 800;
+    font-size: 25px;
+    padding-top: 50px;
+}
+
+.actions input {
+    background-color: #0072ff;
+    color: white;
+    border: none;
+    width: 150px;
+    height: 40px;
+    font-size: 16px;
+    border-radius: 10px;
+    &:hover {
+        cursor: pointer;
+    }
+}
+
+.actions {
+    margin-bottom: 50px;
+}
+
+.back-link-border {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #0072ff;
+    border-radius: 10px;
+    width: 148px;
+    height: 38px;
+}
+
+.events-back-link {
+    text-decoration: none;
+    background-color: #fff;
+    color: #0072ff;
+    text-align: center;
+}
+
+.events-form-links {
+    padding-bottom: 50px;
+    padding-top: 10px;
+}
+
+@media screen and (max-width:1000px) {
+    .events-date-start-end, .events-time-start-end, .events-form-links {
+        width: 100%;
+    }
+    .events-form-margin {
+        margin-left: 50px;
+        margin-right: 50px;
+    }
+    .events-form-wrapper {
+        width: 85vw;
+    }
+}
+
+@media screen and (max-width: 650px) {
+    .events-date-start-end, .events-time-start-end {
+        display: block;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .events-form-links {
+        display: flex;
+        flex-direction: column-reverse;
+        justify-content: center;
+        align-items: center;
+    }
+    .events-form-margin {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+    * {
+        text-align: center;
+    }
+    select {
+        padding: 3spx;
+        line-height: 15px;
+    }
+}
