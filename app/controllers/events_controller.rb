@@ -1,11 +1,12 @@
 # frozen_string_literal: true
+require 'date'
 
 class EventsController < ApplicationController
   before_action :set_event, only: %i[show edit update destroy]
 
   # GET /events or /events.json
   def index
-    @events = Event.all
+    @events = Event.order('start_date ASC')
   end
 
   # GET /events/1 or /events/1.json

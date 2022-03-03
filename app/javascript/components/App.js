@@ -22,11 +22,36 @@ const EventCalendar = () => {
    // translates rails event to javascript date
    function formatEvent(event) {
 
+      // Pull out start/end dates and start/end times (The times in the database don't have correct dates on them for some reason)
+      const { start_date, end_date, start_time, end_time } = event;
+      const startDate   = new Date(start_date)
+      const endDate     = new Date(end_date)
+      const startTime   = new Date(start_time)
+      const endTime     = new Date(end_time)
+
+      // Generate new start and end dates as composite of above date and times
+      const start = new Date(
+         startDate.getFullYear(),
+         startDate.getMonth(),
+         startDate.getDate(),
+         startTime.getHours(),
+         startTime.getMinutes(),
+         startTime.getSeconds(),
+      )
+      const end = new Date(
+         endDate.getFullYear(),
+         endDate.getMonth(),
+         endDate.getDate(),
+         endTime.getHours(),
+         endTime.getMinutes(),
+         endTime.getSeconds(),
+      )
+
+      // Generate formatted event
       const formatedEvent = {
          title : event.event_type,
-         // some substring calculations to get the year month day
-         start : new Date(event.start_date.substring(0,4),parseInt(event.start_date.substring(5,7))-1,event.start_date.substring(8,10)),
-         end : new Date(event.end_date.substring(0,4),parseInt(event.end_date.substring(5,7))-1,event.end_date.substring(8,10))
+         start, 
+         end
       }
 
       return formatedEvent;
