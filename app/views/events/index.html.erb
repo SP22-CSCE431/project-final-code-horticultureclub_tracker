@@ -29,7 +29,7 @@
   <div class="table-wrapper events-wrapper">
     <% @events.each do |event| %>
       <p><%= event.event_type %></p>
-      <p><%= event.start_date %></p>
+      <p><%= event.start_date.strftime("%B %e, %Y") %></p>
       <p><%= event.description %></p>
       <p><%= event.points %></p>
       <div class="crud-icons">
