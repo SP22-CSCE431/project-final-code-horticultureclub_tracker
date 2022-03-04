@@ -104,7 +104,7 @@ end
 
 RSpec.describe(Plant, type: :model) do
   subject(:plant) do
-    described_class.new(name: 'test plant', price: 12.99, description: 'rose', icon: 'test')
+    described_class.new(name: 'test plant', price: 12.99, description: 'rose', category: 'test')
   end
 
   it 'is valid with all valid attributes' do
@@ -126,8 +126,8 @@ RSpec.describe(Plant, type: :model) do
     expect(plant).not_to(be_valid)
   end
 
-  it 'is not valid without an icon' do
-    plant.icon = nil
+  it 'is not valid without a category' do
+    plant.category = nil
     expect(plant).not_to(be_valid)
   end
 end
