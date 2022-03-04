@@ -47,7 +47,7 @@ ActiveRecord::Schema.define(version: 2022_03_02_065803) do
     t.string "name"
     t.decimal "price"
     t.string "description"
-    t.string "icon"
+    t.string "category"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
