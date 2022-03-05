@@ -25,7 +25,7 @@
   </div>
   <div class="table-wrapper members-wrapper">
     <% @members.each do |member| %>
-      <p><%= member.name %></p>
+      <p class="member-name"><%= member.name %></p>
       <div class="crud-icons">
         <p><%= link_to 'Show', member, class: "attribute-show-btn" %></p>
         <p><%= link_to image_tag("edit.png", class: "attribute-icon"), edit_member_path(member) %></p>

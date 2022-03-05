@@ -12,6 +12,7 @@
  .fade-bg {
      background-image: linear-gradient(to right, #218743, #02491A);
      min-height: 100vh;
+     padding-bottom: 20px;
  }
 
  .dashboard-title {
@@ -226,6 +227,7 @@
     padding: 20px;
     border-bottom-left-radius: 15px;
     border-bottom-right-radius: 15px;
+    align-items: center;
 }
 
 .table-wrapper p {

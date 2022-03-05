@@ -2,6 +2,45 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
 
+// Event Show Styles
+
+.event-show-field h6, .event-show-field p {
+    margin: 0 !important;
+}
+
+.event-show-field h6 {
+    font-size: 16px;
+}
+
+.event-show-field {
+    width: 80%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin: 20px 0px;
+}
+
+.event-show-links {
+    display: flex;
+    justify-content: space-between;
+    width: 60%;
+    padding-top: 10px;
+    padding-bottom: 50px;
+}
+
+.event-show-links a {
+    background-color: #fff;
+    text-decoration: none;
+    color: #0072ff;
+    border: 1px solid #0072ff;
+    font-size: 16px;
+    border-radius: 10px;
+    padding: 10px 20px;
+    &:nth-of-type(2) {
+        background-color: #0072ff;
+        color: #fff;
+    }
+}
+
 // Event Form Styles
 .events-form-wrapper {
     background-color: #fff;
@@ -13,6 +52,7 @@
 .events-form-margin {
     margin-left: 100px;
     margin-right: 100px;
+    padding-bottom: 50px;
 }
 
 .events-date-start-end, .events-time-start-end, .events-form-links {
@@ -35,7 +75,7 @@ label {
     font-size: 16px;
 }
 
-#event_event_type, #event_description, #event_points {
+#event_event_type, #event_description, #event_points, input {
     line-height: 20px;
     border-radius: 8px;
     border: 1px solid #000;
@@ -92,7 +132,6 @@ select {
 }
 
 .events-form-links {
-    padding-bottom: 50px;
     padding-top: 10px;
 }
 
@@ -112,6 +151,12 @@ select {
 @media screen and (max-width: 650px) {
     .events-date-start-end, .events-time-start-end {
         display: block;
+    }
+    .event-show-links {
+        width: 90%;
+    }
+    .event-show-field {
+        width: 90%;
     }
 }
 
@@ -134,5 +179,22 @@ select {
     select {
         padding: 3spx;
         line-height: 15px;
+    }
+    .event-show-field {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        margin: 0;
+        width: 100%;
+    }
+    .event-show-field * {
+        padding: 5px;
+    }
+    .event-show-links * {
+        margin: 5px;
+    }
+    .event-show-links {
+        flex-direction: column;
     }
 }
