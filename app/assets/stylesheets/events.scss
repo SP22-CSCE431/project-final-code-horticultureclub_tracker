@@ -68,50 +68,15 @@
     text-align: left;
 }
 
-label {
-    padding-top: 10px;
-    padding-bottom: 10px;
-    font-weight: bold;
-    font-size: 16px;
-}
-
-#event_event_type, #event_description, #event_points, input {
-    line-height: 20px;
-    border-radius: 8px;
-    border: 1px solid #000;
-}
-
 #event_description {
     width: 50%;
 }
 
-select {
-    line-height: 20px;
-    padding: 5px;
-    border-radius: 8px;
-}
 
 .events-form-title {
     font-weight: 800;
     font-size: 25px;
     padding-top: 50px;
-}
-
-.actions input {
-    background-color: #0072ff;
-    color: white;
-    border: none;
-    width: 150px;
-    height: 40px;
-    font-size: 16px;
-    border-radius: 10px;
-    &:hover {
-        cursor: pointer;
-    }
-}
-
-.actions {
-    margin-bottom: 50px;
 }
 
 .back-link-border {
@@ -172,13 +137,6 @@ select {
         justify-content: center;
         align-items: center;
         flex-direction: column;
-    }
-    * {
-        text-align: center;
-    }
-    select {
-        padding: 3spx;
-        line-height: 15px;
     }
     .event-show-field {
         display: flex;

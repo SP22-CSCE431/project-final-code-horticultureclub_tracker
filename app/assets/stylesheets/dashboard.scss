@@ -9,12 +9,6 @@
      font-family: 'Lato', sans-serif;
  }
 
- .fade-bg {
-     background-image: linear-gradient(to right, #218743, #02491A);
-     min-height: 100vh;
-     padding-bottom: 20px;
- }
-
  .dashboard-title {
      text-align: center !important;
      color: #ffffff;
@@ -27,7 +21,7 @@
  }
 
  .card-title {
-     text-align: center;
+    text-align: center;
  }
 
  .selection-grid {
@@ -137,10 +131,6 @@
 }
 
 // admin pages styles
-.admin-page-title {
-    color: #fff;
-    font-size: 30px;
-}
 .admin-navbar {
     display: flex;
     justify-content: space-around;
@@ -248,19 +238,6 @@
     align-items: center;
 }
 
-.attribute-show-btn {
-    background-color: #00892E;
-    color: #fff;
-    text-decoration: none;
-    padding: 5px 10px;
-    border-radius: 15px;
-}
-
-.attribute-icon {
-    width: 25px;
-    height: 25px;
-}
-
 @media screen and (max-width:1000px) {
     .selection-grid {
         grid-template-columns: 1fr 1fr;
@@ -271,18 +248,11 @@
         display: block;
         margin-left: 10vw;
     }
-    .admin-page-title {
-        margin-top: 0;
-        padding-top: 30px;
-    }
     .table-first-row h6 {
         font-size: 13px;
     }
     .table-wrapper, .table-first-row, .new-attribute-wrapper {
         padding: 15px;
-    }
-    .new-attribute-btn {
-        margin-left: 0;
     }
     .table-wrapper p {
         font-size: 10px;
@@ -324,14 +294,9 @@
     .admin-navbar{
         margin-left: 0;
     }
-    .admin-page-title {
-        margin-left: 25px;
-    }
+
     .new-attribute-wrapper, .table-first-row, .table-wrapper {
         max-width: 100vw;
         padding: 10px;
-    }
-    .new-attribute-btn {
-        padding: 5px 10px;
     }
 }
