@@ -1,37 +1,35 @@
-<section class="fade-bg">
-  <nav class="admin-navbar">
+<section class="admin-fade-bg">
+
+  <nav>
+  </nav>
+
+  <div class="admin-white-bg">
 
     <h1 class="admin-page-title">Members</h1>
 
-    <div class="nav-options">
-      <a href="../events">Events</a>
-      <a href="../points">Points</a>
-      <a href="../leaderboard">Leaderboard</a>
-      <a href="../plants">Plant Sale</a>
-      <a href="../positions">Positions</a>
-      <a href="../">Dashboard</a>
+    <p id="notice"><%= notice %></p>
+
+    <%= link_to 'Add New Member', new_member_path, class: "admin-new-btn"%>
+
+    <div class="admin-member-wrapper">
+
+      <h6 class="admin-column-title">Name</h6>
+      <div></div>
+
+      <% @members.each do |member| %>
+
+        <p><%= member.name %></p>
+
+        <div class="admin-member-crud-icons">
+          <%= link_to 'View Details', member, class: "attribute-show-btn" %>
+          <%= link_to image_tag("edit.png", class: "attribute-icon"), edit_member_path(member) %>
+          <%= link_to image_tag("delete.png", class: "attribute-icon"), member, method: :delete, data: { confirm: 'Are you sure?' } %>
+        </div>
+
+      <% end %>
+
     </div>
 
-  </nav>
-
-  <p id="notice"><%= notice %></p>
-
-  <div class="new-attribute-wrapper new-member-wrapper">
-    <%= link_to "Add New Member", new_member_path, class: "new-attribute-btn" %>
-  </div>
-
-  <div class="table-first-row members-first-row">
-    <h6>Member Name</h6>
-  </div>
-  <div class="table-wrapper members-wrapper">
-    <% @members.each do |member| %>
-      <p class="member-name"><%= member.name %></p>
-      <div class="crud-icons">
-        <p><%= link_to 'Show', member, class: "attribute-show-btn" %></p>
-        <p><%= link_to image_tag("edit.png", class: "attribute-icon"), edit_member_path(member) %></p>
-        <p><%= link_to image_tag("delete.png", class: "attribute-icon"), member, method: :delete, data: { confirm: 'Are you sure?' } %></p>
-      </div>
-    <% end %>
   </div>
 
 </section>

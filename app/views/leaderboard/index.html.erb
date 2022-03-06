@@ -1,30 +1,31 @@
+<section class="admin-fade-bg">
 
+   <nav>
+   </nav>
 
-<div class="leaderboard-wrapper">
-   <h1>Leaderboard</h1>
-   <table>
-      <tr>
-         <th>Member Name</th>
-         <th>Total Points</th>
-      </tr>
-      <% @members.each do |member| %>
-         <div>
-            <tr>
-               <td>
-                  <%= link_to member_path(member.id) do %>
-                     <%= member.name %>
-                  <% end %>
-               </td>
-               <td><%= member.points %></td>
-            </tr>
-         </div>
-            
-      <% end %>
-   </table>
+   <div class="admin-white-bg">
+   
+      <h1 class="admin-page-title">Points Leaderboard</h1>
 
-   <%= link_to 'Back', root_path %>
-   <br>
-   <%= link_to 'Edit Members', members_path %>
-   <br>
-   <%= link_to 'Dashboard', root_path %>
-</div>
+      <div class="admin-leaderboard-wrapper">
+
+         <h6 class="admin-column-title">Name</h6>
+         <h6 class="admin-column-title">Total Points</h6>
+
+         <% @members.each do |member| %>
+            <p>
+            <%= link_to member_path(member.id) do %>
+               <%= member.name %>
+            <% end %>
+            </p>
+            <p><%= member.points %></p>
+         <% end %>
+      </div>
+      <div class="admin-attribute-links admin-plant-links">
+         <%= link_to 'Back to Dashboard', dashboard_path, class: "admin-attribute-back-link admin-leaderboard-link"%>
+         <%= link_to 'View Events', events_path, class: "admin-attribute-active-link"%>
+      </div>
+
+   </div>
+
+</section>

@@ -1,9 +1,26 @@
-<p id="notice"><%= notice %></p>
+<section class="admin-fade-bg">
 
-<p>
-  <strong>Name:</strong>
-  <%= @member.name %>
-</p>
+  <nav>
+  </nav>
 
-<%= link_to 'Edit', edit_member_path(@member) %> |
-<%= link_to 'Back', members_path %>
+  <div class="admin-white-bg">
+
+    <h1 class="admin-page-title">Member Details</h1>
+
+    <p id="notice"><%= notice %></p>
+
+    <div class="admin-show-wrapper">
+
+      <h6 class="admin-column-title">Name:</h6>
+      <p><%= @member.name %></p>
+
+    </div>
+
+    <div class="admin-attribute-links admin-plant-links">
+      <%= link_to 'Back to Members', members_path, class: "admin-attribute-back-link"%>
+      <%= link_to 'Edit Member', edit_member_path(@member), class: "admin-attribute-active-link"%>
+    </div>
+
+  </div>
+
+</section>

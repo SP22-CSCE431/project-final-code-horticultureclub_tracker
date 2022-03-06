@@ -1,15 +1,33 @@
-<p id="notice"><%= notice %></p>
+<section class="admin-fade-bg">
 
-<p>
-  <strong>Member:</strong>
-  <%= Member.find(@point.member_id).name %>
-</p>
+  <nav>
+  </nav>
 
-<p>
-  <strong>Event:</strong>
-  <%= Event.find(@point.event_id).description %>
-</p>
+  <div class="admin-white-bg">
 
+    <h1 class="admin-page-title">Point Details</h1>
 
-<%= link_to 'Edit', edit_point_path(@point) %> |
-<%= link_to 'Back', points_path %>
+    <p id="notice"><%= notice %></p>
+
+    <div class="admin-show-wrapper">
+
+      <h6 class="admin-column-title">Member Name:</h6>
+      <p>
+        <%= Member.find(@point.member_id).name %>
+      </p>
+
+      <h6 class="admin-column-title">Event</h6>
+      <p>
+        <%= Event.find(@point.event_id).description %>
+      </p>
+
+    </div>
+
+    <div class="admin-attribute-links admin-plant-links">
+      <%= link_to 'Back to Points', points_path, class: "admin-attribute-back-link"%>
+      <%= link_to 'Edit Point', edit_point_path(@point), class: "admin-attribute-active-link"%>
+    </div>
+
+  </div>
+
+</section>
