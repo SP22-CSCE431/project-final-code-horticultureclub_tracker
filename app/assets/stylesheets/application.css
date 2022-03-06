@@ -189,8 +189,9 @@ select {
         text-align: center;
     }
     select {
-        padding: 3px;
-        line-height: 15px;
+        padding: 2px;
+        line-height: 13px;
+        font-size: 13px;
     }
     .admin-attribute-links {
         flex-direction: column;

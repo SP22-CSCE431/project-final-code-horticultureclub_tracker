@@ -1,76 +1,58 @@
-<section class="fade-bg">
-  <nav class="admin-navbar">
+<section class="admin-fade-bg">
 
-    <h1 href="../events" class="admin-page-title">Events</h1>
-
-    <div class="nav-options">
-      <%= link_to "Members", members_path %>
-      <%= link_to "Points", points_path %>
-      <%= link_to "Leaderboard", leaderboard_path %>
-      <%= link_to "Plants", plants_path %>
-      <%= link_to "Positions", positions_path %>
-      <%= link_to "Dashboard", dashboard_path %>
-    </div>
-
+  <nav>
   </nav>
 
-  <div class="events-form-wrapper">
-    <div class="events-form-margin">
-      <h1 class="events-form-title">Event Details</h1>
-      <p id="notice"><%= notice %></p>
-      <div class="event-show-field">
-        <h6>Event Type:</h6>
-        <p>
-          <%= @event.event_type %>
-        </p>
-      </div>
+  <div class="admin-white-bg">
 
-      <div class="event-show-field">
-        <h6>Start Date:</h6>
-        <p>
-          <%= @event.start_date %>
-        </p>
-      </div>
+    <h1 class="admin-page-title">Event Details</h1>
 
-      <div class="event-show-field">
-        <h6>End Date:</h6>
-        <p>
-          <%= @event.end_date %>
-        </p>
-      </div>
+    <p id="notice"><%= notice %></p>
 
-      <div class="event-show-field">
-        <h6>Start Time:</h6>
-        <p>
-          <%= @event.start_time %>
-        </p>
-      </div>
+    <div class="admin-show-wrapper">
 
-      <div class="event-show-field">
-        <h6>End Time:</h6>
-        <p>
-          <%= @event.end_time %>
-        </p>
-      </div>
+      <h6 class="admin-column-title">Event Type:</h6>
+      <p>
+        <%= @event.event_type %>
+      </p>
 
-      <div class="event-show-field">
-        <h6>Description:</h6>
-        <p>
-          <%= @event.description %>
-        </p>
-      </div>
+      <h6 class="admin-column-title">Start Date:</h6>
+      <p>
+        <%= @event.start_date %>
+      </p>
 
-      <div class="event-show-field">
-        <h6>Points:</h6>
-        <p>
-          <%= @event.points %>
-        </p>
-      </div>
+      <h6 class="admin-column-title">End Date:</h6>
+      <p>
+        <%= @event.end_date %>
+      </p>
 
-      <div class="event-show-links">
-        <%= link_to 'Back to Events', events_path %> 
-        <%= link_to 'Edit Event', edit_event_path(@event) %>
-      </div>
-    </div>  
+      <h6 class="admin-column-title">Start Time:</h6>
+      <p>
+        <%= @event.start_time %>
+      </p>
+
+      <h6 class="admin-column-title">End Time:</h6>
+      <p>
+        <%= @event.end_time %>
+      </p>
+
+      <h6 class="admin-column-title">Description</h6>
+      <p>
+        <%= @event.description %>
+      </p>
+
+      <h6 class="admin-column-title">Points</h6>
+      <p>
+        <%= @event.points %>
+      </p>
+
+    </div>
+
+    <div class="admin-attribute-links admin-plant-links">
+      <%= link_to 'Back to Events', events_path, class: "admin-attribute-back-link"%>
+      <%= link_to 'Edit Event', edit_event_path(@event), class: "admin-attribute-active-link"%>
+    </div>
+
   </div>
+  
 </section>

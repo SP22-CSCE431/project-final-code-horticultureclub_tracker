@@ -2,157 +2,36 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
 
-// Event Show Styles
-
-.event-show-field h6, .event-show-field p {
-    margin: 0 !important;
+// Event Index Styles
+.admin-event-wrapper {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    align-items: center;
+    row-gap: 5px;
 }
 
-.event-show-field h6 {
-    font-size: 16px;
-}
-
-.event-show-field {
-    width: 80%;
+.admin-events-start-end {
+    width: 85%;
     display: grid;
     grid-template-columns: 1fr 1fr;
-    margin: 20px 0px;
-}
-
-.event-show-links {
-    display: flex;
-    justify-content: space-between;
-    width: 60%;
-    padding-top: 10px;
-    padding-bottom: 50px;
-}
-
-.event-show-links a {
-    background-color: #fff;
-    text-decoration: none;
-    color: #0072ff;
-    border: 1px solid #0072ff;
-    font-size: 16px;
-    border-radius: 10px;
-    padding: 10px 20px;
-    &:nth-of-type(2) {
-        background-color: #0072ff;
-        color: #fff;
-    }
-}
-
-// Event Form Styles
-.events-form-wrapper {
-    background-color: #fff;
-    border-radius: 15px;
-    margin: 0 auto;
-    width: 70vw;
-}
-
-.events-form-margin {
-    margin-left: 100px;
-    margin-right: 100px;
-    padding-bottom: 50px;
-}
-
-.events-date-start-end, .events-time-start-end, .events-form-links {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    // justify-content: space-between;
-    // align-items: center;
-    width: 90%;
-    max-width: 100%;
-}
-
-.events-event-type {
+    align-items: center;
     text-align: left;
 }
 
-#event_description {
-    width: 50%;
-}
-
-
-.events-form-title {
-    font-weight: 800;
-    font-size: 25px;
-    padding-top: 50px;
-}
-
-.back-link-border {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border: 1px solid #0072ff;
-    border-radius: 10px;
-    width: 148px;
-    height: 38px;
-}
-
-.events-back-link {
-    text-decoration: none;
-    background-color: #fff;
-    color: #0072ff;
-    text-align: center;
-}
-
-.events-form-links {
-    padding-top: 10px;
-}
-
 @media screen and (max-width:1000px) {
-    .events-date-start-end, .events-time-start-end, .events-form-links {
-        width: 100%;
-    }
-    .events-form-margin {
-        margin-left: 50px;
-        margin-right: 50px;
-    }
-    .events-form-wrapper {
-        width: 85vw;
-    }
 }
 
-@media screen and (max-width: 650px) {
-    .events-date-start-end, .events-time-start-end {
+@media screen and (max-width: 750px) {
+    .admin-events-start-end {
         display: block;
-    }
-    .event-show-links {
-        width: 90%;
-    }
-    .event-show-field {
-        width: 90%;
     }
 }
 
 @media screen and (max-width: 500px) {
-    .events-form-links {
-        display: flex;
-        flex-direction: column-reverse;
-        justify-content: center;
-        align-items: center;
+    .admin-events-start-end {
+        margin: 0 auto;
     }
-    .events-form-margin {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-direction: column;
-    }
-    .event-show-field {
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        align-items: center;
-        margin: 0;
-        width: 100%;
-    }
-    .event-show-field * {
-        padding: 5px;
-    }
-    .event-show-links * {
-        margin: 5px;
-    }
-    .event-show-links {
-        flex-direction: column;
+    .admin-event-wrapper p, .admin-event-wrapper h6 {
+        font-size: 12px;
     }
 }
