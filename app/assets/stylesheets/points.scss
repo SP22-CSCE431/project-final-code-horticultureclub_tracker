@@ -1,3 +1,26 @@
 // Place all the styles related to the Points controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
+
+.admin-point-wrapper {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    align-items: center;
+    row-gap: 5px;
+}
+
+.admin-point-crud-icons {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+@media screen and (max-width:700px){
+    .admin-point-crud-icons {
+        grid-column: 1 / span 3;
+        justify-content: space-evenly;
+    }
+    .admin-point-wrapper a, .admin-point-wrapper h6 {
+        font-size: 12px;
+    }
+}

@@ -1,22 +1,36 @@
-<%= form_with(model: member) do |form| %>
-  <% if member.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(member.errors.count, "error") %> prohibited this member from being saved:</h2>
+<section class="admin-fade-bg">
 
-      <ul>
-        <% member.errors.each do |error| %>
-          <li><%= error.full_message %></li>
-        <% end %>
-      </ul>
-    </div>
-  <% end %>
+  <nav>
+  </nav>
 
-  <div class="field">
-    <%= form.label :name %>
-    <%= form.text_field :name %>
+  <div class="admin-white-bg">
+
+    <h1 class="admin-page-title">New Member</h1>
+
+    <%= form_with(model: member) do |form| %>
+      <% if member.errors.any? %>
+        <div id="error_explanation">
+          <h2><%= pluralize(member.errors.count, "error") %> prohibited this member from being saved:</h2>
+
+          <ul>
+            <% member.errors.each do |error| %>
+              <li><%= error.full_message %></li>
+            <% end %>
+          </ul>
+        </div>
+      <% end %>
+
+      <div class="field">
+        <%= form.label :name %>
+        <%= form.text_field :name %>
+      </div>
+
+      <div class="admin-attribute-links admin-plant-links">
+        <%= link_to 'Back to Members', members_path, class: "admin-attribute-back-link" %>
+        <div class="actions">
+          <%= form.submit %>
+        </div>
+      </div>
+    <% end %>
   </div>
-
-  <div class="actions">
-    <%= form.submit %>
-  </div>
-<% end %>
+</section>
