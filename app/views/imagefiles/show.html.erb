@@ -1,9 +1,13 @@
 <p id="notice"><%= notice %></p>
 
-<p>
+<%
+=begin%>
+ <p>
   <strong>Title:</strong>
   <%= @imagefile.title %>
-</p>
+</p> 
+<%
+=end%>
 
 <div style="width:300px; height:auto">
 <%= link_to image_tag(@imagefile.image, style:'width:100%'), imagefiles_path %>

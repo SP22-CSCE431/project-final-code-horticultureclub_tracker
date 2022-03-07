@@ -1,27 +1,34 @@
-<p id="notice"><%= notice %></p>
+<section class="admin-fade-bg">
 
-<h1>Imagefiles</h1>
+  <nav>
+  </nav>
 
-<table>
-  <thead>
-    <tr>
-      <th>Title</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
+  <div class="admin-white-bg">
 
-  <tbody>
-    <% @imagefiles.each do |imagefile| %>
-      <tr>
-        <td><%= imagefile.title %></td>
-        <td><%= link_to 'Show', imagefile %></td>
-        <td><%= link_to 'Edit', edit_imagefile_path(imagefile) %></td>
-        <td><%= link_to 'Destroy', imagefile, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
+    <h1 class="admin-page-title">Member Photos</h1>
 
-<br>
+    <p id="notice"><%= notice %></p>
 
-<%= link_to 'New Imagefile', new_imagefile_path %>
+    <%= link_to 'Add Member Photo', new_imagefile_path, class: "admin-new-btn"%>
+
+    <div class="admin-photo-wrapper">
+
+      <h6 class="admin-column-title">Member Name</h6>
+      <div></div>
+
+      <% @imagefiles.each do |imagefile| %>
+
+        <p><%= Member.find(imagefile.member_id).name %></p>
+
+        <div class="admin-member-crud-icons">
+          <%= link_to 'View Details', imagefile, class: "attribute-show-btn" %>
+          <%= link_to image_tag("edit.png", class: "attribute-icon"), edit_imagefile_path(imagefile) %>
+          <%= link_to image_tag("delete.png", class: "attribute-icon"), imagefile, method: :delete, data: { confirm: 'Are you sure?' } %>
+        </div>
+      <% end %>
+
+    </div>
+
+  </div>
+
+</section>
