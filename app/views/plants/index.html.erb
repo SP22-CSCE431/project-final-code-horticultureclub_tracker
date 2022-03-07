@@ -1,35 +1,29 @@
-<p id="notice"><%= notice %></p>
+<section class="admin-fade-bg">
+  <nav>
+  </nav>
+  <div class="admin-white-bg">
 
-<h1>Plants</h1>
+    <h1 class="admin-page-title">Plants</h1>
+    
+    <p id="notice"><%= notice %></p>
 
-<table>
-  <thead>
-    <tr>
-      <th>Name</th>
-      <th>Price</th>
-	  <th>Description</th>
-	  <th>Category</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
+    <%= link_to 'Add New Plant', new_plant_path, class: "admin-new-btn"%>
 
-  <tbody>
-    <% @plants.each do |plant| %>
-      <tr>
-        <td><%= plant.name %></td>
-        <td><%= plant.price %></td>
-		<td><%= plant.description %></td>
-		<td><%= plant.category %></td>
-        <td><%= link_to 'Show', plant %></td>
-        <td><%= link_to 'Edit', edit_plant_path(plant) %></td>
-        <td><%= link_to 'Destroy', plant, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
-
-<br>
-
-<%= link_to 'New Plant', new_plant_path %>
-<br>
-<%= link_to 'Dashboard', root_path %>
+    <div class="admin-plant-wrapper">
+      <h6 class="admin-column-title">Name</h6>
+      <h6 class="admin-column-title">Price</h6>
+      <h6 class="admin-column-title">Description</h6>
+      <div></div>
+      <% @plants.each do |plant| %>
+        <p><%= plant.name %></p>
+        <p><%= plant.price %></p>
+        <p><%= plant.description %></p>
+        <div class="admin-crud-icons">
+          <%= link_to 'View Details', plant, class: "attribute-show-btn" %>
+          <%= link_to image_tag("edit.png", class: "attribute-icon"), edit_plant_path(plant) %>
+          <%= link_to image_tag("delete.png", class: "attribute-icon"), plant, method: :delete, data: { confirm: 'Are you sure?' } %>
+        </div>
+      <% end %>
+    </div>
+  </div>
+</section>

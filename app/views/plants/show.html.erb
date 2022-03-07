@@ -1,24 +1,42 @@
-<p id="notice"><%= notice %></p>
+<section class="admin-fade-bg">
 
-<p>
-  <strong>Name:</strong>
-  <%= @plant.name %>
-</p>
+  <nav>
+  </nav>
 
-<p>
-  <strong>Price:</strong>
-  <%= @plant.price %>
-</p>
+  <div class="admin-white-bg">
 
-<p>
-  <strong>Description:</strong>
-  <%= @plant.description %>
-</p>
+    <h1 class="admin-page-title">Plant Details</h1>
 
-<p>
-  <strong>Category:</strong>
-  <%= @plant.category %>
-</p>
+    <p id="notice"><%= notice %></p>
 
-<%= link_to 'Edit', edit_plant_path(@plant) %> |
-<%= link_to 'Back', plants_path %>
+    <div class="admin-show-wrapper">
+      <h6 class="admin-column-title">Name:</h6>
+      <p>
+        <%= @plant.name %>
+      </p>
+
+      <h6 class="admin-column-title">Price:</h6>
+      <p>
+        <%= @plant.price %>
+      </p>
+
+      <h6 class="admin-column-title">Description:</h6>
+      <p>
+        <%= @plant.description %>
+      </p>
+
+      <h6 class="admin-column-title">Category:</h6>
+      <p>
+        <%= @plant.category %>
+      </p>
+
+    </div>
+
+    <div class="admin-attribute-links admin-plant-links">
+      <%= link_to 'Back to Plants', plants_path, class: "admin-attribute-back-link"%>
+      <%= link_to 'Edit Plant', edit_plant_path(@plant), class: "admin-attribute-active-link"%>
+    </div>
+
+  </div>
+
+</section>

@@ -1,88 +1,71 @@
- <section class="fade-bg">
-  <%= form_with(model: event) do |form| %>
-    <% if event.errors.any? %>
-      <div id="error_explanation">
-        <h2><%= pluralize(event.errors.count, "error") %> prohibited this event from being saved:</h2>
+ <section class="admin-fade-bg">
 
-        <ul>
-          <% event.errors.each do |error| %>
-            <li><%= error.full_message %></li>
-          <% end %>
-        </ul>
-        
-      </div>
-    <% end %>
-
-    <nav class="admin-navbar">
-
-      <h1 href="../events" class="admin-page-title">Events</h1>
-
-      <div class="nav-options">
-        <a href="../members">Members</a>
-        <a href="../points">Points</a>
-        <a href="../leaderboard">Leaderboard</a>
-        <a href="../plants">Plant Sale</a>
-        <a href="../positions">Positions</a>
-        <a href="../">Dashboard</a>
-      </div>
-
+    <nav>
     </nav>
 
-    <div class="events-form-wrapper">
-      <div class="events-form-margin">
-        <h1 class="events-form-title">New Event</h1>
-        <div class="width-80">
-          <div class="field events-event-type">
-            <%= form.label :event_type %>
-            <%= form.text_field :event_type %>
-          </div>
+  <div class="admin-white-bg">
+
+    <h1 class="admin-page-title">New Event</h1>
+
+    <%= form_with(model: event) do |form| %>
+      <% if event.errors.any? %>
+        <div id="error_explanation">
+          <h2><%= pluralize(event.errors.count, "error") %> prohibited this event from being saved:</h2>
+
+          <ul>
+            <% event.errors.each do |error| %>
+              <li><%= error.full_message %></li>
+            <% end %>
+          </ul>
+          
         </div>
+      <% end %>
 
-        <div class="events-date-start-end">
-          <div class="field">
-            <%= form.label :start_date %>
-            <%= form.date_select :start_date %>
-          </div>
+      <div class="field">
+        <%= form.label :event_type %>
+          <%= form.select :event_type, ["Monthly Meeting", "Conference", "Volunteer Day", "Plant Sale", "Social"] %>
+      </div>
 
-          <div class="field">
-            <%= form.label :end_date %>
-            <%= form.date_select :end_date %>
-          </div>
-        </div>
-
-        <div class="events-time-start-end">
-          <div class="field">
-            <%= form.label :start_time %>
-            <%= form.time_select :start_time %>
-          </div>
-
-          <div class="field">
-            <%= form.label :end_time %>
-            <%= form.time_select :end_time %>
-          </div>
+      <div class="admin-events-start-end">
+        <div class="field">
+          <%= form.label :start_date %>
+          <%= form.date_select :start_date %>
         </div>
 
         <div class="field">
-          <%= form.label :description %>
-          <%= form.text_field :description %>
-        </div>
-
-        <div class="field">
-          <%= form.label :points %>
-          <%= form.number_field :points %>
-        </div>
-
-        <div class="events-form-links">
-          <div href="../events" class="back-link-border">
-            <a href="../events" class="events-back-link">Back to Events</a>
-          </div>
-          <div class="actions">
-            <%= form.submit %>
-          </div>
+          <%= form.label :end_date %>
+          <%= form.date_select :end_date %>
         </div>
       </div>
-    
-    </div>
 
-  <% end %>
+      <div class="admin-events-start-end">
+        <div class="field">
+          <%= form.label :start_time %>
+          <%= form.time_select :start_time %>
+        </div>
+
+        <div class="field">
+          <%= form.label :end_time %>
+          <%= form.time_select :end_time %>
+        </div>
+      </div>
+
+      <div class="field">
+        <%= form.label :description %>
+        <%= form.text_field :description %>
+      </div>
+
+      <div class="field">
+        <%= form.label :points %>
+        <%= form.number_field :points %>
+      </div>
+
+      <div class="admin-attribute-links admin-plant-links">
+        <%= link_to 'Back to Events', events_path, class: "admin-attribute-back-link" %>
+        <div class="actions">
+          <%= form.submit %>
+        </div>
+      </div>
+    <% end %>
+  </div>
 </section>

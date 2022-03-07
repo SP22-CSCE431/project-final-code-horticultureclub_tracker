@@ -127,8 +127,8 @@ RSpec.describe(Plant, type: :model) do
     plant.description = nil
     expect(plant).not_to(be_valid)
   end
-
-  it 'is not valid without an icon' do
+  
+  it 'is not valid without a category' do
     plant.category = nil
     expect(plant).not_to(be_valid)
   end

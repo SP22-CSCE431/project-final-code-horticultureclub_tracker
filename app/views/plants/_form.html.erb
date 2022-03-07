@@ -1,37 +1,50 @@
-<%= form_with(model: plant) do |form| %>
-  <% if plant.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(plant.errors.count, "error") %> prohibited this plant from being saved:</h2>
+<section class="admin-fade-bg">
 
-      <ul>
-        <% plant.errors.each do |error| %>
-          <li><%= error.full_message %></li>
-        <% end %>
-      </ul>
-    </div>
-  <% end %>
+  <nav>
+  </nav>
 
-  <div class="field">
-    <%= form.label :name %>
-    <%= form.text_field :name %>
-  </div>
-  
-  <div class="field">
-    <%= form.label :price %>
-    <%= form.number_field :price, step: :any%>
-  </div>
-  
-  <div class="field">
-    <%= form.label :description %>
-    <%= form.text_field :description %>
-  </div>
+  <div class="admin-white-bg">
+    <h1 class="admin-page-title">New Plant</h1>
 
-  <div class="field">
-    <%= form.label :category %>
-    <%= form.select :category, ["Flowers", "Bushes", "Trees"]%>
-  </div>
+    <%= form_with(model: plant) do |form| %>
+      <% if plant.errors.any? %>
+        <div id="error_explanation">
+          <h2><%= pluralize(plant.errors.count, "error") %> prohibited this plant from being saved:</h2>
 
-  <div class="actions">
-    <%= form.submit %>
+          <ul>
+            <% plant.errors.each do |error| %>
+              <li><%= error.full_message %></li>
+            <% end %>
+          </ul>
+        </div>
+      <% end %>
+
+      <div class="field">
+        <%= form.label :name %>
+        <%= form.text_field :name %>
+      </div>
+      
+      <div class="field">
+        <%= form.label :price %>
+        <%= form.number_field :price, step: :any%>
+      </div>
+      
+      <div class="field">
+        <%= form.label :description %>
+        <%= form.text_field :description %>
+      </div>
+
+      <div class="field">
+        <%= form.label :category %>
+        <%= form.select :category, ["Flowers", "Bushes", "Trees"]%>
+      </div>
+
+      <div class="admin-attribute-links admin-plant-links">
+        <%= link_to 'Back to Plants', plants_path, class: "admin-attribute-back-link" %>
+        <div class="actions">
+          <%= form.submit %>
+        </div>
+      </div>
+    <% end %>
   </div>
-<% end %>
+</section>
