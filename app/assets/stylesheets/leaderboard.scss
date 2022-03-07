@@ -2,18 +2,16 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
 
-table {
-   font-family: arial, sans-serif;
-   border-collapse: collapse;
-   margin: 50px;
-}
- 
-td, th {
-   border: 1px solid #d1d1d1;
-   text-align: left;
-   padding: 12px !important;
+.admin-leaderboard-wrapper {
+   display: grid;
+   grid-template-columns: repeat(2, 1fr);
+   align-items: center;
+   row-gap: 5px;
 }
 
-tr:nth-child(even) {
-   background-color: #dddddd;
+@media screen and (max-width: 500px) {
+   .admin-leaderboard-link {
+      font-size: 13px;
+      padding: 8px 13px;
+   }
 }

@@ -1,69 +1,69 @@
 <%= stylesheet_pack_tag 'hello_react' %>
 <%= javascript_pack_tag 'hello_react' %>
-<section class="fade-bg">
-<h1 class="dashboard-title">Horticulture Club Tracker</h1>
-<div class="selection-grid">
-    <div class="selection-grid-item">
-        <div class="selection-card">
-            <div class="selection-card-title">
-                <%= image_tag("date.png", class: "selection-icon") %>
-                <h2 class="card-title">Events</h2>
+<section class="admin-fade-bg">
+    <h1 class="dashboard-title">Horticulture Club Tracker</h1>
+    <div class="selection-grid">
+        <div class="selection-grid-item">
+            <div class="selection-card">
+                <div class="selection-card-title">
+                    <%= image_tag("date.png", class: "selection-icon") %>
+                    <h2 class="card-title">Events</h2>
+                </div>
+                <p class="selection-description">Edit the events for the Horticulture Club.</p>
+                <a class="dashboard-link" id="events-link" href="/events">Edit Events</a>
             </div>
-            <p class="selection-description">Edit the events for the Horticulture Club.</p>
-            <a class="dashboard-link" id="events-link" href="/events">Edit Events</a>
+        </div>
+        <div class="selection-grid-item">
+            <div class="selection-card">
+                <div class="selection-card-title">
+                    <%= image_tag("persona.png", class: "selection-icon") %>
+                    <h2 class="card-title">Members</h2>
+                </div>
+                <p class="selection-description">Edit the members of the Horticulture Club.</p>
+                <a class="dashboard-link" id="members-link" href="/members">Edit Members</a>
+                <a class="dashboard-link" id="leaderboard-link" href="/leaderboard">Member Leaderboard</a>
+            </div>
+        </div>
+        <div class="selection-grid-item">
+            <div class="selection-card">
+                <div class="selection-card-title">
+                    <%= image_tag("competition.png", class: "selection-icon") %>
+                    <h2 class="card-title">Points</h2>
+                </div>
+                <p class="selection-description">Edit event attendance and give members points.</p>
+                <a class="dashboard-link" id="points-link" href="/points">Edit Points</a>
+            </div>
+        </div>
+        <div class="selection-grid-item">
+            <div class="selection-card">
+                <div class="selection-card-title">
+                    <%= image_tag("tree-plant.png", class: "selection-icon") %>
+                    <h2 class="card-title">Plant Sale</h2>
+                </div>
+                <p class="selection-description">Edit the plants for the anual Plant Sale.</p>
+                <a class="dashboard-link" id="plantsale-link" href="/plants">Edit Plant Sale</a>
+            </div>
+        </div>
+        <div class="selection-grid-item">
+            <div class="selection-card">
+                <div class="selection-card-title">
+                    <%= image_tag("communities-social-networking.png", class: "selection-icon") %>
+                    <h2 class="card-title">Positions</h2>
+                </div>
+                <p class="selection-description">Edit the organizational Positions for the Horticulture Club.</p>
+                <a class="dashboard-link" id="positions-link" href="/positions">Edit Positions</a>
+            </div>
+        </div>
+        <div class="selection-grid-item">
+            <div class="selection-card">
+                <div class="selection-card-title">
+                    <%= image_tag("admin.png", class: "selection-icon") %>
+                    <h2 class="card-title">Admin</h2>
+                </div>
+                <p class="selection-description">Edit who can access this page.</p>
+                <a class="dashboard-link" id="admins-link" href="">Edit Admins</a>
+                <a class="dashboard-link" id="admins-link" href="/admins/sign_out">Log Out</a>
+            </div>
         </div>
     </div>
-    <div class="selection-grid-item">
-        <div class="selection-card">
-            <div class="selection-card-title">
-                <%= image_tag("persona.png", class: "selection-icon") %>
-                <h2 class="card-title">Members</h2>
-            </div>
-            <p class="selection-description">Edit the members of the Horticulture Club.</p>
-            <a class="dashboard-link" id="members-link" href="/members">Edit Members</a>
-            <a class="dashboard-link" id="leaderboard-link" href="/leaderboard">Member Leaderboard</a>
-        </div>
-    </div>
-    <div class="selection-grid-item">
-        <div class="selection-card">
-            <div class="selection-card-title">
-                <%= image_tag("competition.png", class: "selection-icon") %>
-                <h2 class="card-title">Points</h2>
-            </div>
-            <p class="selection-description">Edit event attendance and give members points.</p>
-            <a class="dashboard-link" id="points-link" href="/points">Edit Points</a>
-        </div>
-    </div>
-    <div class="selection-grid-item">
-        <div class="selection-card">
-            <div class="selection-card-title">
-                <%= image_tag("tree-plant.png", class: "selection-icon") %>
-                <h2 class="card-title">Plant Sale</h2>
-            </div>
-            <p class="selection-description">Edit the plants for the anual Plant Sale.</p>
-            <a class="dashboard-link" id="plantsale-link" href="/plants">Edit Plant Sale</a>
-        </div>
-    </div>
-    <div class="selection-grid-item">
-        <div class="selection-card">
-            <div class="selection-card-title">
-                <%= image_tag("communities-social-networking.png", class: "selection-icon") %>
-                <h2 class="card-title">Positions</h2>
-            </div>
-            <p class="selection-description">Edit the organizational Positions for the Horticulture Club.</p>
-            <a class="dashboard-link" id="positions-link" href="/positions">Edit Positions</a>
-        </div>
-    </div>
-    <div class="selection-grid-item">
-        <div class="selection-card">
-            <div class="selection-card-title">
-                <%= image_tag("admin.png", class: "selection-icon") %>
-                <h2 class="card-title">Admin</h2>
-            </div>
-            <p class="selection-description">Edit who can access this page.</p>
-            <a class="dashboard-link" id="admins-link" href="">Edit Admins</a>
-            <a class="dashboard-link" id="admins-link" href="/admins/sign_out">Log Out</a>
-        </div>
-    </div>
-</div>
 </section>
