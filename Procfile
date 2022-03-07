@@ -1,1 +1,1 @@
-release: rails db:setup
+release: rails db:migrate rails db:seed
