@@ -1,0 +1,27 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Eligible Admins</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Email</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @eligible_admins.each do |eligible_admin| %>
+      <tr>
+        <td><%= eligible_admin.email %></td>
+        <td><%= link_to 'Show', eligible_admin %></td>
+        <td><%= link_to 'Edit', edit_eligible_admin_path(eligible_admin) %></td>
+        <td><%= link_to 'Destroy', eligible_admin, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Eligible Admin', new_eligible_admin_path %>
