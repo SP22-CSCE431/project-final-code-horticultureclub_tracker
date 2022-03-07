@@ -1,6 +1,8 @@
 # frozen_string_literal: true
 
 Rails.application.routes.draw do
+  get 'admins/index'
+  resources :eligible_admins
   resources :positions
   resources :points
   resources :members

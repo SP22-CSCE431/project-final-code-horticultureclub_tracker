@@ -4,11 +4,25 @@
 require 'spec_helper'
 ENV['RAILS_ENV'] ||= 'test'
 require_relative '../config/environment'
+Rails.application.load_seed
 # Prevent database truncation if the environment is production
 abort('The Rails environment is running in production mode!') if Rails.env.production?
 require 'rspec/rails'
 # Add additional requires below this line. Rails is not loaded until this point!
-
+OmniAuth.config.test_mode = true
+OmniAuth.config.mock_auth[:google_user] = OmniAuth::AuthHash.new({
+  provider: 'google_oauth2',
+  uid: '104671366635829612281',
+  avatar_url: 'https://lh3.googleusercontent.com/a/AATXAJwmWxvfbxyh57qeM6TEVFbkprulqPqtZUGjIcfQ=s96-c',
+  info: {
+    email: 'jacksonengel@tamu.edu',
+    full_name: 'Jackson Engel'
+  },
+  credentials: {
+    :token => "token",
+    :refresh_token => "refresh_token"
+  }
+})
 # Requires supporting ruby files with custom matchers and macros, etc, in
 # spec/support/ and its subdirectories. Files matching `spec/**/*_spec.rb` are
 # run as spec files by default. This means that files in spec/support that end

@@ -1,0 +1,22 @@
+<%= form_with(model: eligible_admin) do |form| %>
+  <% if eligible_admin.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(eligible_admin.errors.count, "error") %> prohibited this eligible_admin from being saved:</h2>
+
+      <ul>
+        <% eligible_admin.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :email %>
+    <%= form.text_field :email %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

@@ -45,7 +45,7 @@ RSpec.describe('/positions', type: :request) do
   describe 'GET /new' do
     it 'renders a successful response' do
       get new_position_url
-      expect(response).to(be_successful)
+      expect(response).to(have_http_status(302))
     end
   end
 

@@ -2,7 +2,9 @@
 
 require 'rails_helper'
 
+OmniAuth.config.test_mode = true
 RSpec.describe(Event, type: :model) do
+
   subject(:event) do
     described_class.new(event_type: 'Monthly Meeting', start_date: '2022-02-14', end_date: '2022-02-14', start_time: '5:00', end_time: '6:00', description: 'Monthly meeting for February', points: 10)
   end
@@ -104,7 +106,7 @@ end
 
 RSpec.describe(Plant, type: :model) do
   subject(:plant) do
-    described_class.new(name: 'test plant', price: 12.99, description: 'rose', icon: 'test')
+    described_class.new(name: 'test plant', price: 12.99, description: 'rose', category: 'test')
   end
 
   it 'is valid with all valid attributes' do
@@ -127,7 +129,7 @@ RSpec.describe(Plant, type: :model) do
   end
 
   it 'is not valid without an icon' do
-    plant.icon = nil
+    plant.category = nil
     expect(plant).not_to(be_valid)
   end
 end
