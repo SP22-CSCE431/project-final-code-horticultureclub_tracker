@@ -1,7 +1,7 @@
 class CreateImagefiles < ActiveRecord::Migration[6.1]
   def change
     create_table :imagefiles do |t|
-      t.string :title
+      t.integer :member_id
 
       t.timestamps
     end

@@ -1,14 +1,31 @@
-<p id="notice"><%= notice %></p>
+<section class="admin-fade-bg">
 
-<p>
-  <strong>Member:</strong>
-  <%= @position.member_id %>
-</p>
+  <nav>
+  </nav>
 
-<p>
-  <strong>Position name:</strong>
-  <%= @position.position_name %>
-</p>
+  <div class="admin-white-bg">
 
-<%= link_to 'Edit', edit_position_path(@position) %> |
-<%= link_to 'Back', positions_path %>
+    <h1 class="admin-page-title">Position Details</h1>
+
+    <p id="notice"><%= notice %></p>
+
+    <div class="admin-show-wrapper">
+
+      <h6 class="admin-column-title">Member Name</h6>
+      <p><%= Member.find(@position.member_id).name %></p>
+
+      <h6 class="admin-column-title">Position Title</h6>
+      <p><%= @position.position_name %></p>
+
+    </div>
+
+    
+    <div class="admin-attribute-links admin-plant-links">
+      <%= link_to 'Back to Postitions', positions_path, class: "admin-attribute-back-link"%>
+      <%= link_to 'Edit Position', edit_position_path(@position), class: "admin-attribute-active-link"%>
+    </div>
+
+
+  </div>
+
+</section>

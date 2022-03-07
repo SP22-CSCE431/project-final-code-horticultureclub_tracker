@@ -1,3 +1,46 @@
 // Place all the styles related to the Positions controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
+
+// Positions Styles
+
+.admin-position-wrapper {
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    align-items: center;
+    row-gap: 5px;
+}
+
+.admin-position-btns {
+    width: 60%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.admin-position-crud-icons {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+@media screen and (max-width: 725px) {
+    .admin-position-crud-icons {
+        grid-column: 1 / span 3;
+        justify-content: space-evenly;
+    }
+    .admin-position-btns {
+        width: 80%;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .admin-position-btns {
+        flex-direction: column;
+        margin: 0 auto;
+        width: 100%;
+    }
+    .admin-position-btns a {
+        margin: 5px;
+    }
+}

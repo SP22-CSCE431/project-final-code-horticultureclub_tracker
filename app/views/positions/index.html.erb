@@ -1,30 +1,40 @@
-<p id="notice"><%= notice %></p>
+<section class="admin-fade-bg">
 
-<h1>Positions</h1>
+  <nav>
+  </nav>
 
-<table>
-  <thead>
-    <tr>
-      <th>Member</th>
-      <th>Position name</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
+  <div class="admin-white-bg">
 
-  <tbody>
-    <% @positions.each do |position| %>
-      <tr>
-        <% member = @members.find(position.member_id) %>
-        <td><%= member.name %></td>
-        <td><%= position.position_name %></td>
-        <td><%= link_to 'Show', position %></td>
-        <td><%= link_to 'Edit', edit_position_path(position) %></td>
-        <td><%= link_to 'Destroy', position, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
+    <h1 class="admin-page-title">Positions</h1>
 
-<br>
+    <p id="notice"><%= notice %></p>
 
-<%= link_to 'New Position', new_position_path %>
+    <div class="admin-position-btns">
+      <%= link_to 'Add New Position', new_position_path, class: "admin-new-btn" %>
+      <%= link_to 'Edit Member Photos', new_imagefile_path, class: "admin-new-btn" %>
+    </div> 
+
+    <div class="admin-position-wrapper">
+
+      <h6 class="admin-column-title">Member Name</h6>
+      <h6 class="admin-column-title">Position Title</h6>
+      <div></div>
+
+      <% @positions.each do |position| %>
+        <p>
+          <%= Member.find(position.member_id).name %>
+        </p>
+        <p>
+          <%= position.position_name %>
+        </p>
+        <div class="admin-position-crud-icons">
+          <%= link_to image_tag("edit.png", class: "attribute-icon"), edit_position_path(position) %>
+          <%= link_to image_tag("delete.png", class: "attribute-icon"), position, method: :delete, data: { confirm: 'Are you sure?' } %>
+        </div>
+      <% end %>
+
+    </div>
+
+  </div>
+
+</section>
