@@ -12,7 +12,7 @@ RSpec.describe('Creating an event', type: :feature) do
   
   it 'valid inputs' do
     visit new_event_path
-    fill_in 'Event type', with: 'Monthly Meeting'
+    select 'Monthly Meeting', from: 'event_event_type'
     fill_in 'Description', with: 'Monthly meeting for February'
     fill_in 'Points', with: 10
     select '2022', from: 'event_start_date_1i'
@@ -55,7 +55,7 @@ RSpec.describe('Creating a point object', type: :feature) do
     fill_in 'Name', with: 'John Smith'
     click_on 'Create Member'
     visit new_event_path
-    fill_in 'Event type', with: 'Monthly Meeting'
+    select 'Monthly Meeting', from: 'event_event_type'
     fill_in 'Description', with: 'Monthly meeting for February'
     fill_in 'Points', with: 10
     select '2022', from: 'event_start_date_1i'

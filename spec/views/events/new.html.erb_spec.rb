@@ -17,7 +17,7 @@ RSpec.describe('events/new', type: :view) do
     render
 
     assert_select 'form[action=?][method=?]', events_path, 'post' do
-      assert_select 'input[name=?]', 'event[event_type]'
+      
 
       assert_select 'input[name=?]', 'event[description]'
     end

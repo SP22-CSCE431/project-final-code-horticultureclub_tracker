@@ -1,17 +1,18 @@
+# frozen_string_literal: true
+
 class AdminsController < ApplicationController
   def index
     @admins = Admin.all
   end
 
-  def show
-  end
+  def show; end
 
-  def edit
-  end
+  def edit; end
 
   def new
     @admin = Admin.new
   end
+
   def create
     @admin = Admin.new(admin_params)
 
