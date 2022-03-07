@@ -1,0 +1,2 @@
+class EligibleAdmin < ApplicationRecord
+end

@@ -1,8 +1,15 @@
 # frozen_string_literal: true
 
 require 'rails_helper'
+require 'selenium-webdriver'
 
 RSpec.describe('Creating an event', type: :feature) do
+  before do
+    Rails.application.env_config['devise.mapping'] = Devise.mappings[:admin]
+    Rails.application.env_config['omniauth.auth'] = OmniAuth.config.mock_auth[:google_user]
+    visit (admin_google_oauth2_omniauth_authorize_path)
+  end
+  
   it 'valid inputs' do
     visit new_event_path
     fill_in 'Event type', with: 'Monthly Meeting'
@@ -24,6 +31,11 @@ RSpec.describe('Creating an event', type: :feature) do
 end
 
 RSpec.describe('Creating a member', type: :feature) do
+  before do
+    Rails.application.env_config['devise.mapping'] = Devise.mappings[:admin]
+    Rails.application.env_config['omniauth.auth'] = OmniAuth.config.mock_auth[:google_user]
+    visit (admin_google_oauth2_omniauth_authorize_path)
+  end
   it 'valid inputs' do
     visit new_member_path
     fill_in 'Name', with: 'John Smith'
@@ -33,6 +45,11 @@ RSpec.describe('Creating a member', type: :feature) do
 end
 
 RSpec.describe('Creating a point object', type: :feature) do
+  before do
+    Rails.application.env_config['devise.mapping'] = Devise.mappings[:admin]
+    Rails.application.env_config['omniauth.auth'] = OmniAuth.config.mock_auth[:google_user]
+    visit (admin_google_oauth2_omniauth_authorize_path)
+  end
   it 'valid inputs' do
     visit new_member_path
     fill_in 'Name', with: 'John Smith'

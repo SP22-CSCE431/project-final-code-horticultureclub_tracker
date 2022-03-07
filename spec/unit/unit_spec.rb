@@ -2,7 +2,9 @@
 
 require 'rails_helper'
 
+OmniAuth.config.test_mode = true
 RSpec.describe(Event, type: :model) do
+
   subject(:event) do
     described_class.new(event_type: 'Monthly Meeting', start_date: '2022-02-14', end_date: '2022-02-14', start_time: '5:00', end_time: '6:00', description: 'Monthly meeting for February', points: 10)
   end
@@ -125,7 +127,7 @@ RSpec.describe(Plant, type: :model) do
     plant.description = nil
     expect(plant).not_to(be_valid)
   end
-
+  
   it 'is not valid without a category' do
     plant.category = nil
     expect(plant).not_to(be_valid)
