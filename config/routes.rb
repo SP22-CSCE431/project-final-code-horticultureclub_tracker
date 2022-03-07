@@ -1,6 +1,8 @@
 # frozen_string_literal: true
 
 Rails.application.routes.draw do
+  
+  resources :imagefiles
   get 'admins/index'
   resources :eligible_admins
   resources :positions
