@@ -2,6 +2,7 @@
 
 class EligibleAdminsController < ApplicationController
   before_action :set_eligible_admin, only: %i[show edit update destroy]
+  before_action :authenticate_admin!
 
   # GET /eligible_admins or /eligible_admins.json
   def index
