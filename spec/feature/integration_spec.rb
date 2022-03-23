@@ -53,7 +53,7 @@ RSpec.describe('Creating an admin', type: :feature) do
   it 'valid inputs' do
     visit new_eligible_admin_path
     fill_in 'Email', with: 'dylanharden3@tamu.edu'
-    click_on 'Create Eligible Admin'
+    click_on 'Create Eligible admin'
     expect(page).to(have_content('dylanharden3@tamu.edu'))
   end
 end
