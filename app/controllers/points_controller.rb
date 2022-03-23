@@ -2,6 +2,7 @@
 
 class PointsController < ApplicationController
   before_action :set_point, only: %i[show edit update destroy]
+  before_action :authenticate_admin!
 
   # GET /points or /points.json
   def index

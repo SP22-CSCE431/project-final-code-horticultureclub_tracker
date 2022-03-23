@@ -1,6 +1,7 @@
 # frozen_string_literal: true
 
 class LeaderboardController < ApplicationController
+  before_action :authenticate_admin!
   def index
     @members = Point
                .joins('INNER JOIN members ON members.id=points.member_id')

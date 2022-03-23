@@ -2,6 +2,7 @@
 
 class PlantsController < ApplicationController
   before_action :set_plant, only: %i[show edit update destroy]
+  before_action :authenticate_admin!
 
   # GET /plants or /plants.json
   def index

@@ -1,7 +1,7 @@
 {
   "RSpec": {
     "coverage": {
-      "/csce431/horticulture_tracker/horticulture_tracker/spec/feature/integration_spec.rb": {
+      "/csce431/spec/feature/integration_spec.rb": {
         "lines": [
           null,
           null,
@@ -28,10 +28,24 @@
           0,
           0,
           null,
-          0,
-          0,
-          0,
-          0,
+          null,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          null,
+          1,
+          1,
+          1,
+          1,
           null,
           null,
           null,
@@ -80,7 +94,7 @@
           null
         ]
       },
-      "/csce431/horticulture_tracker/horticulture_tracker/spec/rails_helper.rb": {
+      "/csce431/spec/rails_helper.rb": {
         "lines": [
           null,
           null,
@@ -164,7 +178,7 @@
           null
         ]
       },
-      "/csce431/horticulture_tracker/horticulture_tracker/config/environment.rb": {
+      "/csce431/config/environment.rb": {
         "lines": [
           null,
           null,
@@ -175,7 +189,7 @@
           1
         ]
       },
-      "/csce431/horticulture_tracker/horticulture_tracker/config/application.rb": {
+      "/csce431/config/application.rb": {
         "lines": [
           null,
           null,
@@ -209,7 +223,7 @@
           null
         ]
       },
-      "/csce431/horticulture_tracker/horticulture_tracker/config/boot.rb": {
+      "/csce431/config/boot.rb": {
         "lines": [
           null,
           null,
@@ -219,7 +233,7 @@
           1
         ]
       },
-      "/csce431/horticulture_tracker/horticulture_tracker/config/environments/test.rb": {
+      "/csce431/config/environments/test.rb": {
         "lines": [
           null,
           null,
@@ -285,7 +299,7 @@
           null
         ]
       },
-      "/csce431/horticulture_tracker/horticulture_tracker/config/initializers/application_controller_renderer.rb": {
+      "/csce431/config/initializers/application_controller_renderer.rb": {
         "lines": [
           null,
           null,
@@ -298,7 +312,7 @@
           null
         ]
       },
-      "/csce431/horticulture_tracker/horticulture_tracker/config/initializers/assets.rb": {
+      "/csce431/config/initializers/assets.rb": {
         "lines": [
           null,
           null,
@@ -318,7 +332,7 @@
           null
         ]
       },
-      "/csce431/horticulture_tracker/horticulture_tracker/config/initializers/backtrace_silencers.rb": {
+      "/csce431/config/initializers/backtrace_silencers.rb": {
         "lines": [
           null,
           null,
@@ -332,7 +346,7 @@
           1
         ]
       },
-      "/csce431/horticulture_tracker/horticulture_tracker/config/initializers/content_security_policy.rb": {
+      "/csce431/config/initializers/content_security_policy.rb": {
         "lines": [
           null,
           null,
@@ -367,7 +381,7 @@
           null
         ]
       },
-      "/csce431/horticulture_tracker/horticulture_tracker/config/initializers/cookies_serializer.rb": {
+      "/csce431/config/initializers/cookies_serializer.rb": {
         "lines": [
           null,
           null,
@@ -378,7 +392,7 @@
           1
         ]
       },
-      "/csce431/horticulture_tracker/horticulture_tracker/config/initializers/devise.rb": {
+      "/csce431/config/initializers/devise.rb": {
         "lines": [
           null,
           null,
@@ -694,7 +708,7 @@
           null
         ]
       },
-      "/csce431/horticulture_tracker/horticulture_tracker/config/initializers/filter_parameter_logging.rb": {
+      "/csce431/config/initializers/filter_parameter_logging.rb": {
         "lines": [
           null,
           null,
@@ -706,7 +720,7 @@
           null
         ]
       },
-      "/csce431/horticulture_tracker/horticulture_tracker/config/initializers/inflections.rb": {
+      "/csce431/config/initializers/inflections.rb": {
         "lines": [
           null,
           null,
@@ -732,7 +746,7 @@
           null
         ]
       },
-      "/csce431/horticulture_tracker/horticulture_tracker/config/initializers/mime_types.rb": {
+      "/csce431/config/initializers/mime_types.rb": {
         "lines": [
           null,
           null,
@@ -741,7 +755,7 @@
           null
         ]
       },
-      "/csce431/horticulture_tracker/horticulture_tracker/config/initializers/permissions_policy.rb": {
+      "/csce431/config/initializers/permissions_policy.rb": {
         "lines": [
           null,
           null,
@@ -757,7 +771,7 @@
           null
         ]
       },
-      "/csce431/horticulture_tracker/horticulture_tracker/config/initializers/wrap_parameters.rb": {
+      "/csce431/config/initializers/wrap_parameters.rb": {
         "lines": [
           null,
           null,
@@ -777,12 +791,15 @@
           null
         ]
       },
-      "/csce431/horticulture_tracker/horticulture_tracker/config/routes.rb": {
+      "/csce431/config/routes.rb": {
         "lines": [
           null,
           null,
           1,
           null,
+          1,
+          1,
+          1,
           1,
           1,
           1,
@@ -811,8 +828,10 @@
           null
         ]
       },
-      "/csce431/horticulture_tracker/horticulture_tracker/app/models/admin.rb": {
+      "/csce431/app/models/admin.rb": {
         "lines": [
+          null,
+          null,
           1,
           null,
           null,
@@ -828,7 +847,7 @@
           null
         ]
       },
-      "/csce431/horticulture_tracker/horticulture_tracker/app/models/application_record.rb": {
+      "/csce431/app/models/application_record.rb": {
         "lines": [
           null,
           null,
@@ -837,7 +856,7 @@
           null
         ]
       },
-      "/csce431/horticulture_tracker/horticulture_tracker/app/controllers/api/base.rb": {
+      "/csce431/app/controllers/api/base.rb": {
         "lines": [
           null,
           null,
@@ -848,7 +867,7 @@
           null
         ]
       },
-      "/csce431/horticulture_tracker/horticulture_tracker/app/controllers/api/v1/base.rb": {
+      "/csce431/app/controllers/api/v1/base.rb": {
         "lines": [
           null,
           null,
@@ -864,7 +883,7 @@
           null
         ]
       },
-      "/csce431/horticulture_tracker/horticulture_tracker/app/controllers/api/v1/events.rb": {
+      "/csce431/app/controllers/api/v1/events.rb": {
         "lines": [
           null,
           null,
@@ -890,7 +909,7 @@
           null
         ]
       },
-      "/csce431/horticulture_tracker/horticulture_tracker/app/controllers/api/v1/defaults.rb": {
+      "/csce431/app/controllers/api/v1/defaults.rb": {
         "lines": [
           null,
           null,
@@ -932,7 +951,7 @@
           null
         ]
       },
-      "/csce431/horticulture_tracker/horticulture_tracker/app/controllers/api/v1/plants.rb": {
+      "/csce431/app/controllers/api/v1/plants.rb": {
         "lines": [
           null,
           null,
@@ -958,7 +977,7 @@
           null
         ]
       },
-      "/csce431/horticulture_tracker/horticulture_tracker/app/controllers/api/v1/positions.rb": {
+      "/csce431/app/controllers/api/v1/positions.rb": {
         "lines": [
           null,
           null,
@@ -984,7 +1003,7 @@
           null
         ]
       },
-      "/csce431/horticulture_tracker/horticulture_tracker/app/controllers/api/v1/members.rb": {
+      "/csce431/app/controllers/api/v1/members.rb": {
         "lines": [
           null,
           null,
@@ -1132,7 +1151,26 @@
           null
         ]
       },
-      "/csce431/horticulture_tracker/horticulture_tracker/spec/helpers/leaderboard_helper_spec.rb": {
+      "/csce431/spec/helpers/imagefiles_helper_spec.rb": {
+        "lines": [
+          1,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          1,
+          1,
+          null
+        ]
+      },
+      "/csce431/spec/helpers/leaderboard_helper_spec.rb": {
         "lines": [
           null,
           null,
@@ -1153,7 +1191,7 @@
           null
         ]
       },
-      "/csce431/horticulture_tracker/horticulture_tracker/spec/helpers/members_helper_spec.rb": {
+      "/csce431/spec/helpers/members_helper_spec.rb": {
         "lines": [
           null,
           null,
@@ -1174,7 +1212,7 @@
           null
         ]
       },
-      "/csce431/horticulture_tracker/horticulture_tracker/spec/helpers/points_helper_spec.rb": {
+      "/csce431/spec/helpers/points_helper_spec.rb": {
         "lines": [
           null,
           null,
@@ -1195,7 +1233,7 @@
           null
         ]
       },
-      "/csce431/horticulture_tracker/horticulture_tracker/spec/helpers/positions_helper_spec.rb": {
+      "/csce431/spec/helpers/positions_helper_spec.rb": {
         "lines": [
           null,
           null,
@@ -1216,7 +1254,16 @@
           null
         ]
       },
-      "/csce431/horticulture_tracker/horticulture_tracker/spec/models/admin_spec.rb": {
+      "/csce431/spec/models/admin_spec.rb": {
+        "lines": [
+          1,
+          null,
+          1,
+          1,
+          null
+        ]
+      },
+      "/csce431/spec/models/eligible_admin_spec.rb": {
         "lines": [
           1,
           null,
@@ -1265,7 +1312,7 @@
           null
         ]
       },
-      "/csce431/horticulture_tracker/horticulture_tracker/spec/models/point_spec.rb": {
+      "/csce431/spec/models/point_spec.rb": {
         "lines": [
           null,
           null,
@@ -1297,7 +1344,17 @@
           null
         ]
       },
-      "/csce431/horticulture_tracker/horticulture_tracker/spec/requests/dashboard_spec.rb": {
+      "/csce431/spec/requests/admins_spec.rb": {
+        "lines": [
+          1,
+          null,
+          1,
+          null,
+          null,
+          null
+        ]
+      },
+      "/csce431/spec/requests/dashboard_spec.rb": {
         "lines": [
           null,
           null,
@@ -1823,27 +1880,18 @@
           0,
           null,
           null,
+          1,
+          2,
           null,
-          null,
-          0,
-          0,
-          0,
-          0,
-          null,
-          null,
-          0,
-          0,
-          0,
-          0,
-          0,
-          null,
+          2,
+          2,
+          4,
+          2,
           null,
           0,
           0,
           0,
           0,
-          0,
-          null,
           null,
           null,
           0,
@@ -1852,6 +1900,26 @@
           0,
           0,
           null,
+          null,
+          0,
+          0,
+          0,
+          null,
+          0,
+          0,
+          null,
+          null,
+          null,
+          0,
+          0,
+          0,
+          0,
+          null,
+          0,
+          null,
+          0,
+          0,
+          0,
           null,
           null,
           null,
@@ -1874,8 +1942,6 @@
       },
       "/csce431/horticulture_tracker/horticulture_tracker/spec/requests/points_spec.rb": {
         "lines": [
-          null,
-          null,
           1,
           null,
           null,
@@ -2083,10 +2149,10 @@
           null,
           null,
           null,
-          0,
-          0,
-          0,
-          0,
+          2,
+          2,
+          4,
+          2,
           null,
           null,
           null,
@@ -2277,10 +2343,10 @@
           null,
           1,
           null,
-          0,
-          0,
-          0,
-          0,
+          1,
+          1,
+          2,
+          1,
           null,
           null,
           0,
@@ -2357,7 +2423,7 @@
           null
         ]
       },
-      "/csce431/horticulture_tracker/horticulture_tracker/spec/routing/positions_routing_spec.rb": {
+      "/csce431/spec/routing/positions_routing_spec.rb": {
         "lines": [
           null,
           null,
@@ -2720,6 +2786,14 @@
           null,
           null,
           null,
+          1,
+          1,
+          null
+        ]
+      },
+      "/csce431/spec/views/admins/show.html.erb_spec.rb": {
+        "lines": [
+          1,
           null,
           null,
           null,
@@ -2729,8 +2803,29 @@
       },
       "/csce431/horticulture_tracker/horticulture_tracker/spec/views/events/new.html.erb_spec.rb": {
         "lines": [
+          1,
+          null,
+          1,
+          1,
+          1,
           null,
           null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          1,
+          1,
+          1,
+          null,
+          null
+        ]
+      },
+      "/csce431/spec/views/eligible_admins/new.html.erb_spec.rb": {
+        "lines": [
           1,
           null,
           0,
@@ -2740,9 +2835,20 @@
           null,
           null,
           null,
+          1,
+          1,
+          null,
+          1,
+          null,
+          1,
           null,
           null,
-          null,
+          null
+        ]
+      },
+      "/csce431/spec/views/eligible_admins/show.html.erb_spec.rb": {
+        "lines": [
+          1,
           null,
           0,
           0,
@@ -2750,7 +2856,16 @@
           0,
           0,
           null,
-          0,
+          null,
+          null,
+          null,
+          1,
+          1,
+          null,
+          1,
+          null,
+          null,
+          1,
           null,
           null,
           null
@@ -2836,7 +2951,8 @@
           null,
           0,
           null,
-          0,
+          null,
+          1,
           null,
           null,
           null
@@ -2860,7 +2976,7 @@
           null
         ]
       },
-      "/csce431/horticulture_tracker/horticulture_tracker/spec/views/leaderboard/index.html.erb_spec.rb": {
+      "/csce431/spec/views/leaderboard/index.html.erb_spec.rb": {
         "lines": [
           null,
           null,
@@ -2871,56 +2987,7 @@
           null
         ]
       },
-      "/csce431/horticulture_tracker/horticulture_tracker/spec/views/members/edit.html.erb_spec.rb": {
-        "lines": [
-          null,
-          null,
-          1,
-          null,
-          0,
-          0,
-          0,
-          null,
-          null,
-          null,
-          null,
-          null,
-          0,
-          0,
-          null,
-          0,
-          0,
-          null,
-          null,
-          null
-        ]
-      },
-      "/csce431/horticulture_tracker/horticulture_tracker/spec/views/members/index.html.erb_spec.rb": {
-        "lines": [
-          null,
-          null,
-          1,
-          null,
-          0,
-          0,
-          0,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          0,
-          0,
-          null,
-          null
-        ]
-      },
-      "/csce431/horticulture_tracker/horticulture_tracker/spec/views/members/new.html.erb_spec.rb": {
+      "/csce431/spec/views/members/edit.html.erb_spec.rb": {
         "lines": [
           null,
           null,
@@ -2944,7 +3011,56 @@
           null
         ]
       },
-      "/csce431/horticulture_tracker/horticulture_tracker/spec/views/members/show.html.erb_spec.rb": {
+      "/csce431/spec/views/members/index.html.erb_spec.rb": {
+        "lines": [
+          null,
+          null,
+          1,
+          null,
+          0,
+          0,
+          0,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          0,
+          0,
+          null,
+          null
+        ]
+      },
+      "/csce431/spec/views/members/new.html.erb_spec.rb": {
+        "lines": [
+          null,
+          null,
+          1,
+          null,
+          0,
+          0,
+          0,
+          null,
+          null,
+          null,
+          null,
+          null,
+          0,
+          0,
+          null,
+          0,
+          0,
+          null,
+          null,
+          null
+        ]
+      },
+      "/csce431/spec/views/members/show.html.erb_spec.rb": {
         "lines": [
           null,
           null,
@@ -2965,7 +3081,7 @@
           null
         ]
       },
-      "/csce431/horticulture_tracker/horticulture_tracker/spec/views/points/edit.html.erb_spec.rb": {
+      "/csce431/spec/views/points/edit.html.erb_spec.rb": {
         "lines": [
           null,
           null,
@@ -2986,7 +3102,7 @@
           null
         ]
       },
-      "/csce431/horticulture_tracker/horticulture_tracker/spec/views/points/index.html.erb_spec.rb": {
+      "/csce431/spec/views/points/index.html.erb_spec.rb": {
         "lines": [
           null,
           null,
@@ -3009,45 +3125,7 @@
           null
         ]
       },
-      "/csce431/horticulture_tracker/horticulture_tracker/spec/views/points/new.html.erb_spec.rb": {
-        "lines": [
-          null,
-          null,
-          1,
-          null,
-          0,
-          0,
-          0,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          0,
-          0,
-          null,
-          null
-        ]
-      },
-      "/csce431/horticulture_tracker/horticulture_tracker/spec/views/points/show.html.erb_spec.rb": {
-        "lines": [
-          null,
-          null,
-          1,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null
-        ]
-      },
-      "/csce431/horticulture_tracker/horticulture_tracker/spec/views/positions/edit.html.erb_spec.rb": {
+      "/csce431/spec/views/points/new.html.erb_spec.rb": {
         "lines": [
           null,
           null,
@@ -3062,37 +3140,18 @@
           null,
           null,
           null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
+          0,
+          0,
           null,
           null
         ]
       },
-      "/csce431/horticulture_tracker/horticulture_tracker/spec/views/positions/index.html.erb_spec.rb": {
+      "/csce431/spec/views/points/show.html.erb_spec.rb": {
         "lines": [
           null,
           null,
           1,
           null,
-          0,
-          0,
-          0,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
           null,
           null,
           null,
@@ -3104,7 +3163,7 @@
           null
         ]
       },
-      "/csce431/horticulture_tracker/horticulture_tracker/spec/views/positions/new.html.erb_spec.rb": {
+      "/csce431/spec/views/positions/edit.html.erb_spec.rb": {
         "lines": [
           null,
           null,
@@ -3132,7 +3191,7 @@
           null
         ]
       },
-      "/csce431/horticulture_tracker/horticulture_tracker/spec/views/positions/show.html.erb_spec.rb": {
+      "/csce431/spec/views/positions/index.html.erb_spec.rb": {
         "lines": [
           null,
           null,
@@ -3143,6 +3202,69 @@
           0,
           null,
           null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ]
+      },
+      "/csce431/spec/views/positions/new.html.erb_spec.rb": {
+        "lines": [
+          null,
+          null,
+          1,
+          null,
+          0,
+          0,
+          0,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ]
+      },
+      "/csce431/app/controllers/admins/omniauth_callbacks_controller.rb": {
+        "lines": [
+          null,
+          null,
+          1,
+          null,
+          0,
+          0,
+          0,
+          null,
+          3,
+          3,
+          3,
+          3,
+          null,
+          0,
+          0,
           null,
           null,
           null,
