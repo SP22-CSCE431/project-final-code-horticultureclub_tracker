@@ -65,8 +65,18 @@
       </div>
 
       <div class="field">
+        <%= form.label :quantity %>
+        <%= form.number_field :quantity %>
+      </div>
+
+      <div class="field">
+        <%= form.label :growth %>
+        <%= form.select :growth, ["Annual", "Perennial"]%>
+      </div>
+
+      <div class="field">
         <%= form.label :category %>
-        <%= form.select :category, ["Flowers", "Bushes", "Trees"]%>
+        <%= form.select :category, ["Flowers", "Bushes", "Trees", "Grasses", "Succulents"]%>
       </div>
 
       <div class="admin-attribute-links admin-plant-links">

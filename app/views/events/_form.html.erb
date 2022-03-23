@@ -1,7 +1,7 @@
  <section class="admin-fade-bg">
 
     <nav class="navbar navbar-expand-lg navbar-light bg-adminNav">
-    <div class="adminNav-container container-fluid">
+    <div class="adminNav-container">
       <%= link_to 'Horticulture Club Tracker', dashboard_path, class: "navbar-brand text-white" %>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
@@ -57,26 +57,34 @@
       </div>
 
       <div class="admin-events-start-end">
-        <div class="field">
+        <div class="admin-date-wrapper">
           <%= form.label :start_date %>
-          <%= form.date_select :start_date %>
+          <div>
+            <%= form.date_select :start_date %>
+          </div>
         </div>
 
-        <div class="field">
+        <div class="admin-date-wrapper">
           <%= form.label :end_date %>
-          <%= form.date_select :end_date %>
+          <div>
+            <%= form.date_select :end_date %>
+          </div>        
         </div>
       </div>
 
       <div class="admin-events-start-end">
-        <div class="field">
+        <div class="admin-date-wrapper">
           <%= form.label :start_time %>
-          <%= form.time_select :start_time %>
+          <div class="">
+            <%= form.time_select :start_time %>
+          </div>
         </div>
 
-        <div class="field">
+        <div class="admin-date-wrapper">
           <%= form.label :end_time %>
-          <%= form.time_select :end_time %>
+          <div class="">
+            <%= form.time_select :end_time %>
+          </div>
         </div>
       </div>
 
