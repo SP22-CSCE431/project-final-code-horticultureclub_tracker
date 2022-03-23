@@ -44,6 +44,20 @@ RSpec.describe('Creating a member', type: :feature) do
   end
 end
 
+RSpec.describe('Creating an admin', type: :feature) do
+  before do
+    Rails.application.env_config['devise.mapping'] = Devise.mappings[:admin]
+    Rails.application.env_config['omniauth.auth'] = OmniAuth.config.mock_auth[:google_user]
+    visit (admin_google_oauth2_omniauth_authorize_path)
+  end
+  it 'valid inputs' do
+    visit new_eligible_admin_path
+    fill_in 'Email', with: 'dylanharden3@tamu.edu'
+    click_on 'Create Eligible Admin'
+    expect(page).to(have_content('dylanharden3@tamu.edu'))
+  end
+end
+
 RSpec.describe('Creating a plant', type: :feature) do
   before do
     Rails.application.env_config['devise.mapping'] = Devise.mappings[:admin]

@@ -64,6 +64,21 @@ RSpec.describe(Member, type: :model) do
   end
 end
 
+RSpec.describe(EligibleAdmin, type: :model) do
+  subject(:eligible_admin) do
+    described_class.new(email: 'dylanharden3@tamu.edu')
+  end
+
+  it 'is valid with all valid attributes' do
+    expect(eligible_admin).to(be_valid)
+  end
+
+  it 'is not valid without an email' do
+    eligible_admin.email = nil
+    expect(eligible_admin).not_to(be_valid)
+  end
+end
+
 RSpec.describe(Point, type: :model) do
   subject(:point) do
     described_class.new(member_id: 1, event_id: 5)
