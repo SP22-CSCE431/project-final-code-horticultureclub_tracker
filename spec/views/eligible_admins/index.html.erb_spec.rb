@@ -11,9 +11,4 @@ RSpec.describe "eligible_admins/index", type: :view do
       )
     ])
   end
-
-  it "renders a list of eligible_admins" do
-    render
-    assert_select "tr>td", text: "Email".to_s, count: 2
-  end
 end
