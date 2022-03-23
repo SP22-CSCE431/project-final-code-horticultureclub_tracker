@@ -29,10 +29,42 @@
     padding-bottom: 20px;
  }
 
+ .bg-adminNav {
+     background-color: rgba(255, 255, 255, 0.0);
+ }
+
+ .adminNav-container {
+    margin: 0 auto;
+    width: 68vw !important;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+ }
+
+ .bg-adminNav-dropdown-active {
+     background-color: #999999 !important;
+ }
+
+ .navbar-brand {
+     font-size: 1.5rem !important;
+ }
+
+ .navbar-toggler {
+     background-color: #fff !important;
+ }
+
+ .nav-link {
+     color: #fff !important;
+ }
+
+ .active {
+     color: #999999 !important;
+ }
+
 .admin-white-bg {
     background-color: #fff;
     padding: 50px;
-    width: 70vw;
+    width: 75vw;
     margin: 0 auto;
     border-radius: 15px;
 }
@@ -49,6 +81,10 @@
     padding: 10px 15px;
     border-radius: 15px;
     text-decoration: none;
+}
+
+.admin-new-btn:hover {
+    color: #fff !important;
 }
 
 .admin-column-title {
@@ -165,15 +201,24 @@ select {
 /* Media queries for smaller screen sizes */
 @media screen and (max-width:1000px) {
     .admin-white-bg {
-        width: 85vw;
+        width: 95vw;
         padding: 30px;
+    }
+    .adminNav-container {
+        width: 83vw !important;
     }
 }
 
 @media screen and (max-width: 700px) {
+    .adminNav-options {
+        margin-left: 0 !important;
+    }
     .admin-white-bg {
         width: 95vw;
         padding: 20px;
+    }
+    .adminNav-container {
+        width: 93vw !important;
     }
     .admin-crud-icons {
         grid-column: 1 / span 4;

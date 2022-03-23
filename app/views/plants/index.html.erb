@@ -1,5 +1,35 @@
 <section class="admin-fade-bg">
-  <nav>
+  <nav class="navbar navbar-expand-lg navbar-light bg-adminNav">
+    <div class="adminNav-container container-fluid">
+      <%= link_to 'Horticulture Club Tracker', dashboard_path, class: "navbar-brand text-white" %>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto adminNav-options">
+          <li class="nav-item">
+            <%= link_to 'Events', events_path, class: "nav-link", aria_current: "page" %>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Members
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <li><%= link_to "Points", points_path, class: "dropdown-item" %></li>
+              <li><%= link_to "Leaderboard", leaderboard_path, class: "dropdown-item" %></li>
+              <li><%= link_to "Members", members_path, class: "dropdown-item" %></li>
+              <li><%= link_to "Positions", positions_path, class: "dropdown-item" %></li>
+            </ul>
+          </li>
+          <li class="nav-item">
+            <%= link_to "Plants", plants_path, class: "nav-link active" %>
+          </li>
+          <li class="nav-item">
+            <%= link_to "Admins", eligible_admins_path, class: "nav-link" %>
+          </li>
+        </ul>
+      </div>
+    </div>
   </nav>
   <div class="admin-white-bg">
 

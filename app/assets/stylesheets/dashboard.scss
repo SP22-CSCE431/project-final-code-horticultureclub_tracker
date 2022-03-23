@@ -6,7 +6,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
 
  *{
-     font-family: 'Lato', sans-serif;
+     font-family: 'Lato', sans-serif !important;
  }
 
  .dashboard-title {
@@ -22,6 +22,8 @@
 
  .card-title {
     text-align: center;
+    font-size: larger;
+    margin-bottom: 0 !important;
  }
 
  .selection-grid {
@@ -52,6 +54,7 @@
 
  .selection-card-title {
      margin: 0 auto;
+     margin-top: 10px;
      width: 80%;
      display: flex;
      justify-content:space-evenly;
