@@ -1,0 +1,26 @@
+// Place all the styles related to the website controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: https://sass-lang.com/
+
+#hero, #aboutus, #officers, #plantsale {
+    min-height: 100vh;
+    height: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#hero {
+    background-image: image-url('websitebgs/hero.png');
+}
+
+#aboutus {
+    background-image: image-url('websitebgs/aboutus.png');
+}
+
+#officers {
+    background-image: image-url('websitebgs/officers.png');
+}
+
+#plantsale {
+    background-image: image-url('websitebgs/plantsale.png');
+}
