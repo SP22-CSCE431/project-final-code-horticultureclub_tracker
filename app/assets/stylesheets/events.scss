@@ -11,17 +11,27 @@
 }
 
 .admin-events-start-end {
-    width: 85%;
+    width: 100%;
     display: grid;
     grid-template-columns: 1fr 1fr;
     align-items: center;
     text-align: left;
 }
 
-@media screen and (max-width:1000px) {
+.admin-date-wrapper {
+    width: 80%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
-@media screen and (max-width: 750px) {
+@media screen and (max-width: 1000px) {
+    .admin-date-wrapper {
+        width: 95%;
+    }
+}
+
+@media screen and (max-width: 753px) {
     .admin-events-start-end {
         display: block;
     }

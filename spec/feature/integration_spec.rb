@@ -44,6 +44,44 @@ RSpec.describe('Creating a member', type: :feature) do
   end
 end
 
+RSpec.describe('Creating an admin', type: :feature) do
+  before do
+    Rails.application.env_config['devise.mapping'] = Devise.mappings[:admin]
+    Rails.application.env_config['omniauth.auth'] = OmniAuth.config.mock_auth[:google_user]
+    visit (admin_google_oauth2_omniauth_authorize_path)
+  end
+  it 'valid inputs' do
+    visit new_eligible_admin_path
+    fill_in 'Email', with: 'dylanharden3@tamu.edu'
+    click_on 'Create Eligible admin'
+    expect(page).to(have_content('dylanharden3@tamu.edu'))
+  end
+end
+
+RSpec.describe('Creating a plant', type: :feature) do
+  before do
+    Rails.application.env_config['devise.mapping'] = Devise.mappings[:admin]
+    Rails.application.env_config['omniauth.auth'] = OmniAuth.config.mock_auth[:google_user]
+    visit (admin_google_oauth2_omniauth_authorize_path)
+  end
+  it 'valid inputs' do
+    visit new_plant_path
+    fill_in 'Name', with: 'Rose'
+    fill_in 'Price', with: '12.99'
+    fill_in 'Description', with: 'Test description'
+    select 'Flowers', from: 'plant_category'
+    select 'Annual', from: 'plant_growth'
+    fill_in 'Quantity', with: '5'
+    click_on 'Create Plant'
+    expect(page).to(have_content('Rose'))
+    expect(page).to(have_content('12.99'))
+    expect(page).to(have_content('Test description'))
+    expect(page).to(have_content('Flowers'))
+    expect(page).to(have_content('Annual'))
+    expect(page).to(have_content('5'))
+  end
+end
+
 RSpec.describe('Creating a point object', type: :feature) do
   before do
     Rails.application.env_config['devise.mapping'] = Devise.mappings[:admin]
