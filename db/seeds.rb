@@ -10,6 +10,6 @@
 
 EligibleAdmin.create!(email: 'jacksonengel@tamu.edu')
 EligibleAdmin.create!(email: 'ecblevins@tamu.edu')
-EligibleAdmin.create!(email: 'jhassman@tamu.edu')
+EligibleAdmin.create!(email: 'jhassmann@tamu.edu')
 EligibleAdmin.create!(email: 'dylanharden3@tamu.edu')
 EligibleAdmin.create!(email: 'rwang0527@tamu.edu')
