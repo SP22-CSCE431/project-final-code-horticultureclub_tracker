@@ -8,12 +8,12 @@ Cloudinary.config(
   api_secret: ENV['CLOUD_API_SECRET']
 )
 Shrine.storages = {
-  cache: Shrine::Storage::Cloudinary.new(prefix: 'cache'), 
+  cache: Shrine::Storage::Cloudinary.new(prefix: 'cache'),
   store: Shrine::Storage::Cloudinary.new(prefix: 'rails_uploads')
 }
-Shrine.plugin(:activerecord)           
-Shrine.plugin(:cached_attachment_data) 
-Shrine.plugin(:restore_cached_data)    
+Shrine.plugin(:activerecord)
+Shrine.plugin(:cached_attachment_data)
+Shrine.plugin(:restore_cached_data)
 Shrine.plugin(:validation_helpers)
 Shrine.plugin(:validation
              )
