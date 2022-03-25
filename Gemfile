@@ -39,6 +39,7 @@ group :development, :test do
   gem 'rubocop-performance'
   gem 'rubocop-rails'
   gem 'rubocop-rspec'
+  gem 'dotenv-rails'
 end
 
 group :development do
@@ -73,3 +74,6 @@ gem 'rack-cors'
 gem 'devise'
 gem 'omniauth', '~> 1.9.1'
 gem 'omniauth-google-oauth2'
+gem 'image_processing', '~> 1.2'
+gem 'shrine', '~> 3.3'
+gem "shrine-cloudinary", "~> 1.1"
