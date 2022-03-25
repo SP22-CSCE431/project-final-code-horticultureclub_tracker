@@ -34,12 +34,12 @@ gem 'rexml'
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platforms: %i[mri mingw x64_mingw]
+  gem 'dotenv-rails'
   gem 'rspec-rails'
   gem 'rubocop'
   gem 'rubocop-performance'
   gem 'rubocop-rails'
   gem 'rubocop-rspec'
-  gem 'dotenv-rails'
 end
 
 group :development do
@@ -72,8 +72,8 @@ gem 'grape-active_model_serializers'
 gem 'rack-cors'
 
 gem 'devise'
+gem 'image_processing', '~> 1.2'
 gem 'omniauth', '~> 1.9.1'
 gem 'omniauth-google-oauth2'
-gem 'image_processing', '~> 1.2'
 gem 'shrine', '~> 3.3'
-gem "shrine-cloudinary", "~> 1.1"
+gem 'shrine-cloudinary', '~> 1.1'
