@@ -3,16 +3,16 @@
    <nav class="navbar navbar-expand-lg navbar-light bg-adminNav">
     <div class="adminNav-container container-fluid">
       <%= link_to 'Horticulture Club Tracker', dashboard_path, class: "navbar-brand text-white" %>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <button class="navbar-toggler admin-navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav ms-auto adminNav-options">
           <li class="nav-item">
-            <%= link_to 'Events', events_path, class: "nav-link", aria_current: "page" %>
+            <%= link_to 'Events', events_path, class: "nav-link admin-nav-link", aria_current: "page" %>
           </li>
           <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle active" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            <a class="nav-link dropdown-toggle admin-active" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
               Members
             </a>
             <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
@@ -23,10 +23,10 @@
             </ul>
           </li>
           <li class="nav-item">
-            <%= link_to "Plants", plants_path, class: "nav-link" %>
+            <%= link_to "Plants", plants_path, class: "nav-link admin-nav-link" %>
           </li>
           <li class="nav-item">
-            <%= link_to "Admins", eligible_admins_path, class: "nav-link" %>
+            <%= link_to "Admins", eligible_admins_path, class: "nav-link admin-nav-link" %>
           </li>
         </ul>
       </div>
