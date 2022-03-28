@@ -49,15 +49,15 @@
      font-size: 1.5rem !important;
  }
 
- .navbar-toggler {
+ .admin-navbar-toggler {
      background-color: #fff !important;
  }
 
- .nav-link {
+ .admin-nav-link {
      color: #fff !important;
  }
 
- .active {
+ .admin-active {
      color: #999999 !important;
  }
 
