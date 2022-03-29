@@ -25,7 +25,9 @@ const EventCalendar = () => {
       // Pull out start/end dates and start/end times (The times in the database don't have correct dates on them for some reason)
       const { start_date, end_date, start_time, end_time } = event;
       const startDate   = new Date(start_date)
+      startDate.setDate(startDate.getDate() + 1)
       const endDate     = new Date(end_date)
+      endDate.setDate(endDate.getDate() + 1)
       const startTime   = new Date(start_time)
       const endTime     = new Date(end_time)
 
@@ -66,7 +68,7 @@ const EventCalendar = () => {
 
       })
       setEvents(tempEvents);
-      console.log(tempEvents);
+      // console.log(tempEvents);
    }
 
 
