@@ -1,4 +1,4 @@
-import React, { Component, useState, useEffect} from 'react'
+import React, { Component, useState, useEffect, useLayoutEffect} from 'react'
 import { Calendar, Views, momentLocalizer } from 'react-big-calendar'
 import moment from 'moment'
 import './styles.scss'
@@ -7,17 +7,11 @@ const localizer = momentLocalizer(moment)
 
 let allViews = Object.keys(Views).map(k => Views[k])
 
-const ColoredDateCellWrapper = ({ children }) =>
-  React.cloneElement(React.Children.only(children), {
-    style: {
-      backgroundColor: 'lightblue',
-    },
-  })
-
 
 const EventCalendar = () => {
 
-   const [events, setEvents] = useState();
+   const [events, setEvents] = useState(); // has events for the calendar with their format
+   const [eventsData, setEventsData] = useState(); // same as events except these have the description
 
    // translates rails event to javascript date
    function formatEvent(event) {
@@ -62,26 +56,77 @@ const EventCalendar = () => {
 
    async function updateEvents(data) {
       let tempEvents = [];
+      let tempEventsData = [];
       data.forEach(event => {
-                     
-         tempEvents.push(formatEvent(event));
-
+         let currEvent = formatEvent(event)
+         tempEvents.push(currEvent);
+         tempEventsData.push({ title: currEvent.title, start: currEvent.start, end: currEvent.end, description : event.description });
       })
+      console.log(tempEvents);
       setEvents(tempEvents);
+      console.log(tempEventsData);
+      setEventsData(tempEventsData);
       // console.log(tempEvents);
    }
-
 
    useEffect(async () => {
       const getEvents = async () => {
          try {
+            console.log('getting events')
             const response = await fetch('/api/v1/events');
             const json = await response.json();
             await updateEvents(json);
          }catch(error) { console.log(error); }
       }
+
+      // updates the colors of the cells on the calendar 
+      async function setColors() {
+         const eventCells = document.querySelectorAll('div.rbc-event');
+         for(let i = 0 ; i < eventCells.length; i++) {
+             switch (eventCells[i].textContent) {
+                 case 'Volunteer Day':
+                    if (eventCells[i].classList.contains('event-volunteerDay')) return;
+                     eventCells[i].classList += ' event-volunteerDay';
+                     break;
+                 case 'Monthly Meeting':
+                  if (eventCells[i].classList.contains('event-monthlyMeeting')) return;
+                     eventCells[i].classList += ' event-monthlyMeeting';
+                     break;
+                 case 'Conference':
+                  if (eventCells[i].classList.contains('event-conference')) return;
+                     eventCells[i].classList += ' event-conference';
+                     break;
+                 case 'Plant Sale':
+                  if (eventCells[i].classList.contains('event-plantSale')) return;
+                     eventCells[i].classList += ' event-plantSale';
+                     break;
+                 case 'Social':
+                  if (eventCells[i].classList.contains('event-social')) return;
+                     eventCells[i].classList += ' event-social';
+                     break;
+             }
+         }
+      }
+
       await getEvents();
+      setColors();
+      window.setInterval(setColors , 1000);
+      
+      // makes it so when you click on an event you can see its details
+      function setEventToggles() {
+         const eventCells = document.querySelectorAll('div.rbc-event');
+         for(let i = 0 ; i < eventCells.length ; i++) {
+            eventCells[i].onclick = setEventPopover(eventCells[i]);
+         }
+      }
+      // adds popover with event that was clicked
+      function setEventPopover(event) {
+         let popover = document.querySelector('div.popover');
+      }
+
+      setEventToggles();
    }, []);
+
 
 
    // Event {
@@ -116,20 +161,17 @@ const EventCalendar = () => {
             step={60}
             showMultiDayTimes
             // max={dates.add(dates.endOf(new Date(2015, 17, 1), 'day'), -1, 'hours')}
-            defaultDate={new Date(2022, 1, 15)}
-            components={{
-               timeSlotWrapper: ColoredDateCellWrapper,
-            }}
+            defaultDate={new Date()}
+            // components={{
+            //    timeSlotWrapper: ColoredDateCellWrapper,
+            // }}
             localizer={localizer}
             style = {{ height: 500 }}
          />
       </div>
    );
 }
-
-
 class App extends Component {
-
 
    render() {
       return (
@@ -137,7 +179,6 @@ class App extends Component {
             <h2>Calendar Component Below:</h2>
             <EventCalendar />
          </div>
-
       )
    }
 }
