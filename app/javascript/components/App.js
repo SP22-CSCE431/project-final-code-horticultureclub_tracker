@@ -2,6 +2,7 @@ import React, { Component, useState, useEffect, useLayoutEffect} from 'react'
 import { Calendar, Views, momentLocalizer } from 'react-big-calendar'
 import moment from 'moment'
 import './styles.scss'
+import RemoveIcon from 'images/remove.png'
 
 const localizer = momentLocalizer(moment)
 
@@ -11,7 +12,7 @@ let allViews = Object.keys(Views).map(k => Views[k])
 const EventCalendar = () => {
 
    const [events, setEvents] = useState(); // has events for the calendar with their format
-   const [eventsData, setEventsData] = useState(); // same as events except these have the description
+   const [showPopover, setShowPopover] = useState(false); // toggles the event popover
 
    // translates rails event to javascript date
    function formatEvent(event) {
@@ -56,23 +57,17 @@ const EventCalendar = () => {
 
    async function updateEvents(data) {
       let tempEvents = [];
-      let tempEventsData = [];
       data.forEach(event => {
-         let currEvent = formatEvent(event)
-         tempEvents.push(currEvent);
-         tempEventsData.push({ title: currEvent.title, start: currEvent.start, end: currEvent.end, description : event.description });
+         let currEvent = formatEvent(event);
+         tempEvents.push({ title: currEvent.title, start: currEvent.start, end: currEvent.end, description : event.description, points: event.points });
       })
-      console.log(tempEvents);
       setEvents(tempEvents);
-      console.log(tempEventsData);
-      setEventsData(tempEventsData);
       // console.log(tempEvents);
    }
 
    useEffect(async () => {
       const getEvents = async () => {
          try {
-            console.log('getting events')
             const response = await fetch('/api/v1/events');
             const json = await response.json();
             await updateEvents(json);
@@ -111,22 +106,24 @@ const EventCalendar = () => {
       await getEvents();
       setColors();
       window.setInterval(setColors , 1000);
-      
-      // makes it so when you click on an event you can see its details
-      function setEventToggles() {
-         const eventCells = document.querySelectorAll('div.rbc-event');
-         for(let i = 0 ; i < eventCells.length ; i++) {
-            eventCells[i].onclick = setEventPopover(eventCells[i]);
-         }
-      }
-      // adds popover with event that was clicked
-      function setEventPopover(event) {
-         let popover = document.querySelector('div.popover');
-      }
 
-      setEventToggles();
    }, []);
 
+   const weekDays = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
+
+   function getFormatedDate(date) {
+      return `${weekDays[date.getDay()]} ${date.toLocaleString()}`;
+   }
+
+   const eventSelectedEvent = (e) => {
+      document.querySelector('h3.event-popover-title').textContent = `${e.title}`;
+      let start = getFormatedDate(e.start);
+      let end = getFormatedDate(e.end);
+      document.querySelector('h5.event-popover-start').textContent = `Start: ${start}`;
+      document.querySelector('h5.event-popover-end').textContent = `End: ${end}`;
+      document.querySelector('h5.event-popover-description').textContent = `Details: ${e.description}`;
+      setShowPopover(true);
+   }
 
 
    // Event {
@@ -167,7 +164,19 @@ const EventCalendar = () => {
             // }}
             localizer={localizer}
             style = {{ height: 500 }}
+            onSelectEvent={(e) => eventSelectedEvent(e)}
          />
+         <div className={`event-popover event-popover-${showPopover == true ? 'show' : 'hide'}`}>
+            <div className='event-popover-head'>
+               <h3 className='event-popover-title'></h3>
+               <img src={RemoveIcon} className={'remove-icon'} onClick={() => {setShowPopover(false)}}></img>
+            </div>
+            <div className='event-popover-start-end'>
+               <h5 className='event-popover-start'></h5>
+               <h5 className='event-popover-end'></h5>
+            </div>
+            <h5 className='event-popover-description'></h5>
+         </div>
       </div>
    );
 }
@@ -176,7 +185,6 @@ class App extends Component {
    render() {
       return (
          <div>
-            <h2>Calendar Component Below:</h2>
             <EventCalendar />
          </div>
       )
