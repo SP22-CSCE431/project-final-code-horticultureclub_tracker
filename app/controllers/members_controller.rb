@@ -6,11 +6,23 @@ class MembersController < ApplicationController
 
   # GET /members or /members.json
   def index
-    @members = Member.all
+    @members = Member.all.order('name ASC')
   end
 
   # GET /members/1 or /members/1.json
-  def show; end
+  def show
+    @events = Event.joins('INNER JOIN points ON events.id=points.event_id')
+                   .where('points.member_id=?', @member.id)
+    @positions = Position.where(member_id: @member.id)
+    @points = Event
+              .joins('INNER JOIN points ON events.id=points.event_id')
+              .joins('INNER JOIN members ON members.id=points.member_id')
+              .group('points.member_id')
+              .sum('events.points')
+    @points.each do |key, value|
+      @member_points = value if key == @member.id
+    end
+  end
 
   # GET /members/new
   def new

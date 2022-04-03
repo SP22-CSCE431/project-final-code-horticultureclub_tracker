@@ -42,13 +42,13 @@
          <h6 class="admin-column-title">Name</h6>
          <h6 class="admin-column-title">Total Points</h6>
 
-         <% @members.each do |member| %>
+         <% @members.each do |key, value| %>
             <p>
-            <%= link_to member_path(member.id) do %>
-               <%= member.name %>
+            <%= link_to member_path(key) do %>
+               <%= Member.find(key).name %>
             <% end %>
             </p>
-            <p><%= member.points %></p>
+            <p><%= value %></p>
          <% end %>
       </div>
       <div class="admin-attribute-links admin-plant-links">
