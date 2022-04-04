@@ -1,3 +1,28 @@
 // Place all the styles related to the admins controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
+
+
+.admin-login-bg {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100vw;
+    background: rgb(20,67,203);
+    background: linear-gradient(90deg, rgba(20,67,203,1) 0%, rgba(47,196,12,1) 100%);
+}
+
+.admin-login-wrapper {
+    background-color: #fff;
+    border-radius: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 20px;
+}
+
+.admin-login-text {
+    color: #000;
+}
