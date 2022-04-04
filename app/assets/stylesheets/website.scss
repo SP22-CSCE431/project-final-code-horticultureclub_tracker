@@ -3,13 +3,6 @@
 // You can use Sass (SCSS) here: https://sass-lang.com/
 
 
-* {
-    overflow-x: hidden;
-}
-
-body {
-    padding-bottom: 100px;
-}
 
 #bg-img {
     width: 100vw;
@@ -17,491 +10,513 @@ body {
     z-index: -1;
 }
 
-nav {
-    display: flex;
-    justify-content: start;
-    align-items: center;
-    padding: 20px 10px 20px 30px;
-
-    .links {
-        flex-grow: 1;
-        margin-left: 20px;
-
-        ul {
-            margin-top: 10px;
-        }
-
-        .link {
-            margin: 0 20px;
-            display: inline-block;
-        }
-        .link:hover:after { 
-            transform: scaleX(1); 
-        }
-        .link:after {
-            display:block;
-            content: '';
-            border-bottom: solid 5px #000;  
-            transform: scaleX(0);  
-            transition: transform 150ms ease-in-out;
-            transform-origin:  0% 50%;
-        }
-    }
-
-    .navbar-logo {
-        font-family: 'Righteous', cursive !important;
-        color: black;
-        font-size: 2em !important;
-        text-decoration: none;
-    }
-
-    .navbar-button {
-        background-color: #007FFF;
-        padding: 10px 30px;
-        border-radius: 50px;
-        color: #fff !important;
-        font-weight: 900;
-        font-size: 1.2em;
-        border: none;
-        outline: none;
-        margin: 0 5px;
-        transition: 0.2s ease;
-
-        &:hover {
-            background-color: #006bd6;
-        }
-
-        &:active {
-            background-color: #0054a8;
-            transition: 0s;
-        }
-    }
-
-    .navbar-button.admin {
-        background-color: rgba(0, 128, 255, 0);
-        color: #007FFF !important;
-
-        &:hover {
-            background-color: rgba(0, 128, 255, 0.2);
-        }
-    }
-
-    li {
-        display: inline;
-        margin: 0 10px;
-    }
-    li > a {
-        color: black !important;
-        text-decoration: none;
-        font-size: 1.2em;
-    }
+body {
+    overflow-x: hidden;
 }
 
+.home-page {
 
-
-#hero {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-
-    .social-links {
-        display: none;
-        cursor: pointer;
-
+    body {
+        padding-bottom: 100px;
+    }
+    
+    nav {
+        display: flex;
+        justify-content: start;
+        align-items: center;
+        padding: 20px 10px 20px 30px;
+    
+        .links {
+            flex-grow: 1;
+            margin-left: 20px;
+    
+            ul {
+                margin-top: 10px;
+                list-style: none;
+            }
+    
+            .link {
+                margin: 0 20px;
+                display: inline-block;
+            }
+            .link:hover:after { 
+                transform: scaleX(1); 
+            }
+            .link:after {
+                display:block;
+                content: '';
+                border-bottom: solid 5px #000;  
+                transform: scaleX(0);  
+                transition: transform 150ms ease-in-out;
+                transform-origin:  0% 50%;
+            }
+        }
+    
+        .navbar-logo {
+            font-family: 'Righteous', cursive !important;
+            color: black;
+            font-size: 2em !important;
+            text-decoration: none;
+        }
+    
+        .navbar-button {
+            background-color: #007FFF;
+            padding: 10px 30px;
+            border-radius: 50px;
+            color: #fff !important;
+            font-weight: 900;
+            font-size: 1.2em;
+            border: none;
+            outline: none;
+            margin: 0 5px;
+            transition: 0.2s ease;
+    
+            &:hover {
+                background-color: #006bd6;
+            }
+    
+            &:active {
+                background-color: #0054a8;
+                transition: 0s;
+            }
+        }
+    
+        .navbar-button.admin {
+            background-color: rgba(0, 128, 255, 0);
+            color: #007FFF !important;
+    
+            &:hover {
+                background-color: rgba(0, 128, 255, 0.2);
+            }
+        }
+    
+        li {
+            display: inline;
+            margin: 0 10px;
+        }
+        li > a {
+            color: black !important;
+            text-decoration: none;
+            font-size: 1.2em;
+        }
+    }
+    
+    
+    
+    #hero {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    
+        .social-links {
+            display: none;
+            cursor: pointer;
+    
+            a {
+                text-decoration: none;
+            }
+    
+            ul {
+                padding: 0;
+                list-style: none;
+            }
+            
+            li {
+                display: inline;
+            }
+    
+            svg {
+                fill: rgba(0, 0, 0, 0.8);
+                margin: 10px;
+                width: 30px;
+                height: 30px;
+    
+                &:hover {
+                    fill: rgba(0, 0, 0, 1);
+                }
+            }
+        }
+    
+        h1 {
+            font-family: 'Righteous', cursive !important;
+            color: black;
+            font-size: 70px !important;
+            margin-top: 50px;
+            overflow: hidden;
+            padding: 0 30px;
+            text-align: center;
+        }
+    
+        p {
+            font-size: 1.5em;
+            margin-top: 50px;
+            width: calc(max(50%, 100px));
+            text-align: center;
+        }
+    
+        .actions {
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+            flex-wrap: wrap;
+            margin-top: 50px;
+        }
+        .action-button {
+            padding: 8px 80px;
+            font-family: 'Righteous', cursive !important;
+            outline: none;
+            border: none;
+            color: #fff;
+            font-size: 1.5em;
+            border-radius: 50px;
+            margin: 10px;
+            transition: 0.2s ease;
+            min-width: 273px;
+        }
+        .action-button1, .action-button3 {
+            background-color: #007FFF;
+            
+            &:hover {
+                background-color: #006bd6;
+            }
+    
+            &:active {
+                background-color: #0054a8;
+                transition: 0s;
+            }
+        }
+        .action-button2 {
+            background-color: #00AD83;
+            
+            &:hover {
+                background-color: #009771;
+            }
+    
+            &:active {
+                background-color: #007256;
+                transition: 0s;
+            }
+        }
+        #contact-btn {
+            display: none;
+        }
+    
+        .admins {
+            display: none;
+        }
+        .action-button4 {
+            background-color: rgba(0, 128, 255, 0);
+            color: #007FFF !important;
+            margin: 0;
+            padding: 8px 40px;
+            min-width: unset;
+    
+    
+            &:hover {
+                background-color: rgba(0, 128, 255, 0.2);
+            }
+        }
+    }
+    
+    
+    
+    #aboutus {
+        margin-top: 300px;
+        display: flex;
+        flex-wrap: wrap;
+    
+        & > div {
+            width: calc(max(700px, 50%));
+            padding: 50px;
+            margin: 0 auto;
+        }
+    
+        .header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+    
+        .header > span {
+            margin: 0 10px;
+        }
+        .header > span:nth-child(1) {
+            background-color: #000;
+            width: 60px;
+            height: 6px;
+        }
+        .header > span:nth-child(2) {
+            font-size: 2.8em;
+            font-family: 'Roboto Condensed', sans-serif !important;
+        }
+        .header > span:nth-child(3) {
+            background-color: #000;
+            width: 200px;
+            height: 6px;
+        }
+    
+        p {
+            font-family: 'Roboto Condensed', sans-serif !important;
+            font-size: 1.6em;
+        }
+    
+    
+        .slideshow {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+    
+            img {
+                width: 100%;
+            }
+        }
+    }
+    
+    
+    
+    #officers {
+    
+        width: calc(max(70%, 500px));
+        margin: 200px auto 0 auto;
+        padding-top: 50px;
+    
+        .header {
+            display: flex;
+            align-items: center;
+            justify-content: end;
+            margin-bottom: 20px;
+        }
+    
+        .header > span {
+            margin: 0 10px;
+        }
+        .header > span:nth-child(1) {
+            background-color: #000;
+            width: 200px;
+            height: 6px;
+        }
+        .header > span:nth-child(2) {
+            font-size: 2.8em;
+            font-family: 'Roboto Condensed', sans-serif !important;
+        }
+        .header > span:nth-child(3) {
+            background-color: #000;
+            width: 60px;
+            height: 6px;
+        }
+    
+        .gallery {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            margin-top: 10px;
+    
+            img {
+                margin: 20px;
+                width: calc(max(20%, 150px));
+            }
+        }
+        
+    
+    }
+    
+    #plantsale {
+        width: calc(max(70%, 500px));
+        margin: 100px auto 0 auto;
+        padding-top: 50px;
+    
+        .header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+    
+        .header > span {
+            margin: 0 10px;
+        }
+        .header > span:nth-child(1) {
+            background-color: #000;
+            width: 60px;
+            height: 6px;
+        }
+        .header > span:nth-child(2) {
+            font-size: 2.8em;
+            font-family: 'Roboto Condensed', sans-serif !important;
+        }
+        .header > span:nth-child(3) {
+            background-color: #000;
+            width: 200px;
+            height: 6px;
+        }
+    
+        p {
+            font-family: 'Roboto Condensed', sans-serif !important;
+            font-size: 1.6em;
+            text-align: center;
+        }
+    
+        .plantsale-action {
+            margin-top: 50px;
+            display: flex;
+            justify-content: end;
+        }
+        .plantsale-action button {
+            padding: 8px 80px;
+            font-family: 'Righteous', cursive !important;
+            outline: none;
+            border: none;
+            color: #fff;
+            font-size: 1.5em;
+            border-radius: 50px;
+            margin: 0 10px;
+            transition: 0.2s ease;
+            background-color: #00AD83;
+            
+            &:hover {
+                background-color: #009771;
+            }
+    
+            &:active {
+                background-color: #007256;
+                transition: 0s;
+            }
+        }
+    }
+    
+    #social-media {
+        position: fixed;
+        right: 40px;
+        top: 50%;
+        transform: translate(0, -50%);
+    
         a {
             text-decoration: none;
         }
 
         ul {
-            padding: 0;
+            list-style: none;
         }
-        
+    
         li {
-            display: inline;
+            margin: 10px 0;
         }
-
+    
         svg {
-            fill: rgba(0, 0, 0, 0.8);
-            margin: 10px;
+            fill: rgba(0, 0, 0, 0.5);
+            cursor: pointer;
             width: 30px;
             height: 30px;
-
+            transition: 0.2s ease;
+    
             &:hover {
-                fill: rgba(0, 0, 0, 1);
+                fill: rgba(0, 0, 0, 0.8);
             }
         }
     }
-
-    h1 {
-        font-family: 'Righteous', cursive !important;
-        color: black;
-        font-size: 70px !important;
-        margin-top: 50px;
-        overflow: hidden;
-        padding: 0 30px;
-        text-align: center;
-    }
-
-    p {
-        font-size: 1.5em;
-        margin-top: 50px;
-        width: calc(max(50%, 100px));
-        text-align: center;
-    }
-
-    .actions {
-        display: flex;
-        justify-content: space-evenly;
-        align-items: center;
-        flex-wrap: wrap;
-        margin-top: 50px;
-    }
-    .action-button {
-        padding: 8px 80px;
-        font-family: 'Righteous', cursive !important;
-        outline: none;
-        border: none;
-        color: #fff;
-        font-size: 1.5em;
-        border-radius: 50px;
-        margin: 10px;
-        transition: 0.2s ease;
-        min-width: 273px;
-    }
-    .action-button1, .action-button3 {
-        background-color: #007FFF;
-        
-        &:hover {
-            background-color: #006bd6;
-        }
-
-        &:active {
-            background-color: #0054a8;
-            transition: 0s;
-        }
-    }
-    .action-button2 {
-        background-color: #00AD83;
-        
-        &:hover {
-            background-color: #009771;
-        }
-
-        &:active {
-            background-color: #007256;
-            transition: 0s;
-        }
-    }
-    #contact-btn {
-        display: none;
-    }
-
-    .admins {
-        display: none;
-    }
-    .action-button4 {
-        background-color: rgba(0, 128, 255, 0);
-        color: #007FFF !important;
-        margin: 0;
-        padding: 8px 40px;
-        min-width: unset;
-
-
-        &:hover {
-            background-color: rgba(0, 128, 255, 0.2);
-        }
-    }
-}
-
-
-
-#aboutus {
-    margin-top: 300px;
-    display: flex;
-    flex-wrap: wrap;
-
-    & > div {
-        width: calc(max(700px, 50%));
-        padding: 50px;
-        margin: 0 auto;
-    }
-
-    .header {
-        display: flex;
-        align-items: center;
-        margin-bottom: 20px;
-    }
-
-    .header > span {
-        margin: 0 10px;
-    }
-    .header > span:nth-child(1) {
-        background-color: #000;
-        width: 60px;
-        height: 6px;
-    }
-    .header > span:nth-child(2) {
-        font-size: 2.8em;
-        font-family: 'Roboto Condensed', sans-serif !important;
-    }
-    .header > span:nth-child(3) {
-        background-color: #000;
-        width: 200px;
-        height: 6px;
-    }
-
-    p {
-        font-family: 'Roboto Condensed', sans-serif !important;
-        font-size: 1.6em;
-    }
-
-
-    .slideshow {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-
-        img {
-            width: 100%;
-        }
-    }
-}
-
-
-
-#officers {
-
-    width: calc(max(70%, 500px));
-    margin: 200px auto 0 auto;
-    padding-top: 50px;
-
-    .header {
-        display: flex;
-        align-items: center;
-        justify-content: end;
-        margin-bottom: 20px;
-    }
-
-    .header > span {
-        margin: 0 10px;
-    }
-    .header > span:nth-child(1) {
-        background-color: #000;
-        width: 200px;
-        height: 6px;
-    }
-    .header > span:nth-child(2) {
-        font-size: 2.8em;
-        font-family: 'Roboto Condensed', sans-serif !important;
-    }
-    .header > span:nth-child(3) {
-        background-color: #000;
-        width: 60px;
-        height: 6px;
-    }
-
-    .gallery {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        flex-wrap: wrap;
-        margin-top: 10px;
-
-        img {
-            margin: 20px;
-            width: calc(max(20%, 150px));
+    
+    
+    @media screen and (max-width: 1400px) {
+        #aboutus {
+            margin-left: auto;
+            margin-right: auto;
+            width: calc(max(400px, 70%));
+    
+            & > div {
+                width: 100%;
+                padding: 50px;
+            }
         }
     }
     
-
-}
-
-#plantsale {
-    width: calc(max(70%, 500px));
-    margin: 100px auto 0 auto;
-    padding-top: 50px;
-
-    .header {
-        display: flex;
-        align-items: center;
-        margin-bottom: 20px;
-    }
-
-    .header > span {
-        margin: 0 10px;
-    }
-    .header > span:nth-child(1) {
-        background-color: #000;
-        width: 60px;
-        height: 6px;
-    }
-    .header > span:nth-child(2) {
-        font-size: 2.8em;
-        font-family: 'Roboto Condensed', sans-serif !important;
-    }
-    .header > span:nth-child(3) {
-        background-color: #000;
-        width: 200px;
-        height: 6px;
-    }
-
-    p {
-        font-family: 'Roboto Condensed', sans-serif !important;
-        font-size: 1.6em;
-        text-align: center;
-    }
-
-    .plantsale-action {
-        margin-top: 50px;
-        display: flex;
-        justify-content: end;
-    }
-    .plantsale-action button {
-        padding: 8px 80px;
-        font-family: 'Righteous', cursive !important;
-        outline: none;
-        border: none;
-        color: #fff;
-        font-size: 1.5em;
-        border-radius: 50px;
-        margin: 0 10px;
-        transition: 0.2s ease;
-        background-color: #00AD83;
-        
-        &:hover {
-            background-color: #009771;
+    
+    
+    @media screen and (max-width: 1100px) {
+        nav {
+            display: none;
         }
-
-        &:active {
-            background-color: #007256;
-            transition: 0s;
+        #hero {
+            #contact-btn {
+                display: block;
+            }
         }
-    }
-}
-
-#social-media {
-    position: fixed;
-    right: 40px;
-    top: 50%;
-    transform: translate(0, -50%);
-
-    a {
-        text-decoration: none;
-    }
-
-    li {
-        margin: 10px 0;
-    }
-
-    svg {
-        fill: rgba(0, 0, 0, 0.5);
-        cursor: pointer;
-        width: 30px;
-        height: 30px;
-        transition: 0.2s ease;
-
-        &:hover {
-            fill: rgba(0, 0, 0, 0.8);
-        }
-    }
-}
-
-
-@media screen and (max-width: 1400px) {
-    #aboutus {
-        margin-left: auto;
-        margin-right: auto;
-        width: calc(max(400px, 70%));
-
-        & > div {
-            width: 100%;
-            padding: 50px;
-        }
-    }
-}
-
-
-
-@media screen and (max-width: 1100px) {
-    nav {
-        display: none;
-    }
-    #hero {
-        #contact-btn {
+    
+        #hero .admins {
             display: block;
         }
-    }
-
-    #hero .admins {
-        display: block;
-    }
-
-    #hero .social-links {
-        display: block;
-    }
-
-    #social-media {
-        display: none;
-    }
-}
-
-@media screen and (max-width: 1000px) {
-    #aboutus {
-        width: 90%;
-    }
-
     
-
-    #plantsale {
-        .header span:nth-child(1),
-        .header span:nth-child(3) {
-            display: none;
-        } 
-    }
-}
-
-@media screen and (max-width: 700px) {
-    #aboutus, #officers {
-        .header span:nth-child(1),
-        .header span:nth-child(3) {
+        #hero .social-links {
+            display: block;
+        }
+    
+        #social-media {
             display: none;
         }
     }
-
-    #officers {
-        padding: 50px;
-    }
-
-    #aboutus > div {
-        padding: 0;
-    }
-
-    #plantsale {
-        .plantsale-action {
-            justify-content: center;
+    
+    @media screen and (max-width: 1000px) {
+        #aboutus {
+            width: 90%;
         }
-    }
-}
-
-@media screen and (max-width: 500px) {
-    #aboutus, #plantsale {
-        width: 100%;
-        padding: 50px;
+    
         
-        p {
-            font-size: 1em;
+    
+        #plantsale {
+            .header span:nth-child(1),
+            .header span:nth-child(3) {
+                display: none;
+            } 
         }
     }
-
-    #aboutus {
-        & > div {
-            width: 100%;
+    
+    @media screen and (max-width: 700px) {
+        #aboutus, #officers {
+            .header span:nth-child(1),
+            .header span:nth-child(3) {
+                display: none;
+            }
+        }
+    
+        #officers {
+            padding: 50px;
+        }
+    
+        #aboutus > div {
             padding: 0;
         }
+    
+        #plantsale {
+            .plantsale-action {
+                justify-content: center;
+            }
+        }
     }
-
-    #bg-img {
-        display: none;
+    
+    @media screen and (max-width: 500px) {
+        #aboutus, #plantsale {
+            width: 100%;
+            padding: 50px;
+            
+            p {
+                font-size: 1em;
+            }
+        }
+    
+        #aboutus {
+            & > div {
+                width: 100%;
+                padding: 0;
+            }
+        }
+    
+        #bg-img {
+            display: none;
+        }
     }
 }
+
+
+
+
+
