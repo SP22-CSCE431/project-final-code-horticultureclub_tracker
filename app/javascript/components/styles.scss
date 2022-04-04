@@ -5,6 +5,10 @@
   color: #fff !important;
 }
 
+.calendar {
+  padding-top: 50px;
+}
+
 .event-volunteerDay {
   background-color: #DC493A !important;
 }
@@ -34,6 +38,7 @@
   border-radius: 10px;
   padding: 10px;
   z-index: 100;
+  box-shadow: 0 1px 2px #3c40434d, 0 1px 3px 1px #3c404326;
 }
 
 .event-popover-show {
