@@ -44,9 +44,26 @@
       <h6 class="admin-column-title">Name:</h6>
       <p><%= @member.name %></p>
 
+      <h6 class="admin-column-title">Total Points:</h6>
+      <p><%= @member_points %></p>
+
+      <h6 class="admin-column-title">Positions:</h6>
+      <ul class="admin-show-list">
+        <% @positions.each do |position| %>
+          <li><%= position.position_name %></li>
+        <% end %>
+      </ul>
+
+      <h6 class="admin-column-title">Events:</h6>
+      <ul class="admin-show-list">
+        <% @events.each do |event| %>
+          <li><%= event.description %>, <%=event.start_date %></li>
+        <% end %>
+      </ul>
+
       <h6 class="admin-column-title">Image:</h6>
       <%= image_tag @member.image_url if @member.image %>
-
+      <br />
     </div>
 
     <div class="admin-attribute-links admin-plant-links">
