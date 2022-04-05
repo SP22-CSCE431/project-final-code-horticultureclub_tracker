@@ -13,5 +13,5 @@ class WebsiteController < ApplicationController
     @succulents = Plant.all.where("category = 'Succulents'")
     @fruits = Plant.all.where("category = 'Fruits'")
     @vegetables = Plant.all.where("category = 'Vegetables'"
-
+  end
 end
