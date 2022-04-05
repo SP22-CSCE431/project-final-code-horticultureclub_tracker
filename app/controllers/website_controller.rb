@@ -1,8 +1,9 @@
 # frozen_string_literal: true
 
 class WebsiteController < ApplicationController
-  def index; end
-
+  def index
+    @positions = Position.all
+  end
   def plantsale
     @annuals = Plant.all.where("category = 'Annuals'")
     @perennials = Plant.all.where("category = 'Perennials'")
@@ -12,7 +13,5 @@ class WebsiteController < ApplicationController
     @succulents = Plant.all.where("category = 'Succulents'")
     @fruits = Plant.all.where("category = 'Fruits'")
     @vegetables = Plant.all.where("category = 'Vegetables'"
-  def index
-    @positions = Position.all
-  end
+
 end
