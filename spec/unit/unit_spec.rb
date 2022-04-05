@@ -121,7 +121,7 @@ end
 
 RSpec.describe(Plant, type: :model) do
   subject(:plant) do
-    described_class.new(name: 'test plant', price: 12.99, description: 'rose', category: 'test', quantity: 5, growth: 'test')
+    described_class.new(name: 'test plant', price: 12.99, category: 'Annuals', quantity: 5)
   end
 
   it 'is valid with all valid attributes' do
