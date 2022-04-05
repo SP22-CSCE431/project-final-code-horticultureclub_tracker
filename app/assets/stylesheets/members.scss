@@ -15,11 +15,25 @@
     align-items: center;
 }
 
+.member-img {
+    max-width: 40vw;
+    margin: 0 auto;
+}
+
+@media screen and (max-width: 1000px) {
+    .member-img {
+        max-width: 60vw;
+    }
+}
+
 @media screen and (max-width: 500px) {
     .admin-member-wrapper {
         grid-template-columns: 1fr;
     }
     .admin-member-wrapper p {
         font-size: 18px;
+    }
+    .member-img {
+        max-width: 75vw;
     }
 }   
