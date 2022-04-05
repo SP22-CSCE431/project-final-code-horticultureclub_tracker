@@ -137,11 +137,6 @@ RSpec.describe(Plant, type: :model) do
     plant.price = nil
     expect(plant).not_to(be_valid)
   end
-
-  it 'is not valid without a description' do
-    plant.description = nil
-    expect(plant).not_to(be_valid)
-  end
   
   it 'is not valid without a category' do
     plant.category = nil
@@ -150,11 +145,6 @@ RSpec.describe(Plant, type: :model) do
 
   it 'is not valid without a quantity' do
     plant.quantity = nil
-    expect(plant).not_to(be_valid)
-  end
-
-  it 'is not valid without a growth' do
-    plant.growth = nil
     expect(plant).not_to(be_valid)
   end
 end

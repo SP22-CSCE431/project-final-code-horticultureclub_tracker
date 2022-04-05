@@ -2,6 +2,7 @@
 
 class WebsiteController < ApplicationController
   def index; end
+
   def plantsale
     @annuals = Plant.all.where("category = 'Annuals'")
     @perennials = Plant.all.where("category = 'Perennials'")
