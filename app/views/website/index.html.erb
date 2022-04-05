@@ -113,14 +113,14 @@
             <span></span>
         </div>
         <div class="gallery">
-            <img src="/assets/websitebgs/Profile.png" alt="Officer" />
-            <img src="/assets/websitebgs/Profile.png" alt="Officer" />
-            <img src="/assets/websitebgs/Profile.png" alt="Officer" />
-            <img src="/assets/websitebgs/Profile.png" alt="Officer" />
-            <img src="/assets/websitebgs/Profile.png" alt="Officer" />
-            <img src="/assets/websitebgs/Profile.png" alt="Officer" />
-            <img src="/assets/websitebgs/Profile.png" alt="Officer" />
-            <img src="/assets/websitebgs/Profile.png" alt="Officer" />
+            <% @positions.each do |position|%>
+                <% @currMember = Member.find(position.member_id) %>
+                <div class="position-gallery-wrapper">
+                    <%= image_tag @currMember.image_url, class: "member-img" if @currMember.image %>
+                    <h5 class="position-name"><%= @currMember.name %></h5>
+                    <h6 class="position-title"><%= position.position_name %></h6>
+                </div>
+            <% end %>
         </div>
     </section>
 

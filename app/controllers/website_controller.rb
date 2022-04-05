@@ -11,6 +11,8 @@ class WebsiteController < ApplicationController
     @shrubs = Plant.all.where("category = 'Shrubs'")
     @succulents = Plant.all.where("category = 'Succulents'")
     @fruits = Plant.all.where("category = 'Fruits'")
-    @vegetables = Plant.all.where("category = 'Vegetables'")
+    @vegetables = Plant.all.where("category = 'Vegetables'"
+  def index
+    @positions = Position.all
   end
 end

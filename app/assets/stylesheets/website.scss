@@ -307,18 +307,23 @@ body {
         }
     
         .gallery {
-            display: flex;
-            justify-content: space-between;
+            display: grid;
+            justify-content: center;
             align-items: center;
-            flex-wrap: wrap;
             margin-top: 10px;
-    
+            grid-template-columns: repeat(4, 1fr);
             img {
                 margin: 20px;
                 width: calc(max(20%, 150px));
             }
         }
         
+        .position-gallery-wrapper {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
     
     }
     
@@ -460,7 +465,9 @@ body {
             width: 90%;
         }
     
-        
+        .gallery {
+            grid-template-columns: repeat(3, 1fr) !important;
+        }
     
         #plantsale {
             .header span:nth-child(1),
@@ -476,6 +483,10 @@ body {
             .header span:nth-child(3) {
                 display: none;
             }
+        }
+
+        .gallery {
+            grid-template-columns: repeat(2, 1fr) !important;
         }
     
         #officers {
@@ -508,6 +519,10 @@ body {
                 width: 100%;
                 padding: 0;
             }
+        }
+
+        .gallery {
+            grid-template-columns: 1fr !important;
         }
     
         #bg-img {
