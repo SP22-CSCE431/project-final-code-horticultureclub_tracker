@@ -42,12 +42,12 @@
     <div class="admin-plant-wrapper">
       <h6 class="admin-column-title">Name</h6>
       <h6 class="admin-column-title">Price</h6>
-      <h6 class="admin-column-title">Description</h6>
+      <h6 class="admin-column-title">Category</h6>
       <div></div>
       <% @plants.each do |plant| %>
         <p><%= plant.name %></p>
         <p><%= plant.price %></p>
-        <p><%= plant.description %></p>
+        <p><%= plant.category %></p>
         <div class="admin-crud-icons">
           <%= link_to 'View Details', plant, class: "attribute-show-btn" %>
           <%= link_to image_tag("edit.png", class: "attribute-icon"), edit_plant_path(plant) %>

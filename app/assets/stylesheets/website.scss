@@ -517,6 +517,32 @@ body {
 }
 
 
+/* Member Plant Sale Styles */
 
+.plantsale-font-color > h3 {
+    color: #e2e2e2 !important;
+}
 
+.plantsale-plants-wrapper > * {
+    color: #fff !important;
+}
 
+.plantsale-column-titles > * {
+    color: #c6c6c6 !important;
+}
+
+.plantsale-title {
+    text-align: center;
+}
+
+.plantsale-column-titles {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.plantsale-plants-wrapper {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
