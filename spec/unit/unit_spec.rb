@@ -121,7 +121,7 @@ end
 
 RSpec.describe(Plant, type: :model) do
   subject(:plant) do
-    described_class.new(name: 'test plant', price: 12.99, description: 'rose', category: 'test', quantity: 5, growth: 'test')
+    described_class.new(name: 'test plant', price: 12.99, category: 'Annuals', quantity: 5)
   end
 
   it 'is valid with all valid attributes' do
@@ -137,11 +137,6 @@ RSpec.describe(Plant, type: :model) do
     plant.price = nil
     expect(plant).not_to(be_valid)
   end
-
-  it 'is not valid without a description' do
-    plant.description = nil
-    expect(plant).not_to(be_valid)
-  end
   
   it 'is not valid without a category' do
     plant.category = nil
@@ -150,11 +145,6 @@ RSpec.describe(Plant, type: :model) do
 
   it 'is not valid without a quantity' do
     plant.quantity = nil
-    expect(plant).not_to(be_valid)
-  end
-
-  it 'is not valid without a growth' do
-    plant.growth = nil
     expect(plant).not_to(be_valid)
   end
 end

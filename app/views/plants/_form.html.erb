@@ -58,11 +58,6 @@
         <%= form.label :price %>
         <%= form.number_field :price, step: :any%>
       </div>
-      
-      <div class="field">
-        <%= form.label :description %>
-        <%= form.text_field :description %>
-      </div>
 
       <div class="field">
         <%= form.label :quantity %>
@@ -70,13 +65,8 @@
       </div>
 
       <div class="field">
-        <%= form.label :growth %>
-        <%= form.select :growth, ["Annual", "Perennial"]%>
-      </div>
-
-      <div class="field">
         <%= form.label :category %>
-        <%= form.select :category, ["Flowers", "Bushes", "Trees", "Grasses", "Succulents"]%>
+        <%= form.select :category, ["Annuals", "Perennials", "Houseplants", "Trees", "Shrubs", "Succulents", "Fruits", "Vegetables"]%>
       </div>
 
       <div class="admin-attribute-links admin-plant-links">
