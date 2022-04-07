@@ -1,78 +1,78 @@
 <div class="admin-fade-bg">
-<h1 class="plantsale-title pt-5 text-white">TAMU Horticulture Club Plant Sale</h1>
-<h6 class="plantsale-title text-white">Below you can see our inventory!</h6>
+    <h1 class="plantsale-title pt-5 text-white">TAMU Horticulture Club Plant Sale</h1>
+    <h6 class="plantsale-title text-white">Below you can see our inventory!</h6>
 
-<div class="container plantsale-font-color">
-    <div class="plantsale-column-titles">
-        <h4>Name</h4>
-        <h4>|</h4>
-        <h4>Price</h4>
-        <h4>|</h4>
-        <h4>Quantity</h4>
+    <div class="container plantsale-font-color">
+        <div class="plantsale-column-titles">
+            <h4>Name</h4>
+            <h4>|</h4>
+            <h4>Price</h4>
+            <h4>|</h4>
+            <h4>Quantity</h4>
+        </div>
+        <h3>Annuals</h3>
+        <% @annuals.each do |plant| %>
+            <div class="plantsale-plants-wrapper">
+                <h6><%= plant.name %></h6>
+                <p><%= plant.price %></p>
+                <p><%= plant.quantity %></p>
+            </div>
+        <% end %>
+        <h3>Perennials</h3>
+        <% @perennials.each do |plant| %>
+            <div class="plantsale-plants-wrapper">
+                <h6><%= plant.name %></h6>
+                <p><%= plant.price %></p>
+                <p><%= plant.quantity %></p>
+            </div>
+        <% end %>
+        <h3>Houseplants</h3>
+        <% @houseplants.each do |plant| %>
+            <div class="plantsale-plants-wrapper">
+                <h6><%= plant.name %></h6>
+                <p><%= plant.price %></p>
+                <p><%= plant.quantity %></p>
+            </div>
+        <% end %>
+        <h3>Trees</h3>
+        <% @trees.each do |plant| %>
+            <div class="plantsale-plants-wrapper">
+                <h6><%= plant.name %></h6>
+                <p><%= plant.price %></p>
+                <p><%= plant.quantity %></p>
+            </div>
+        <% end %>
+        <h3>Shrubs</h3>
+        <% @shrubs.each do |plant| %>
+            <div class="plantsale-plants-wrapper">
+                <h6><%= plant.name %></h6>
+                <p><%= plant.price %></p>
+                <p><%= plant.quantity %></p>
+            </div>
+        <% end %>
+        <h3>Succulents</h3>
+        <% @succulents.each do |plant| %>
+            <div class="plantsale-plants-wrapper">
+                <h6><%= plant.name %></h6>
+                <p><%= plant.price %></p>
+                <p><%= plant.quantity %></p>
+            </div>
+        <% end %>
+        <h3>Fruits</h3>
+        <% @fruits.each do |plant| %>
+            <div class="plantsale-plants-wrapper">
+                <h6><%= plant.name %></h6>
+                <p><%= plant.price %></p>
+                <p><%= plant.quantity %></p>
+            </div>
+        <% end %>
+        <h3>Vegetables</h3>
+        <% @vegetables.each do |plant| %>
+            <div class="plantsale-plants-wrapper">
+                <h6><%= plant.name %></h6>
+                <p><%= plant.price %></p>
+                <p><%= plant.quantity %></p>
+            </div>
+        <% end %>
     </div>
-    <h3>Annuals</h3>
-    <% @annuals.each do |plant| %>
-        <div class="plantsale-plants-wrapper">
-            <h6><%= plant.name %></h6>
-            <p><%= plant.price %></p>
-            <p><%= plant.quantity %></p>
-        </div>
-    <% end %>
-    <h3>Perennials</h3>
-    <% @perennials.each do |plant| %>
-        <div class="plantsale-plants-wrapper">
-            <h6><%= plant.name %></h6>
-            <p><%= plant.price %></p>
-            <p><%= plant.quantity %></p>
-        </div>
-    <% end %>
-    <h3>Houseplants</h3>
-    <% @houseplants.each do |plant| %>
-        <div class="plantsale-plants-wrapper">
-            <h6><%= plant.name %></h6>
-            <p><%= plant.price %></p>
-            <p><%= plant.quantity %></p>
-        </div>
-    <% end %>
-    <h3>Trees</h3>
-    <% @trees.each do |plant| %>
-        <div class="plantsale-plants-wrapper">
-            <h6><%= plant.name %></h6>
-            <p><%= plant.price %></p>
-            <p><%= plant.quantity %></p>
-        </div>
-    <% end %>
-    <h3>Shrubs</h3>
-    <% @shrubs.each do |plant| %>
-        <div class="plantsale-plants-wrapper">
-            <h6><%= plant.name %></h6>
-            <p><%= plant.price %></p>
-            <p><%= plant.quantity %></p>
-        </div>
-    <% end %>
-    <h3>Succulents</h3>
-    <% @succulents.each do |plant| %>
-        <div class="plantsale-plants-wrapper">
-            <h6><%= plant.name %></h6>
-            <p><%= plant.price %></p>
-            <p><%= plant.quantity %></p>
-        </div>
-    <% end %>
-    <h3>Fruits</h3>
-    <% @fruits.each do |plant| %>
-        <div class="plantsale-plants-wrapper">
-            <h6><%= plant.name %></h6>
-            <p><%= plant.price %></p>
-            <p><%= plant.quantity %></p>
-        </div>
-    <% end %>
-    <h3>Vegetables</h3>
-    <% @vegetables.each do |plant| %>
-        <div class="plantsale-plants-wrapper">
-            <h6><%= plant.name %></h6>
-            <p><%= plant.price %></p>
-            <p><%= plant.quantity %></p>
-        </div>
-    <% end %>
-</div>
 </div>
