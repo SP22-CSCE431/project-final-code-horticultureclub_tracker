@@ -122,6 +122,7 @@ const EventCalendar = () => {
       document.querySelector('h5.event-popover-start').textContent = `Start: ${start}`;
       document.querySelector('h5.event-popover-end').textContent = `End: ${end}`;
       document.querySelector('h5.event-popover-description').textContent = `Details: ${e.description}`;
+      document.querySelector('h5.event-popover-points').textContent = `Points: ${e.points}`;
       setShowPopover(true);
    }
 
@@ -176,6 +177,7 @@ const EventCalendar = () => {
                <h5 className='event-popover-end'></h5>
             </div>
             <h5 className='event-popover-description'></h5>
+            <h5 className='event-popover-points'></h5>
          </div>
       </div>
    );

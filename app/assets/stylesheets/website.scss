@@ -17,6 +17,87 @@ body {
         background-repeat: no-repeat;
         background-size: contain;
     }
+
+    nav {
+        display: flex;
+        justify-content: start;
+        align-items: center;
+        padding: 20px 10px 20px 30px;
+    
+        .links {
+            flex-grow: 1;
+            margin-left: 20px;
+    
+            ul {
+                margin-top: 10px;
+                list-style: none;
+            }
+    
+            .link {
+                margin: 0 20px;
+                display: inline-block;
+            }
+            .link:hover:after { 
+                transform: scaleX(1); 
+            }
+            .link:after {
+                display:block;
+                content: '';
+                border-bottom: solid 5px #000;  
+                transform: scaleX(0);  
+                transition: transform 150ms ease-in-out;
+                transform-origin:  0% 50%;
+            }
+        }
+    
+        .navbar-logo {
+            font-family: 'Righteous', cursive !important;
+            color: black;
+            font-size: 2em !important;
+            text-decoration: none;
+        }
+    
+        .navbar-button {
+            background-color: #007FFF;
+            padding: 10px 30px;
+            border-radius: 50px;
+            color: #fff !important;
+            font-weight: 900;
+            font-size: 1.2em;
+            border: none;
+            outline: none;
+            margin: 0 5px;
+            transition: 0.2s ease;
+    
+            &:hover {
+                background-color: #006bd6;
+            }
+    
+            &:active {
+                background-color: #0054a8;
+                transition: 0s;
+            }
+        }
+    
+        .navbar-button.admin {
+            background-color: rgba(0, 128, 255, 0);
+            color: #007FFF !important;
+    
+            &:hover {
+                background-color: rgba(0, 128, 255, 0.2);
+            }
+        }
+    
+        li {
+            display: inline;
+            margin: 0 10px;
+        }
+        li > a {
+            color: black !important;
+            text-decoration: none;
+            font-size: 1.2em;
+        }
+    }
     
     #hero {
         display: flex;
@@ -66,7 +147,7 @@ body {
         p {
             font-size: 1.5em;
             margin-top: 50px;
-            width: calc(max(50%, 100px));
+            width: 60%;
             text-align: center;
         }
     
@@ -188,11 +269,14 @@ body {
         }
     }
     
-    
+    .officers-bg {
+        background-image: url('/assets/websitebgs/officers.png');
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
     
     #officers {
-        
-
+    
         width: 90%;
         margin: 200px auto 0 auto;
         padding-top: 50px;
@@ -241,6 +325,12 @@ body {
             flex-direction: column;
         }
     
+    }
+
+    .plantsale-bg {
+        background-image: url('/assets/websitebgs/plantsale.png');
+        background-repeat: no-repeat;
+        background-size: cover;
     }
     
     #plantsale {
@@ -354,7 +444,9 @@ body {
     
     
     @media screen and (max-width: 1100px) {
-
+        nav {
+            display: none;
+        }
         #hero {
             #contact-btn {
                 display: block;
@@ -375,8 +467,15 @@ body {
     }
     
     @media screen and (max-width: 1000px) {
+        #hero p {
+            width: 75%;
+        }
         #aboutus {
             width: 90%;
+            margin-top: 200px;
+        }
+        #officers {
+            margin-top: 100px;
         }
     
         .gallery {
@@ -392,6 +491,14 @@ body {
     }
     
     @media screen and (max-width: 700px) {
+        #hero p {
+            width: 90%;
+            margin-top: 25px;
+        }
+
+        #hero .actions {
+            margin-top: 25px;
+        }
         #aboutus, #officers {
             .header span:nth-child(1),
             .header span:nth-child(3) {
@@ -404,7 +511,12 @@ body {
         }
     
         #officers {
-            padding: 50px;
+            padding: 25px;
+            margin-top: 50px;
+        }
+
+        #aboutus, #plantsale {
+            margin-top: 50px;
         }
     
         #aboutus > div {
@@ -421,14 +533,27 @@ body {
     @media screen and (max-width: 500px) {
         #aboutus, #plantsale {
             width: 100%;
-            padding: 50px;
+            padding: 10px;
             
             p {
                 font-size: 1em;
             }
         }
-    
+        #hero .action-button {
+            padding: 4px 40px;
+            font-size: 1em;
+            min-width: 150px;
+        }
+        #hero p {
+            font-size: 1em;;
+        }
+        #hero > h1 {
+            font-size: 2.0rem !important;
+        }
         #aboutus {
+            .header > span:nth-child(2) {
+                font-size: 2em;
+            }
             & > div {
                 width: 100%;
                 padding: 0;
@@ -438,10 +563,30 @@ body {
         .gallery {
             grid-template-columns: 1fr !important;
         }
-    
+        .plantsale-action button {
+            padding: 4px 30px !important;
+            font-size: 1em !important;
+            margin: 0 !important;
+        }
+        #plantsale .header > span:nth-child(2) {
+            font-size: 2em;
+        }
         .hero-aboutus {
             background-image: none;
         }
+    }
+}
+
+.events-header {
+    font-size: 2.8em;
+    font-family: 'Roboto Condensed', sans-serif !important;
+    margin-top: 50px;
+}
+
+@media screen and (max-width: 500px) {
+    .events-header {
+        font-size: 2em;
+        margin-top: 25px;
     }
 }
 
