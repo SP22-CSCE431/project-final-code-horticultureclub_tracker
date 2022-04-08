@@ -88,6 +88,13 @@
     width: 30px;
     height: 30px;
   }
+  .rbc-toolbar, .rbc-btn-group {
+    max-width: 80% !important;
+    font-size: 12px;
+  }
+  .rbc-toolbar {
+    justify-content: flex-start;
+  }
 }
 
 @media scren and (max-width: 300px) {

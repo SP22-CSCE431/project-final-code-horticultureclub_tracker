@@ -2,36 +2,33 @@
 <div class="home-page">
     <!-- Navbar -->
     <div class="hero-aboutus">
-        <nav class="navbar navbar-expand-lg navbar-light bg-light">
-            <a class="navbar-logo" href="">Horticulture<br>Club</a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav mr-auto">
-                    <li class="nav-item active">
-                        <a class="nav-link" href="#">About Us</a>
+        <nav>
+            <div class="logo">
+                <a class="navbar-logo" href="/">Horticulture<br>Club</a>
+            </div>
+            <div class="links">
+                <ul>
+                    <li class="link">
+                        <a aria-current="page" href="/#aboutus">About Us</a>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Officers</a>
+                    <li class="link">
+                        <a href="/#officers">Officers</a>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Plant Sale</a>
+                    <li class="link">
+                        <a href="/#events">Events</a>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Events</a>
+                    <li class="link">
+                        <a href="/#plantsale">Plant Sale</a>
                     </li>
                 </ul>
-                <div class="form-inline">
-                   <a class="navbar-button" href="mailto:horticultureclub@tamu.edu">
-                        Contact Us
-                    </a>
-                    <a class="navbar-button admin" href="/dashboard">
-                        Admins
-                    </a>
-                </div>
             </div>
+            <a href="mailto:horticultureclub@tamu.edu">
+                <button class="navbar-button">Contact Us</button>
+            </a>
+            <a href="/dashboard">
+                <button class="navbar-button admin">Admins</button>
+            </a>
+        
         </nav>
 
         <section id="hero">
@@ -104,44 +101,48 @@
         </section>
     </div>
     <!-- Officers Section -->
-    <section id="officers">
-        <div class="header">
-            <span></span>
-            <span>Officers</span>
-            <span></span>
-        </div>
-        <div class="gallery">
-            <% @positions.each do |position|%>
-                <% @currMember = Member.find(position.member_id) %>
-                <div class="position-gallery-wrapper">
-                    <%= image_tag @currMember.image_url, class: "member-img" if @currMember.image %>
-                    <h5 class="position-name"><%= @currMember.name %></h5>
-                    <h6 class="position-title"><%= position.position_name %></h6>
-                </div>
-            <% end %>
-        </div>
-    </section>
+    <div class="officers-bg">
+        <section id="officers">
+            <div class="header">
+                <span></span>
+                <span>Officers</span>
+                <span></span>
+            </div>
+            <div class="gallery">
+                <% @positions.each do |position|%>
+                    <% @currMember = Member.find(position.member_id) %>
+                    <div class="position-gallery-wrapper">
+                        <%= image_tag @currMember.image_url, class: "member-img" if @currMember.image %>
+                        <h5 class="position-name"><%= @currMember.name %></h5>
+                        <h6 class="position-title"><%= position.position_name %></h6>
+                    </div>
+                <% end %>
+            </div>
+        </section>
+    </div>
 
     <!-- Plant Sale Section -->
-    <section id="plantsale">
-        <div class="header">
-            <span></span>
-            <span>Annual Plant Sale</span>
-            <span></span>
-        </div>
-        <p>Thank you for your interest in the Horticulture Club's 34th Annual Spring Plant Sale. This year it took place March 5th and was unlike any of the 33 before it. We provided more plants than in the past but had no way to predict the turnout, thus we sold out much sooner than we ever have. We thank everyone for coming out and supporting our club. This year has paved the way for future Plant Sales to be even bigger. Hope everyone is enjoying their new plants. If you have any questions on care you can check out the PDFs at the bottom of the page or email us at tamuhorticultureclub@gmail.com
-        </p>
+    <div class="plantsale-bg">
+        <section id="plantsale">
+            <div class="header">
+                <span></span>
+                <span>Annual Plant Sale</span>
+                <span></span>
+            </div>
+            <p>Thank you for your interest in the Horticulture Club's 34th Annual Spring Plant Sale. This year it took place March 5th and was unlike any of the 33 before it. We provided more plants than in the past but had no way to predict the turnout, thus we sold out much sooner than we ever have. We thank everyone for coming out and supporting our club. This year has paved the way for future Plant Sales to be even bigger. Hope everyone is enjoying their new plants. If you have any questions on care you can check out the PDFs at the bottom of the page or email us at tamuhorticultureclub@gmail.com
+            </p>
 
-        <br>
+            <br>
 
-        <p>The Spring Plant Sale is the Horticulture Club's largest fundraiser of the year. Through the support of our community, members have the opportunity to learn about plants by hands on experience in preparation for this sale such as cultivating and maintaining the inventory. This fundraiser has a lasting impact on our club allowing us to be able to send members to represent Texas A&M in horticultural competitions across the country. 
-        </p>
-        <div class="plantsale-action">
-            <a href="/plantsale">
-                <button>Visit Plant Sale</button>
-            </a>
-        </div>
-    </section>
+            <p>The Spring Plant Sale is the Horticulture Club's largest fundraiser of the year. Through the support of our community, members have the opportunity to learn about plants by hands on experience in preparation for this sale such as cultivating and maintaining the inventory. This fundraiser has a lasting impact on our club allowing us to be able to send members to represent Texas A&M in horticultural competitions across the country. 
+            </p>
+            <div class="plantsale-action">
+                <a href="/plantsale" target="_blank">
+                    <button>Visit Plant Sale</button>
+                </a>
+            </div>
+        </section>
+    </div>
 
     <section id="social-media">
         <ul>
@@ -171,6 +172,6 @@
 -->
 
 <!-- CALENDAR WILL BE HERE -->
-
+<h1 class="text-center events-header">Events</h1>
 <%= stylesheet_pack_tag 'hello_react' %>
 <%= javascript_pack_tag 'hello_react' %>
