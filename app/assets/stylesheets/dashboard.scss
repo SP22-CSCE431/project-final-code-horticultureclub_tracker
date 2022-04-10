@@ -11,6 +11,21 @@
      font-family: 'Lato', sans-serif !important;
  }
 
+ .dashboard-title-wrapper{
+     display: flex;
+     justify-content: space-between;
+     align-items: center;
+ }
+
+ .help-link {
+     border: 2px solid #fff;
+     padding: 5px 10px;
+     border-radius: 25px;
+     color: #fff !important;
+     text-decoration: none;
+     margin-right: 30px;
+ }
+
  .dashboard-title {
      text-align: center !important;
      color: #ffffff;
@@ -142,6 +157,13 @@
         column-gap: 25px;
         row-gap: 25px;
     }
+    .dashboard-title-wrapper {
+        flex-direction: column;
+    }
+    .help-link {
+        margin-right: auto;
+        margin-left: auto;
+    }
 }
 
 @media screen and (max-width:570px) {
@@ -153,7 +175,10 @@
         width: 90%;
     }
     .dashboard-title {
-        padding: 50px 20px;
+        padding: 20px 20px;
         font-size: 25px;
+    }
+    .dashboard-title-wrapper {
+        padding-bottom: 30px;
     }
 }

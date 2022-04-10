@@ -1,5 +1,9 @@
 <section class="admin-fade-bg">
-    <h1 class="dashboard-title">Horticulture Club Tracker</h1>
+    <div class="dashboard-title-wrapper">
+        <div></div>
+        <h1 class="dashboard-title">Horticulture Club Tracker</h1>
+            <%= link_to 'Help', help_path, target: "_blank", class: 'help-link'%>
+    </div>
     <div class="selection-grid">
         <div class="selection-grid-item">
             <div class="selection-card">
@@ -64,5 +68,4 @@
             </div>
         </div>
     </div>
-	<%= link_to 'Help', help_path%>
 </section>
