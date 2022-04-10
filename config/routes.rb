@@ -22,6 +22,7 @@ Rails.application.routes.draw do
   get 'dashboard', to: 'dashboard#index'
   get 'website', to: 'website#index'
   get 'plantsale', to: 'website#plantsale'
+  get 'help', to: 'help#help'
 
   mount API::Base, at: '/'
 
