@@ -593,6 +593,18 @@ body {
 
 /* Member Plant Sale Styles */
 
+.plantsale-table {
+    width: 100%;
+    td, th {
+        color: #fff;
+    }
+}
+
+.plantsale-category {
+    font-size: 120%;
+    font-weight: bold;
+}
+
 .plantsale-font-color > h3 {
     color: #e2e2e2 !important;
 }
