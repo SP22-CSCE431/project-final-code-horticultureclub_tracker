@@ -15,6 +15,9 @@
      display: flex;
      justify-content: space-between;
      align-items: center;
+     max-width: 90%;
+     margin: 0 auto;
+     padding: 10px 0px;
  }
 
  .help-link {
@@ -23,7 +26,6 @@
      border-radius: 25px;
      color: #fff !important;
      text-decoration: none;
-     margin-right: 30px;
  }
 
  .dashboard-title {
@@ -159,6 +161,7 @@
     }
     .dashboard-title-wrapper {
         flex-direction: column;
+        max-width: 100%;
     }
     .help-link {
         margin-right: auto;
