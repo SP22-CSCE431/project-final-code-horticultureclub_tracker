@@ -427,6 +427,11 @@ body {
         }
     }
     
+    @media screen and (min-width: 1400px) {
+        .hero-aboutus {
+            background-size: cover;
+        }
+    }
     
     @media screen and (max-width: 1400px) {
         #aboutus {
