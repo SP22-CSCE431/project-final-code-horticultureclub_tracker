@@ -19,12 +19,15 @@ const EventCalendar = () => {
 
       // Pull out start/end dates and start/end times (The times in the database don't have correct dates on them for some reason)
       const { start_date, end_date, start_time, end_time } = event;
+   
       const startDate   = new Date(start_date)
       startDate.setDate(startDate.getDate() + 1)
       const endDate     = new Date(end_date)
       endDate.setDate(endDate.getDate() + 1)
-      const startTime   = new Date(start_time)
+      const startTime   = new Date(start_time);
+      startTime.setHours(startTime.getUTCHours());
       const endTime     = new Date(end_time)
+      endTime.setHours(endTime.getUTCHours());
 
       // Generate new start and end dates as composite of above date and times
       const start = new Date(
@@ -112,7 +115,7 @@ const EventCalendar = () => {
    const weekDays = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
 
    function getFormatedDate(date) {
-      return `${weekDays[date.getDay()]} ${date.toLocaleString()}`;
+      return `${weekDays[date.getDay()]} ${date.toLocaleString('en-US', {timezone : 'UTC'})}`;
    }
 
    const eventSelectedEvent = (e) => {
