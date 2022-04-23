@@ -58,12 +58,12 @@
 
       <h6 class="admin-column-title">Start Time:</h6>
       <p>
-        <%= @event.start_time %>
+        <%= format_time(@event.start_time) %>
       </p>
 
       <h6 class="admin-column-title">End Time:</h6>
       <p>
-        <%= @event.end_time %>
+        <%= format_time(@event.end_time) %>
       </p>
 
       <h6 class="admin-column-title">Description</h6>
