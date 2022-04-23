@@ -76,14 +76,14 @@
         <div class="admin-date-wrapper">
           <%= form.label :start_time %>
           <div class="">
-            <%= form.time_select :start_time %>
+            <%= form.time_select :start_time, {:ampm => true} %>
           </div>
         </div>
 
         <div class="admin-date-wrapper">
           <%= form.label :end_time %>
           <div class="">
-            <%= form.time_select :end_time %>
+            <%= form.time_select :end_time, {:ampm => true} %>
           </div>
         </div>
       </div>

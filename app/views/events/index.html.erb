@@ -45,13 +45,13 @@
 
       <h6 class="admin-column-title">Event Type</h6>
       <h6 class="admin-column-title">Start Date</h6>
-      <h6 class="admin-column-title">Start Time</h6>
+      <h6 class="admin-column-title">Time</h6>
       <div></div>
 
       <% @events.each do |event| %>
         <p><%= event.event_type %></p>
         <p><%= event.start_date %></p>
-        <p><%= event.start_time %></p>
+        <p><%= show_both_times(event.start_time, event.end_time) %></p>
         <div class="admin-crud-icons">
           <%= link_to 'View Details', event, class: "attribute-show-btn" %>
           <%= link_to image_tag("edit.png", class: "attribute-icon"), edit_event_path(event) %>
