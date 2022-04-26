@@ -57,19 +57,16 @@ Run the app
 The application can be seen using a browser and navigating to http://localhost:3000/
 
 ## Environmental Variables/Files ##
-
-** Add instructions/description if your application requires it.
+The app requires a google cloud account, as well as cloudinary. The keys for this project are stored in Heroku under settings > config variables.
 
 ## Deployment ##
 
-** Add instructions about how to deploy to Heroku
-
+The app is delployed on heroku at https://tamuhorticultureclub.herokuapp.com/ .
 
 ## CI/CD ##
 
-TBD
+The app uses github actions and heroku pipelines for CI/CD. You can view the actions under the actions page. To create your own workflow edit the .github folder.
 
 ## Support ##
 
-Admins looking for support should first look at the application help page.
-Users looking for help seek out assistance from the customer.
+Admins looking for support should look to the admin help page.
