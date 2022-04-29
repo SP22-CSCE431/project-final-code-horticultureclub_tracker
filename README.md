@@ -41,9 +41,9 @@ An RSpec test suite is available and can be ran using:
 
 Run the following code in Powershell if using windows or the terminal using Linux/Mac
 
-  `cd your_github_here`
+  `cd horticulture_tracker`
 
-  `docker run --rm -it --volume "$(pwd):/rails_app" -e DATABASE_USER=test_app -e DATABASE_PASSWORD=test_password -p 3000:3000 Dylan-Harden3/horticulture_tracker:main`
+  `docker run --rm -it --volume "$(pwd):/rails_app" -e DATABASE_USER=test_app -e DATABASE_PASSWORD=test_password -p 3000:3000 dmartinez05/ruby_rails/postgresql:latest`
 
   `cd rails_app`
 
@@ -58,6 +58,16 @@ The application can be seen using a browser and navigating to http://localhost:3
 
 ## Environmental Variables/Files ##
 The app requires a google cloud account, as well as cloudinary. The keys for this project are stored in Heroku under settings > config variables.
+The specific environment variables it uses are:
+
+For cloudinary:
+ - CLOUD_NAME
+ - CLOUD_API_KEY
+ - CLOUD_API_SECRET
+ 
+For Google OAUTH:
+ - GOOGLE_OAUTH_CLIENT_ID
+ - GOOGLE_OAUTH_CLIENT_SECRET
 
 ## Deployment ##
 
